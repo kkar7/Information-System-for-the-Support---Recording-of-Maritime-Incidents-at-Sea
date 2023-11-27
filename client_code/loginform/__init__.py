@@ -1,5 +1,6 @@
 from ._anvil_designer import loginformTemplate
 from anvil import *
+import anvil.server
 
 class loginform(loginformTemplate):
   def __init__(self, **properties):

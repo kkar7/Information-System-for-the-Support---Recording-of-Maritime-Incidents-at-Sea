@@ -21,6 +21,8 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'JJEXCC,FGSGCC'}
     event_bindings: {pressed_enter: text_box_1_pressed_enter}
+    data_bindings:
+    - {property: placeholder, code: 'self.item['''']', writeback: false}
   - name: outlined_1
     properties: {role: outlined}
     type: TextBox
@@ -49,6 +51,151 @@ components:
     properties: {}
     type: TextBox
     layout_properties: {grid_position: 'YKUBKT,TISNAA'}
+  - name: spacer_2
+    properties: {height: 12}
+    type: Spacer
+    layout_properties: {grid_position: 'WYIOIE,OXKHSB'}
+  - name: label_4
+    properties: {text: ΣΤΟΙΧΕΙΑ ΑΣΘΕΝΟΥΣ, underline: true}
+    type: Label
+    layout_properties: {grid_position: 'RSTAQG,UMCGPB'}
+  - name: outlined_7
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'BZDIGP,FLAWUU'}
+  - name: outlined_8
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'ZGZHGL,SXPBQT'}
+  - name: outlined_9
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'PZZJFK,HAFDZW'}
+  - name: outlined_10
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'CJLAED,HJGCFU'}
+  - name: outlined_11
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'DLOTXM,QZQFBE'}
+  - name: outlined_12
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'VPIBCP,UYHWNN'}
+  - name: outlined_13
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'BVFHXA,TWNAKM'}
+  - name: outlined_14
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'GVAHNF,DWUUAA'}
+  - name: spacer_1
+    properties: {height: 78}
+    type: Spacer
+    layout_properties: {grid_position: 'ZUSGQU,JAVRML'}
+  - name: label_3
+    properties: {text: ΙΑΤΡΙΚΕΣ ΠΛΗΡΟΦΟΡΙΕΣ ΠΟΥ ΔΙΝΕΙ ΤΟ ΠΛΟΙΟ, align: center, bold: true,
+      underline: true}
+    type: Label
+    layout_properties: {grid_position: 'WKJEBX,WSYIHH'}
+  - name: label_5
+    properties: {text: ΚΥΡΙΟ ΣΥΜΠΤΩΜΑ, align: left, underline: true}
+    type: Label
+    layout_properties: {grid_position: 'YGLXXC,JLGGDQ'}
+  - name: check_box_1
+    properties: {text: ΠΟΝΟΣ}
+    type: CheckBox
+    layout_properties: {grid_position: 'PHSHTM,JCWPWF'}
+  - name: label_6
+    properties: {text: 1. ΤΡΟΠΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ}
+    type: Label
+    layout_properties: {grid_position: 'PHSHTM,RWDTOC'}
+  - name: check_box_2
+    properties: {text: ΠΥΡΕΤΟΣ}
+    type: CheckBox
+    layout_properties: {grid_position: 'KTELOX,MLXMIM'}
+  - name: check_box_16
+    properties: {text: ΞΑΦΝΙΚΑ, checked: false, visible: true}
+    type: CheckBox
+    layout_properties: {grid_position: 'KTELOX,IXAAJE'}
+  - name: check_box_17
+    properties: {text: ΣΤΑΔΙΑΚΑ}
+    type: CheckBox
+    layout_properties: {grid_position: 'KTELOX,AQPARR'}
+  - name: check_box_3
+    properties: {text: ΡΙΓΟΣ}
+    type: CheckBox
+    layout_properties: {grid_position: 'DQBYIL,VTUDDN'}
+  - name: label_7
+    properties: {text: '2. ΧΡΟΝΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ '}
+    type: Label
+    layout_properties: {grid_position: 'DQBYIL,AHNHOE'}
+  - name: check_box_4
+    properties: {text: ΖΑΛΗ}
+    type: CheckBox
+    layout_properties: {grid_position: 'WICJCB,GAWAPO'}
+  - name: label_9
+    properties: {text: 'ΠΡΙΝ:'}
+    type: Label
+    layout_properties: {grid_position: 'WICJCB,EEUCVL'}
+  - name: text_box_3
+    properties: {text: ΩΡΕΣ}
+    type: TextBox
+    layout_properties: {grid_position: 'WICJCB,ANPPHT'}
+  - name: text_box_4
+    properties: {text: ΜΕΡΕΣ}
+    type: TextBox
+    layout_properties: {grid_position: 'WICJCB,TUIAYQ'}
+  - name: check_box_15
+    properties: {text: check_box_15}
+    type: CheckBox
+    layout_properties: {grid_position: 'YHAAEI,FFAQYE'}
+  - name: check_box_14
+    properties: {text: check_box_14}
+    type: CheckBox
+    layout_properties: {grid_position: 'TKBETC,UPRORQ'}
+  - name: check_box_13
+    properties: {text: check_box_13}
+    type: CheckBox
+    layout_properties: {grid_position: 'RVZONS,IWEWAH'}
+  - name: check_box_12
+    properties: {text: check_box_12}
+    type: CheckBox
+    layout_properties: {grid_position: 'KTRAAC,UNJLYG'}
+  - name: check_box_11
+    properties: {text: check_box_11}
+    type: CheckBox
+    layout_properties: {grid_position: 'PJWFKU,DKCCQM'}
+  - name: check_box_5
+    properties: {text: check_box_5}
+    type: CheckBox
+    layout_properties: {grid_position: 'MPDAPM,WOQUSA'}
+  - name: check_box_6
+    properties: {text: check_box_6}
+    type: CheckBox
+    layout_properties: {grid_position: 'IAUUQS,LLDLKK'}
+  - name: check_box_8
+    properties: {text: check_box_8}
+    type: CheckBox
+    layout_properties: {grid_position: 'AXECZD,PQKNRS'}
+  - name: check_box_7
+    properties: {text: check_box_7}
+    type: CheckBox
+    layout_properties: {grid_position: 'ITHHBP,YRAXPF'}
+  - name: check_box_9
+    properties: {text: check_box_9}
+    type: CheckBox
+    layout_properties: {grid_position: 'DLVBSE,JRYEFK'}
+  - name: check_box_10
+    properties: {text: check_box_10}
+    type: CheckBox
+    layout_properties: {grid_position: 'VSBCFO,KIYMHC'}
+  - name: text_area_1
+    properties: {height: 75}
+    type: TextArea
+    layout_properties: {grid_position: 'BMKJCO,LQVYZL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
