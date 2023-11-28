@@ -152,14 +152,34 @@ components:
     properties: {text: check_box_15}
     type: CheckBox
     layout_properties: {grid_position: 'YHAAEI,FFAQYE'}
+  - name: label_8
+    properties: {text: 3. ΜΕΤΡΗΣΗ ΖΩΤΙΚΩΝ ΣΗΜΕΙΩΝ}
+    type: Label
+    layout_properties: {grid_position: 'YHAAEI,BQTPDG'}
   - name: check_box_14
     properties: {text: check_box_14}
     type: CheckBox
     layout_properties: {grid_position: 'TKBETC,UPRORQ'}
+  - name: label_10
+    properties: {text: 'ΑΡΤΗΡΙΑΚΗ ΠΙΕΣΗ (... / ..):'}
+    type: Label
+    layout_properties: {grid_position: 'TKBETC,VEJBHS'}
+  - name: outlined_15
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'TKBETC,BWVSVG'}
   - name: check_box_13
     properties: {text: check_box_13}
     type: CheckBox
     layout_properties: {grid_position: 'RVZONS,IWEWAH'}
+  - name: label_11
+    properties: {text: 'ΣΦΙΞΕΙΣ (/min):'}
+    type: Label
+    layout_properties: {grid_position: 'RVZONS,HKBPKE'}
+  - name: outlined_16
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'RVZONS,SPNRAQ'}
   - name: check_box_12
     properties: {text: check_box_12}
     type: CheckBox
