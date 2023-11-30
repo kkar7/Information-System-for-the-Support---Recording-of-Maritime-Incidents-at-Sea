@@ -231,19 +231,21 @@ components:
     properties: {text: check_box_10}
     type: CheckBox
     layout_properties: {grid_position: 'VSBCFO,KIYMHC'}
-  - name: text_area_1
-    properties: {height: 75}
-    type: TextArea
-    layout_properties: {grid_position: 'BMKJCO,LQVYZL'}
-  - name: spacer_3
-    properties: {height: 42, visible: true}
-    type: Spacer
-    layout_properties: {grid_position: 'ULULWW,GRXBPH'}
   - name: label_14
     properties: {text: Σημειώσατε το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος.}
     type: Label
     layout_properties: {grid_position: 'EHBBYN,MMFVYM'}
+  - name: data_row_panel_1
+    properties: {}
+    type: DataRowPanel
+    layout_properties: {grid_position: 'QYBNDW,RLHQER'}
+    components: []
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: label_15
+  properties: {text: Πληροφοριακό Συστήμα Υποστήριξης – Καταγραφής Περιστατικών Ναυτικών εν Πλω,
+    align: center, bold: true, underline: false}
+  type: Label
+  layout_properties: {slot: title}
