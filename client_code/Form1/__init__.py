@@ -13,7 +13,7 @@ class Form1(Form1Template):
     """This method is called when the user presses Enter in this text box"""
     pass
 
-  def check_box_5_change(self, **event_args):
+  def in_xenosoma_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     pass
 
