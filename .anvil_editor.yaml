@@ -1,5 +1,6 @@
 unique_ids:
   forms:
+    Form2: '1701362894228460332972513.03986'
     Form1: '170103370183035079296913.32368'
     Form1.ItemTemplate1: '1701117381946480480127041.00793'
     Form1.RowTemplate1: '1701361407517884858987743.2295'
@@ -8,5 +9,7 @@ unique_ids:
   server_modules:
     ServerModule1: '1701117902900573050492904.6548'
   assets:
+    ? DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png
+    : '1701362541297206584301799.8622'
     standard-page.html: X5S7VDYYURBRZJJ4DBIWTDDRHUW5J4QG
     theme.css: SECNHQULXGPNTHHPJC5DRJ74ULG5JGVM

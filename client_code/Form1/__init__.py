@@ -16,3 +16,7 @@ class Form1(Form1Template):
   def check_box_5_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     pass
+
+  def text_box_1_show(self, **event_args):
+    """This method is called when the TextBox is shown on the screen"""
+    pass
