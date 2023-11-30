@@ -19,11 +19,12 @@ components:
     type: Spacer
     layout_properties: {grid_position: 'VTWDHL,FLWRTC'}
   - name: label_1
-    properties: {text: ΕΝΗΜΕΡΩΤΙΚΟ ΔΕΛΤΙΟ ΥΓΕΙΑΣ, align: center, bold: true, underline: true}
+    properties: {text: ΕΝΗΜΕΡΩΤΙΚΟ ΔΕΛΤΙΟ ΥΓΕΙΑΣ, align: center, bold: true, underline: true,
+      role: title}
     type: Label
     layout_properties: {grid_position: 'CNYUXA,DPVLBM'}
   - name: label_2
-    properties: {text: ΣΤΟΙΧΕΙΑ ΠΛΟΙΟΥ, align: left, underline: true}
+    properties: {text: ΣΤΟΙΧΕΙΑ ΠΛΟΙΟΥ, align: left, underline: true, role: body}
     type: Label
     layout_properties: {grid_position: 'BUDLON,URCNXJ'}
   - name: label_16
@@ -130,16 +131,13 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'RWLULJ,SMMPGE'}
-  - name: text_box_2
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'YKUBKT,TISNAA'}
   - name: spacer_2
     properties: {height: 12}
     type: Spacer
     layout_properties: {grid_position: 'WYIOIE,OXKHSB'}
   - name: label_4
-    properties: {text: ΣΤΟΙΧΕΙΑ ΑΣΘΕΝΟΥΣ, underline: true}
+    properties: {text: ΣΤΟΙΧΕΙΑ ΑΣΘΕΝΟΥΣ, underline: true, role: body, spacing_below: medium,
+      spacing_above: medium}
     type: Label
     layout_properties: {grid_position: 'RSTAQG,UMCGPB'}
   - name: outlined_7
@@ -329,6 +327,6 @@ components:
   layout_properties: {slot: nav-right}
 - name: label_15
   properties: {text: Πληροφοριακό Συστήμα Υποστήριξης – Καταγραφής Περιστατικών Ναυτικών εν Πλω,
-    align: center, bold: true, underline: false}
+    align: center, bold: true, underline: false, role: headline}
   type: Label
   layout_properties: {slot: title}
