@@ -372,3 +372,4 @@ components:
     align: center, bold: true, underline: false, role: headline}
   type: Label
   layout_properties: {slot: title}
+custom_component: true
