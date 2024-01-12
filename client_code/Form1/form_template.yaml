@@ -358,7 +358,11 @@ components:
     properties: {}
     type: DataRowPanel
     layout_properties: {grid_position: 'OPZARC,MOMXFV'}
-    components: []
+    components:
+    - name: submit
+      properties: {text: Καταχώρηση, bold: true}
+      type: Button
+      layout_properties: {}
   - name: label_14
     properties: {text: Σημειώσατε το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος.}
     type: Label
