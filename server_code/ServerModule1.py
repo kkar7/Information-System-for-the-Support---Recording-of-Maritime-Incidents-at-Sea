@@ -1,11 +1,13 @@
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+import anvil.server
+import anvil.users
 
 #different user permissions
 @anvil.server.callable
 def print_my_permissions():
-  super_user = 'ryan@anvil.works'
+  super_user = 'konstantinoschios@hotmail.com'
   if anvil.users.get_user() is None:
     print("Nobody is logged in.")
   elif anvil.users.get_user()['email'] == super_user:
