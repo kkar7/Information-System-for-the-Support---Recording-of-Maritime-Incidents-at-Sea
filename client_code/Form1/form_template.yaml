@@ -32,9 +32,10 @@ components:
     type: Label
     layout_properties: {grid_position: 'PNORHN,ACWALG'}
   - name: pi_shipname
-    properties: {role: outlined}
+    properties: {role: outlined, visible: true}
     type: TextBox
     layout_properties: {grid_position: 'PNORHN,SFLHOK'}
+    event_bindings: {pressed_enter: pi_shipname_pressed_enter}
   - name: label_17
     properties: {text: 'ΔΙΕΘΝΕΣ ΣΗΜΑ:'}
     type: Label
@@ -43,6 +44,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'PNORHN,XYTKXN'}
+    event_bindings: {pressed_enter: pi_diethnessima_pressed_enter}
   - name: label_18
     properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
     type: Label
@@ -51,6 +53,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'CQHEEY,EFCNMW'}
+    event_bindings: {pressed_enter: pi_ethnikotita_pressed_enter}
   - name: label_19
     properties: {text: 'ΤΥΠΟΣ:'}
     type: Label
@@ -59,6 +62,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'CQHEEY,DFQWMT'}
+    event_bindings: {pressed_enter: pi_type_pressed_enter}
   - name: label_20
     properties: {text: 'E.T.A.:'}
     type: Label
@@ -67,6 +71,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'QEXUCE,KDRQQX'}
+    event_bindings: {pressed_enter: pi_eta_pressed_enter}
   - name: label_21
     properties: {text: 'ΝΑΥΤ. ΖΩΝΗ:'}
     type: Label
@@ -75,6 +80,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'QEXUCE,CJSWGT'}
+    event_bindings: {pressed_enter: pi_naftikizoni_pressed_enter}
   - name: label_22
     properties: {text: 'ΚΑΙΡΟΣ:'}
     type: Label
@@ -83,6 +89,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'SCKQMN,MUPHYF'}
+    event_bindings: {pressed_enter: pi_kairos_pressed_enter}
   - name: label_23
     properties: {text: 'LOG:'}
     type: Label
@@ -91,6 +98,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'PUHGDY,ZSBTTA'}
+    event_bindings: {pressed_enter: pi_logitude_pressed_enter}
   - name: label_26
     properties: {text: 'LAT:'}
     type: Label
@@ -99,6 +107,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'PUHGDY,CVKJCF'}
+    event_bindings: {pressed_enter: pi_latitude_pressed_enter}
   - name: label_24
     properties: {text: 'ΠΡΟΕΛΕΥΣΗ:'}
     type: Label
@@ -107,6 +116,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'HVEYBQ,TWMQMO'}
+    event_bindings: {pressed_enter: pi_proeleusi_pressed_enter}
   - name: label_25
     properties: {text: 'ΠΡΟΟΡΙΣΜΟΣ:'}
     type: Label
@@ -115,6 +125,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'HVEYBQ,SOVUJL'}
+    event_bindings: {pressed_enter: pi_destination_pressed_enter}
   - name: label_27
     properties: {text: 'ΜΕΤΑΦΕΡΟΜΕΝΟ ΦΟΡΤΙΟ:'}
     type: Label
@@ -123,6 +134,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'RWLULJ,DNDPBV'}
+    event_bindings: {pressed_enter: pi_cargo_pressed_enter}
   - name: label_28
     properties: {text: 'ΕΙΔΟΣ ΦΑΡΜΑΚΕΙΟΥ:'}
     type: Label
@@ -131,6 +143,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'RWLULJ,SMMPGE'}
+    event_bindings: {pressed_enter: pi_pharm_pressed_enter}
   - name: spacer_2
     properties: {height: 12}
     type: Spacer
@@ -148,6 +161,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'BZDIGP,FLAWUU'}
+    event_bindings: {pressed_enter: as_eponimo_pressed_enter}
   - name: label_30
     properties: {text: 'ONOMA:'}
     type: Label
@@ -156,6 +170,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'BZDIGP,KLARZD'}
+    event_bindings: {pressed_enter: as_onoma_pressed_enter}
   - name: label_31
     properties: {text: 'ΗΛΙΚΙΑ:'}
     type: Label
@@ -164,6 +179,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'BZDIGP,BKPGPI'}
+    event_bindings: {pressed_enter: as_ilikia_pressed_enter}
   - name: label_32
     properties: {text: 'ΕΙΔΙΚΟΤΗΤΑ:'}
     type: Label
@@ -172,6 +188,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'PZZJFK,OOFWCA'}
+    event_bindings: {pressed_enter: as_eidikotita_pressed_enter}
   - name: label_33
     properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
     type: Label
@@ -180,6 +197,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'PZZJFK,BKPHST'}
+    event_bindings: {pressed_enter: as_ethnikotitanaft_pressed_enter}
   - name: label_34
     properties: {text: 'ΥΨΟΣ (cm):'}
     type: Label
@@ -188,6 +206,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'DLOTXM,WPRDHG'}
+    event_bindings: {pressed_enter: as_ipsos_pressed_enter}
   - name: label_35
     properties: {text: 'ΒΑΡΟΣ (kg):'}
     type: Label
@@ -196,6 +215,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'DLOTXM,MMNQBY'}
+    event_bindings: {pressed_enter: as_varos_pressed_enter}
   - name: label_36
     properties: {text: 'ΜΕΘ. Η ΑΡΙΘΜΟΣ ΔΙΑΒΑΤΗΡΙΟΥ:'}
     type: Label
@@ -204,6 +224,7 @@ components:
     properties: {role: outlined}
     type: TextBox
     layout_properties: {grid_position: 'GVAHNF,DWUUAA'}
+    event_bindings: {pressed_enter: as_am_pressed_enter}
   - name: spacer_1
     properties: {height: 78}
     type: Spacer
@@ -221,6 +242,7 @@ components:
     properties: {text: ΠΟΝΟΣ}
     type: CheckBox
     layout_properties: {grid_position: 'PHSHTM,JCWPWF'}
+    event_bindings: {change: in_ponos_change}
   - name: label_6
     properties: {text: 1. ΤΡΟΠΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ}
     type: Label
@@ -229,6 +251,7 @@ components:
     properties: {text: ΠΥΡΕΤΟΣ}
     type: CheckBox
     layout_properties: {grid_position: 'KTELOX,MLXMIM'}
+    event_bindings: {change: in_piretos_change}
   - name: in_xafnikiemfanisisiptomaton
     properties: {text: ΞΑΦΝΙΚΑ, checked: false, visible: true, align: right}
     type: CheckBox
@@ -241,6 +264,7 @@ components:
     properties: {text: ΡΙΓΟΣ}
     type: CheckBox
     layout_properties: {grid_position: 'DQBYIL,VTUDDN'}
+    event_bindings: {change: in_rigos_change}
   - name: label_7
     properties: {text: '2. ΧΡΟΝΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ '}
     type: Label
@@ -249,6 +273,7 @@ components:
     properties: {text: ΖΑΛΗ}
     type: CheckBox
     layout_properties: {grid_position: 'WICJCB,GAWAPO'}
+    event_bindings: {change: in_zali_change}
   - name: label_38
     properties: {text: 'ΠΡΙΝ (ώρες):', align: right}
     type: Label
@@ -269,10 +294,12 @@ components:
     properties: {text: ΕΜΕΤΟΣ}
     type: CheckBox
     layout_properties: {grid_position: 'YHAAEI,FFAQYE HWWPKW,PCIQYQ'}
+    event_bindings: {change: in_emetos_change}
   - name: in_diaria
     properties: {text: ΔΙΑΡΡΟΙΑ}
     type: CheckBox
     layout_properties: {grid_position: 'YHAAEI,FFAQYE PNUUGH,LLZQZM'}
+    event_bindings: {change: in_diaria_change}
   - name: label_8
     properties: {text: 3. ΜΕΤΡΗΣΗ ΖΩΤΙΚΩΝ ΣΗΜΕΙΩΝ}
     type: Label
@@ -281,6 +308,7 @@ components:
     properties: {text: ΤΡΑΥΜΑ}
     type: CheckBox
     layout_properties: {grid_position: 'TKBETC,UPRORQ'}
+    event_bindings: {change: in_travma_change}
   - name: label_10
     properties: {text: 'ΑΡΤΗΡΙΑΚΗ ΠΙΕΣΗ (... / ..):', align: right}
     type: Label
@@ -293,6 +321,7 @@ components:
     properties: {text: ΕΡΥΘΡΟΤΗΤΑ}
     type: CheckBox
     layout_properties: {grid_position: 'RVZONS,IWEWAH'}
+    event_bindings: {change: in_erithrotita_change}
   - name: label_11
     properties: {text: 'ΣΦΙΞΕΙΣ (/min):', align: right}
     type: Label
