@@ -10,10 +10,11 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-  
+
+    # Any code you write here will run before the form opens.
     anvil.users.login_with_form()  #call login_form
     anvil.server.call('print_my_permissions')
-    # Any code you write here will run before the form opens.
+    
   
   
 
