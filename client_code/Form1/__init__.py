@@ -131,3 +131,71 @@ class Form1(Form1Template):
   def in_erithrotita_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
     pass
+
+  def in_priximo_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+  pass
+  
+  def in_aimoragia_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_xenosoma_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_vixas_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_dispnia_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_adunamia_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_apolia_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_xafnikiemfanisisiptomaton_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_stadiakiemfsimpt_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+
+  def in_ores_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def in_meres_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def outlined_15_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def in_sfixis_pressed_enter(self, **event_args):
+    """This method is called when the user presses Enter in this text box"""
+    pass
+
+  def in_xroniespathisis_change(self, **event_args):
+    """This method is called when the text in this text area is edited"""
+    pass
+
+  def in_proigoumenesxeirourgikesep_change(self, **event_args):
+    """This method is called when the text in this text area is edited"""
+    pass
+
+  def in_allasimptomata_change(self, **event_args):
+    """This method is called when the text in this text area is edited"""
+    pass
+    
+
+  
+    

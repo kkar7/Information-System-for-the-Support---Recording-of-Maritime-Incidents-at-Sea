@@ -9,7 +9,7 @@ components:
   layout_properties: {slot: nav-right}
   components:
   - type: ColumnPanel
-    properties: {}
+    properties: {col_widths: '{}'}
     name: content_panel
     components:
     - name: image_1
@@ -260,10 +260,12 @@ components:
       properties: {text: ΞΑΦΝΙΚΑ, checked: false, visible: true, align: right}
       type: CheckBox
       layout_properties: {grid_position: 'KTELOX,IXAAJE'}
+      event_bindings: {change: in_xafnikiemfanisisiptomaton_change}
     - name: in_stadiakiemfsimpt
       properties: {text: ΣΤΑΔΙΑΚΑ, align: right}
       type: CheckBox
       layout_properties: {grid_position: 'KTELOX,AQPARR'}
+      event_bindings: {change: in_stadiakiemfsimpt_change}
     - name: in_rigos
       properties: {text: ΡΙΓΟΣ}
       type: CheckBox
@@ -286,6 +288,7 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,KYGDBL'}
+      event_bindings: {pressed_enter: in_ores_pressed_enter}
     - name: label_39
       properties: {text: 'ΠΡΙΝ (ημέρες):', align: right}
       type: Label
@@ -294,6 +297,7 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'WICJCB,VUEBTD'}
+      event_bindings: {pressed_enter: in_meres_pressed_enter}
     - name: in_emetos
       properties: {text: ΕΜΕΤΟΣ}
       type: CheckBox
@@ -321,6 +325,7 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'TKBETC,BWVSVG'}
+      event_bindings: {pressed_enter: outlined_15_pressed_enter}
     - name: in_erithrotita
       properties: {text: ΕΡΥΘΡΟΤΗΤΑ}
       type: CheckBox
@@ -334,10 +339,12 @@ components:
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'RVZONS,SPNRAQ'}
+      event_bindings: {pressed_enter: in_sfixis_pressed_enter}
     - name: in_priximo
       properties: {text: ΠΡΗΞΙΜΟ}
       type: CheckBox
       layout_properties: {grid_position: 'KTRAAC,UNJLYG'}
+      event_bindings: {change: in_priximo_change}
     - name: label_12
       properties: {text: 4. ΧΡΟΝΙΕΣ ΠΑΘΗΣΕΙΣ ΑΠΟ ΤΙΣ ΟΠΟΙΕΣ ΠΑΣΧΕΙ Ο ΝΑΥΤΙΚΟΣ}
       type: Label
@@ -346,10 +353,12 @@ components:
       properties: {text: ΑΙΜΟΡΡΑΓΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'PJWFKU,DKCCQM'}
+      event_bindings: {change: in_aimoragia_change}
     - name: in_xroniespathisis
       properties: {}
       type: TextArea
       layout_properties: {grid_position: 'PJWFKU,CIFFHZ'}
+      event_bindings: {change: in_xroniespathisis_change}
     - name: in_xenosoma
       properties: {text: ΞΕΝΟ ΣΩΜΑ}
       type: CheckBox
@@ -363,22 +372,27 @@ components:
       properties: {text: ΒΗΧΑΣ}
       type: CheckBox
       layout_properties: {grid_position: 'IAUUQS,LLDLKK'}
+      event_bindings: {change: in_vixas_change}
     - name: in_proigoumenesxeirourgikesep
       properties: {}
       type: TextArea
       layout_properties: {grid_position: 'IAUUQS,OVLTET'}
+      event_bindings: {change: in_proigoumenesxeirourgikesep_change}
     - name: in_dispnia
       properties: {text: ΔΥΣΠΝΟΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'AXECZD,PQKNRS'}
+      event_bindings: {change: in_dispnia_change}
     - name: in_adunamia
       properties: {text: ΑΔΥΝΑΜΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'ITHHBP,YRAXPF'}
+      event_bindings: {change: in_adunamia_change}
     - name: in_apolia
       properties: {text: ΑΠΩΛΕΙΑ ΑΣΘΗΣΕΩΝ}
       type: CheckBox
       layout_properties: {grid_position: 'DLVBSE,JRYEFK'}
+      event_bindings: {change: in_apolia_change}
     - name: label_37
       properties: {text: ΑΛΛΑ}
       type: Label
@@ -387,6 +401,7 @@ components:
       properties: {auto_expand: true}
       type: TextArea
       layout_properties: {grid_position: 'QQAKYH,CRKBLX'}
+      event_bindings: {change: in_allasimptomata_change}
     - name: data_row_panel_1
       properties: {}
       type: DataRowPanel
