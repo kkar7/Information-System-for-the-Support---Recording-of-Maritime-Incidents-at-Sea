@@ -22,5 +22,5 @@ def add_form(ship_name):
     ship_name=ship_name, 
     #email=email, 
     #feedback=feedback, 
-    created=datetime.now()
+    #created=datetime.now()
   )
