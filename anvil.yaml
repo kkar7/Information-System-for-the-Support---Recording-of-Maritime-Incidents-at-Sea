@@ -41,4 +41,12 @@ db_schema:
       admin_ui: {order: 5, width: 200}
       type: bool
     title: Users
+  add_name:
+    client: none
+    server: full
+    columns:
+    - name: ship_name
+      admin_ui: {width: 200, order: 0}
+      type: string
+    title: Table 2
 renamed: true
