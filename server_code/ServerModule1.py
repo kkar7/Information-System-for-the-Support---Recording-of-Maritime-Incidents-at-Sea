@@ -18,7 +18,7 @@ def print_my_permissions():
 # Add more server functions as needed for your application
 @anvil.server.callable
 def add_form(ship_name):
-  app_tables.ship_form.add_row(
+  app_tables.add_form.add_row(
     ship_name=ship_name, 
     #email=email, 
     #feedback=feedback, 

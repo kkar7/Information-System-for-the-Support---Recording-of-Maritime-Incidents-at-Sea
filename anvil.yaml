@@ -49,4 +49,12 @@ db_schema:
       admin_ui: {width: 200, order: 0}
       type: string
     title: Table 2
+  add_form:
+    title: add_form
+    client: none
+    server: full
+    columns:
+    - name: ship_name
+      admin_ui: {width: 200}
+      type: string
 renamed: true
