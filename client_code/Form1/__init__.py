@@ -6,6 +6,7 @@ from anvil.tables import app_tables
 import anvil.users
 import anvil.server
 
+
 class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
@@ -198,7 +199,7 @@ class Form1(Form1Template):
 
   def submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-   ship_name = pi_shipname.text
+   ship_name = self.pi_shipname.text
    # email = self.email_box.text
    # feedback = self.feedback_box.text
   anvil.server.call('add_form', ship_name)
