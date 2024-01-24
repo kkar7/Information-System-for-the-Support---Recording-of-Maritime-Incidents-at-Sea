@@ -411,6 +411,7 @@ components:
         properties: {text: Καταχώρηση, bold: true}
         type: Button
         layout_properties: {}
+        event_bindings: {click: submit_click}
     - name: label_14
       properties: {text: Σημειώσατε το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος.,
         visible: false}

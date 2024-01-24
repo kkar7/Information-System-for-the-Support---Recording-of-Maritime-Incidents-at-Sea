@@ -195,6 +195,16 @@ class Form1(Form1Template):
   def in_allasimptomata_change(self, **event_args):
     """This method is called when the text in this text area is edited"""
     pass
+
+  def submit_click(self, **event_args):
+    """This method is called when the button is clicked"""
+   # name = self.name_box.text
+   # email = self.email_box.text
+   # feedback = self.feedback_box.text
+    #anvil.server.call('add_feedback', name, email, feedback)
+    Notification("Η Φόρμα καταχωρήθηκε").show()
+    self.clear_inputs()
+    pass
     
 
   
