@@ -198,10 +198,10 @@ class Form1(Form1Template):
 
   def submit_click(self, **event_args):
     """This method is called when the button is clicked"""
-   # name = self.name_box.text
+   ship_name = pi_shipname.text
    # email = self.email_box.text
    # feedback = self.feedback_box.text
-    #anvil.server.call('add_feedback', name, email, feedback)
+  anvil.server.call('add_form', ship_name)
     Notification("Η Φόρμα καταχωρήθηκε").show()
     self.clear_inputs()
     pass

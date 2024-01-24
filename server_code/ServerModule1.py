@@ -16,3 +16,11 @@ def print_my_permissions():
     print("This path is for minimum-access users.")
     
 # Add more server functions as needed for your application
+@anvil.server.callable
+def add_feedback(ship_name):
+  app_tables.ship_form.add_row(
+    ship_name=ship_name, 
+    #email=email, 
+    #feedback=feedback, 
+    created=datetime.now()
+  )
