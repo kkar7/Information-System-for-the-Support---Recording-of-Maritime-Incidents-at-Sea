@@ -95,14 +95,14 @@ components:
       layout_properties: {grid_position: 'SCKQMN,MUPHYF'}
       event_bindings: {pressed_enter: pi_kairos_pressed_enter}
     - name: label_23
-      properties: {text: 'LOG:'}
+      properties: {text: 'LONG:'}
       type: Label
       layout_properties: {grid_position: 'PUHGDY,KCNRTB'}
-    - name: pi_logitude
+    - name: pi_longitude
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PUHGDY,ZSBTTA'}
-      event_bindings: {pressed_enter: pi_logitude_pressed_enter}
+      event_bindings: {pressed_enter: pi_longitude_pressed_enter}
     - name: label_26
       properties: {text: 'LAT:'}
       type: Label

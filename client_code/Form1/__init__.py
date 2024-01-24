@@ -45,7 +45,7 @@ class Form1(Form1Template):
     """This method is called when the user presses Enter in this text box"""
     pass
 
-  def pi_logitude_pressed_enter(self, **event_args):
+  def pi_longitude_pressed_enter(self, **event_args):
     """This method is called when the user presses Enter in this text box"""
     pass
 
@@ -200,13 +200,28 @@ class Form1(Form1Template):
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"""
     ship_name = self.pi_shipname.text
+    sign = self.pi_diethnessima.text
+    nationallity = self.pi_ethnikotita.text
+    type = self.pi_type.text
+    eta = self.pi_eta.text
+    zone = self.pi_naftikizoni.text
+    weather = self.pi_kairos.text
+    #long = self.pi_logitude.text
+    #lat = self.pi_latitude.text
+    origine = self.pi_proeleusi.text
+    destination = self.pi_destination.text
+    cargo = self.pi_cargo.text
+    pharm = self.pi_pharm.text
    # email = self.email_box.text
    # feedback = self.feedback_box.text
     anvil.server.call('add_form',ship_name)
     Notification("Η Φόρμα καταχωρήθηκε").show()
-    self.clear_inputs()
+    #self.clear_inputs()
     pass
     
-
+ # def clear_inputs(self):
+    #self.name_box.text = ""
+    #self.email_box.text = ""
+    #self.feedback_box.text = ""
   
     
