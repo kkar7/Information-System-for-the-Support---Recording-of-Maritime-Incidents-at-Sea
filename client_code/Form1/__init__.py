@@ -202,7 +202,7 @@ class Form1(Form1Template):
     ship_name = self.pi_shipname.text
    # email = self.email_box.text
    # feedback = self.feedback_box.text
-    anvil.server.call('add_form',pi_shipname)
+    anvil.server.call('add_form',ship_name)
     Notification("Η Φόρμα καταχωρήθηκε").show()
     self.clear_inputs()
     pass
