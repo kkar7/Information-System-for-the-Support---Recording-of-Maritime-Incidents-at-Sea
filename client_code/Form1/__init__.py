@@ -212,6 +212,20 @@ class Form1(Form1Template):
     destination = self.pi_destination.text
     cargo = self.pi_cargo.text
     pharm = self.pi_pharm.text
+
+    surname = self.as_eponimo.text
+    name = self.as_onoma.text
+    age = self.as_ilikia.text
+    specialty = self.as_eidikotita.text
+    pnationallity = self.ethnikotitanaft.text
+    hight = self.as_ipsos.text
+    kg = self.as_varos.text
+    am = self.as_am.text
+
+
+    
+    
+    
    # email = self.email_box.text
    # feedback = self.feedback_box.text
     anvil.server.call('add_form',ship_name)
