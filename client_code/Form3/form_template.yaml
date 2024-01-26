@@ -1,8 +1,21 @@
 container: {type: ColumnPanel}
 components:
-- name: map_1
+- name: text_box_latitude
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'SJIKSQ,NYMJST'}
+- name: text_box_longitude
+  properties: {}
+  type: TextBox
+  layout_properties: {grid_position: 'PHSUQY,PXKITI'}
+- name: google_maps_1
   properties: {height: 258}
   type: GoogleMap
   layout_properties: {grid_position: 'XKVSRR,XBWGCW'}
-  event_bindings: {bounds_changed: map_1_bounds_changed}
+  event_bindings: {bounds_changed: google_maps_1_bounds_changed}
+- name: button_set_marker
+  properties: {text: button_1}
+  type: Button
+  layout_properties: {grid_position: 'ABPSXE,RZANRW'}
+  event_bindings: {click: button_set_marker_click}
 is_package: true

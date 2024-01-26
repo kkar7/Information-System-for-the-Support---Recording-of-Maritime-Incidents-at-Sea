@@ -24,3 +24,8 @@ def add_form(ship_name):
     #feedback=feedback, 
     #created=datetime.now()
   )
+
+#map
+@anvil.server.callable
+def set_marker_position(latitude, longitude):
+    return {"latitude": latitude, "longitude": longitude}
