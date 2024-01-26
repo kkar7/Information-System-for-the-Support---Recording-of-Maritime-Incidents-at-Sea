@@ -17,22 +17,28 @@ class Form3(Form3Template):
     """This method is called when the viewport bounds have changed."""
     pass
 
-
-
+  
   def button_set_marker_click(self, **event_args):
     # Get user input for latitude and longitude
     latitude = float(self.text_box_latitude.text)
     longitude = float(self.text_box_longitude.text)
     # Call the set_marker function
     self.set_marker(latitude, longitude)
-
-  def set_marker(self, latitude, longitude):
+  
+ # def set_marker(self, latitude, longitude):
     # Call the server function to set the marker position
-    result = anvil.server.call('set_marker_position', latitude, longitude)
+  #  result = anvil.server.call('set_marker_position', latitude, longitude)
 
     # Update the marker position on the Google Maps component
-    self.google_maps_1.center = {"lat": result['latitude'], "lng": result['longitude']}
-    self.google_maps_1.add_marker(self.google_maps_1.center)
+   # self.google_maps_1.center = {"lat": result['latitude'], "lng": result['longitude']}
+    #self.google_maps_1.add_marker(self.google_maps_1.center)
+  
+  def set_marker(self, latitude, longitude):
+    # Update the center and markers properties on the Google Maps component
+    self.google_maps_1.center = {"lat": latitude, "lng": longitude}
+    self.google_maps_1.markers = [{"lat": latitude, "lng": longitude, "title": "Marker Title"}]
+
+
 
 
 #marker = GoogleMap.Marker(
