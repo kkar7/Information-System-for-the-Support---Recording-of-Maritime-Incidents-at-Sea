@@ -223,7 +223,7 @@ class Form1(Form1Template):
     am = self.as_am.text
 
     #κιριο σιμπτομα
-    #τροποσ εμφανισισ
+    symptomsfre = self.radio_button_1.get_group_value()
     hours = self.in_ores.text
     days = self.in_meres.text
 
@@ -246,6 +246,8 @@ class Form1(Form1Template):
     #self.name_box.text = ""
     #self.email_box.text = ""
     #self.feedback_box.text = ""
+
+
 
   
     

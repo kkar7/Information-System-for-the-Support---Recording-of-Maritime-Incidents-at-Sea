@@ -368,10 +368,10 @@ components:
       layout_properties: {grid_position: 'PJWFKU,CIFFHZ'}
       event_bindings: {change: in_xroniespathisis_change}
     - name: in_xenosoma
-      properties: {text: ΞΕΝΟ ΣΩΜΑ}
+      properties: {text: ΞΕΝΟ ΣΩΜΑ, allow_indeterminate: false, enabled: true}
       type: CheckBox
       layout_properties: {grid_position: 'MPDAPM,WOQUSA'}
-      event_bindings: {change: in_xenosoma_change}
+      event_bindings: {change: in_xenosoma_change, show: in_xenosoma_show}
     - name: label_13
       properties: {text: 5. ΠΡΟΗΓΟΥΜΕΝΕΣ ΧΕΙΡΟΥΡΓΙΚΕΣ ΕΠΕΜΒΑΣΕΙΣ}
       type: Label
