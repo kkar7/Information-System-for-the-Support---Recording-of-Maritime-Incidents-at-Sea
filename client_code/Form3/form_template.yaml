@@ -1,0 +1,8 @@
+container: {type: ColumnPanel}
+components:
+- name: map_1
+  properties: {height: 258}
+  type: GoogleMap
+  layout_properties: {grid_position: 'XKVSRR,XBWGCW'}
+  event_bindings: {bounds_changed: map_1_bounds_changed}
+is_package: true
