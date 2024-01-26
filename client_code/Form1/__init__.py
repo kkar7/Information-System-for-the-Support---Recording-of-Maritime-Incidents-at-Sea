@@ -222,7 +222,16 @@ class Form1(Form1Template):
     kg = self.as_varos.text
     am = self.as_am.text
 
+    #κιριο σιμπτομα
+    #τροποσ εμφανισισ
+    hours = self.in_ores.text
+    days = self.in_meres.text
 
+    #piesi
+    pulses = self.in_sfixis.text
+    chronicdis = self.in_xroniespathisis.text
+    surg = self.in_proigoumenesxeirourgikesep.text
+    
     
     
     
