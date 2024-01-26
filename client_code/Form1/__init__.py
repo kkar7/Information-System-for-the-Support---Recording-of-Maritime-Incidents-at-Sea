@@ -247,8 +247,5 @@ class Form1(Form1Template):
     #self.email_box.text = ""
     #self.feedback_box.text = ""
 
-  def map_1_bounds_changed(self, **event_args):
-    """This method is called when the viewport bounds have changed."""
-    pass
   
     

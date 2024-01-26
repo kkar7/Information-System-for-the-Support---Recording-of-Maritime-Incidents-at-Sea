@@ -25,15 +25,9 @@ class Form3(Form3Template):
     # Call the set_marker function
     self.set_marker(latitude, longitude)
   
- # def set_marker(self, latitude, longitude):
-    # Call the server function to set the marker position
-  #  result = anvil.server.call('set_marker_position', latitude, longitude)
-
-    # Update the marker position on the Google Maps component
-   # self.google_maps_1.center = {"lat": result['latitude'], "lng": result['longitude']}
-    #self.google_maps_1.add_marker(self.google_maps_1.center)
-  
   def set_marker(self, latitude, longitude):
+    # Call the server function to set the marker position
+    
     # Update the center and markers properties on the Google Maps component
     self.google_maps_1.center = {"lat": latitude, "lng": longitude}
     self.google_maps_1.markers = [{"lat": latitude, "lng": longitude, "title": "Marker Title"}]
@@ -41,11 +35,11 @@ class Form3(Form3Template):
 
 
 
-#marker = GoogleMap.Marker(
-#  animation=GoogleMap.Animation.DROP,
- # position=GoogleMap.LatLng(52.2053, 0.1218)
-#)
-#map.map_1(marker)
+marker = GoogleMap.Marker(
+  animation=GoogleMap.Animation.DROP,
+  position=GoogleMap.LatLng(52.2053, 0.1218)
+)
+map.map_1(marker)
 
 
 
