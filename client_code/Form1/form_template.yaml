@@ -1,15 +1,21 @@
+properties: []
 is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+events:
+- {name: event, default_event: true}
+custom_component: true
 components:
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+- name: label_15
+  properties: {text: Πληροφοριακό Συστήμα Υποστήριξης – Καταγραφής Περιστατικών Ναυτικών εν Πλω,
+    align: right, bold: true, underline: false, role: headline, icon_align: top}
+  type: Label
+  layout_properties: {slot: title}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {col_widths: '{}'}
+    properties: {col_widths: '{}', visible: true, spacing_below: small}
     name: content_panel
     components:
     - name: image_1
@@ -417,9 +423,11 @@ components:
         visible: false}
       type: Label
       layout_properties: {grid_position: 'EHBBYN,MMFVYM'}
-- name: label_15
-  properties: {text: Πληροφοριακό Συστήμα Υποστήριξης – Καταγραφής Περιστατικών Ναυτικών εν Πλω,
-    align: center, bold: true, underline: false, role: headline}
-  type: Label
-  layout_properties: {slot: title}
-custom_component: true
+    layout_properties: {slot: nav-right, grid_position: 'DMPPOV,SYSBHA'}
+- type: FlowPanel
+  properties: {}
+  name: flow_panel_1
+  layout_properties: {slot: nav-right}
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}

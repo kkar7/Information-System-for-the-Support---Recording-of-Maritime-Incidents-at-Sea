@@ -12,7 +12,43 @@ components:
     properties: {role: outlined-card}
     type: ColumnPanel
     layout_properties: {grid_position: 'NNUPWY,ZLIVTL'}
+  - name: outlined_1
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'BEHFEV,RDOAMO'}
+  - name: outlined_2
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'XUMZCF,DYPDBU'}
+  - name: outlined_3
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'QHSQJA,TUBAZS'}
+  - name: outlined_4
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'TRQAXP,BBJDLO'}
+  - name: outlined_5
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'WTXIGZ,XSYEKD'}
+  - name: outlined_6
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'XEUZEE,QZIETB'}
+  - name: outlined_8
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'QZHMPU,XTAOGP'}
+  - name: outlined_7
+    properties: {role: outlined}
+    type: TextBox
+    layout_properties: {grid_position: 'ACCUHO,FGOICP'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: left-nav}
