@@ -222,7 +222,7 @@ class Form1(Form1Template):
     kg = self.as_varos.text
     am = self.as_am.text
 
-    #κιριο σιμπτομα
+    #symptomps_intro
     symptomsfre = self.radio_button_1.get_group_value()
     hours = self.in_ores.text
     days = self.in_meres.text
@@ -232,6 +232,7 @@ class Form1(Form1Template):
     chronicdis = self.in_xroniespathisis.text
     surg = self.in_proigoumenesxeirourgikesep.text
     
+    #basic symphtoms
     
     
     
@@ -246,6 +247,10 @@ class Form1(Form1Template):
     #self.name_box.text = ""
     #self.email_box.text = ""
     #self.feedback_box.text = ""
+
+  def showbutton_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
 
 
 

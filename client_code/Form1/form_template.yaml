@@ -122,6 +122,7 @@ components:
       properties: {text: Show on Map}
       type: Button
       layout_properties: {grid_position: 'PUHGDY,MNPLDS'}
+      event_bindings: {click: showbutton_click}
     - name: label_24
       properties: {text: 'ΠΡΟΕΛΕΥΣΗ:'}
       type: Label
