@@ -11,7 +11,11 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+    self.check_boxes = [self.check_box_1, self.check_box_2, self.check_box_3, self.check_box_4]
+    #στην πανω γραμμη πρεπει να αλλαξω τα ονοματα με αυτα π εχω εγω στα selfcheck boxes
 
+
+    
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()  #call login_form
     anvil.server.call('print_my_permissions')
@@ -101,9 +105,6 @@ class Form1(Form1Template):
     """This method is called when the user presses Enter in this text box"""
     pass
 
-  def in_ponos_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
 
   def in_piretos_change(self, **event_args):
     """This method is called when this checkbox is checked or unchecked"""
@@ -233,7 +234,11 @@ class Form1(Form1Template):
     surg = self.in_proigoumenesxeirourgikesep.text
     
     #basic symphtoms
-    
+      def in_ponos_change(self, **event_args):
+    """This method is called when this checkbox is checked or unchecked"""
+    pass
+    #ponos = self.in_ponos
+    basic_sympt =  [box.text for box in self.check_boxes if box.checked == True]
     
     
    # email = self.email_box.text
@@ -252,6 +257,7 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     pass
 
+ 
 
 
   
