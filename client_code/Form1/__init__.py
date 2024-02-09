@@ -11,7 +11,7 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.check_boxes = [self.check_box_1, self.check_box_2, self.check_box_3, self.check_box_4]
+    self.check_boxes = [self.in_ponos, self.in_piretos, self.in_rigos, self.in_zali, self.in_emetos, self.in_diaria, self.in_travma, self.in_erithrotita, self.in_priximo, self.in_aimoragia, self.in_xenosoma, self.in_vixas, self.in_dispnia, self.in_adunamia, self.in_apolia]
     #στην πανω γραμμη πρεπει να αλλαξω τα ονοματα με αυτα π εχω εγω στα selfcheck boxes
 
 
@@ -234,8 +234,8 @@ class Form1(Form1Template):
     surg = self.in_proigoumenesxeirourgikesep.text
     
     #basic symphtoms
-      def in_ponos_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
+    def in_ponos_change(self, **event_args):
+      """This method is called when this checkbox is checked or unchecked"""
     pass
     #ponos = self.in_ponos
     basic_sympt =  [box.text for box in self.check_boxes if box.checked == True]
