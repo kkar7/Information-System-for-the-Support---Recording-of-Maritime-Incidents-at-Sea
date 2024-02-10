@@ -19,16 +19,45 @@ def print_my_permissions():
 @anvil.server.callable
 def add_form(ship_name):
   app_tables.add_form.add_row(
+    #sip_data
     ship_name=ship_name,
-    sign = self.pi_diethnessima.text
-    nationallity = self.pi_ethnikotita.text
-    type = self.pi_type.text
-    eta = self.pi_eta.text
-    zone = self.pi_naftikizoni.text
-    weather = self.pi_kairos.text
+    sign = sign,
+    nationallity = nationallity,
+    type = type,
+    eta = eta,
+    zone = zone,
+    weather = weather,
     #na valw longitude latitude
     #££££££££££££££££££££££££
+    origine = origine,
+    destination = destination,
+    cargo = cargo,
+    pharm = pharm,
 
+    #sailor_data
+    surname = surname,
+    name = name,
+    age = age,
+    speciality = speciality,
+    sailor_nationality = sailor_nationality,
+    height = height,
+    kg = kg,
+    s_id = s_id,
+    
+    #symptoms
+    #symptoms_intro
+    symptomsfre = self.radio_button_1.get_group_value()
+    hours = self.in_ores.text
+    days = self.in_meres.text
+
+    #piesi
+    pulses = self.in_sfixis.text
+    chronicdis = self.in_xroniespathisis.text
+    surg = self.in_proigoumenesxeirourgikesep.text
+    
+    
+
+    
     #email=email, 
     #feedback=feedback, 
     #created=datetime.now()

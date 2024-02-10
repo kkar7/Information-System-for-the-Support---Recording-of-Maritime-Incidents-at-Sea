@@ -217,11 +217,11 @@ class Form1(Form1Template):
     surname = self.as_eponimo.text
     name = self.as_onoma.text
     age = self.as_ilikia.text
-    specialty = self.as_eidikotita.text
-    pnationallity = self.ethnikotitanaft.text
-    hight = self.as_ipsos.text
+    speciality = self.as_eidikotita.text
+    sailor_nationality = self.ethnikotitanaft.text
+    height = self.as_ipsos.text
     kg = self.as_varos.text
-    am = self.as_am.text
+    s_id = self.as_am.text
 
     #symptomps_intro
     symptomsfre = self.radio_button_1.get_group_value()
