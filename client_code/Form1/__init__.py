@@ -239,7 +239,7 @@ class Form1(Form1Template):
     pass
     #ponos = self.in_ponos
     basic_sympt =  [box.text for box in self.check_boxes if box.checked == True]
-    
+    other_symptoms = self.in_allasimptomata.text
     
    # email = self.email_box.text
    # feedback = self.feedback_box.text

@@ -52,12 +52,14 @@ def add_form(ship_name):
     hours = hours,
     days = days,
 
-    #piesi
-    pulses = self.in_sfixis.text
-    chronicdis = self.in_xroniespathisis.text
-    surg = self.in_proigoumenesxeirourgikesep.text
+    #piesi####################
+    pulses = pulses,
+    chronicdis = chronicdis,
+    surgeries = surgeries,
     
-    
+    #check box symptoms
+    ##########################
+    other_symptoms = self.in_allasimptomata.text
 
     
     #email=email, 
