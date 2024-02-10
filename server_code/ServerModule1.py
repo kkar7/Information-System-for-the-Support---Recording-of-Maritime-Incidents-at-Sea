@@ -16,10 +16,12 @@ def print_my_permissions():
     print("This path is for minimum-access users.")
     
 # Add more server functions as needed for your application
+
+#store data for form
 @anvil.server.callable
 def add_form(ship_name):
   app_tables.add_form.add_row(
-    #sip_data
+    #ship_data
     ship_name=ship_name,
     sign = sign,
     nationallity = nationallity,
@@ -46,9 +48,9 @@ def add_form(ship_name):
     
     #symptoms
     #symptoms_intro
-    symptomsfre = self.radio_button_1.get_group_value()
-    hours = self.in_ores.text
-    days = self.in_meres.text
+    symptomsfre = symptomsfre,
+    hours = hours,
+    days = days,
 
     #piesi
     pulses = self.in_sfixis.text
