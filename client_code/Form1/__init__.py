@@ -254,7 +254,12 @@ class Form1(Form1Template):
     #self.feedback_box.text = ""
 
   def showbutton_click(self, **event_args):
-    """This method is called when the button is clicked"""
+    "This method is called when the button Show on Map is clicked"
+    marker = GoogleMap.Marker(
+    animation=GoogleMap.Animation.DROP,
+    position=GoogleMap.LatLng(52.2053, 0.1218)
+    )
+    map.add_component(marker)
     pass
 
  
