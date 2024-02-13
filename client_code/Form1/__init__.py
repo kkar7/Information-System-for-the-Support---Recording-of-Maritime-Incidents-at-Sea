@@ -21,185 +21,11 @@ class Form1(Form1Template):
     anvil.server.call('print_my_permissions')
     
   
-  def pi_shipname_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_diethnessima_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_ethnikotita_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_type_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_eta_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_naftikizoni_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_kairos_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_longitude_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_latitude_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_proeleusi_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_destination_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_cargo_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def pi_pharm_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_eponimo_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_onoma_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_ilikia_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_eidikotita_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_ethnikotitanaft_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_ipsos_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_varos_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def as_am_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-
-  def in_piretos_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_rigos_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_zali_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_emetos_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_diaria_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_travma_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_erithrotita_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_priximo_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-  pass
   
-  def in_aimoragia_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_xenosoma_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_vixas_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_dispnia_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_adunamia_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_apolia_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_xafnikiemfanisisiptomaton_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_stadiakiemfsimpt_change(self, **event_args):
-    """This method is called when this checkbox is checked or unchecked"""
-    pass
-
-  def in_ores_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def in_meres_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def outlined_15_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def in_sfixis_pressed_enter(self, **event_args):
-    """This method is called when the user presses Enter in this text box"""
-    pass
-
-  def in_xroniespathisis_change(self, **event_args):
-    """This method is called when the text in this text area is edited"""
-    pass
-
-  def in_proigoumenesxeirourgikesep_change(self, **event_args):
-    """This method is called when the text in this text area is edited"""
-    pass
-
-  def in_allasimptomata_change(self, **event_args):
-    """This method is called when the text in this text area is edited"""
-    pass
 
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"""
+    #ship_data
     ship_name = self.pi_shipname.text
     sign = self.pi_diethnessima.text
     nationallity = self.pi_ethnikotita.text
@@ -214,6 +40,7 @@ class Form1(Form1Template):
     cargo = self.pi_cargo.text
     pharm = self.pi_pharm.text
 
+    #sailor (patient) data
     surname = self.as_eponimo.text
     name = self.as_onoma.text
     age = self.as_ilikia.text
@@ -223,22 +50,94 @@ class Form1(Form1Template):
     kg = self.as_varos.text
     s_id = self.as_am.text
 
+    #symptomps
     #symptomps_intro
     symptomsfre = self.radio_button_1.get_group_value()
     hours = self.in_ores.text
     days = self.in_meres.text
 
-    #piesi
+    #piesi££££££££££££££££££££££££££
     pulses = self.in_sfixis.text
     chronicdis = self.in_xroniespathisis.text
     surg = self.in_proigoumenesxeirourgikesep.text
     
     #basic symphtoms (check boxes area)
-    def in_ponos_change(self, **event_args):
-      """This method is called when this checkbox is checked or unchecked"""
-    pass
-    #ponos = self.in_ponos
-    basic_sympt =  [box.text for box in self.check_boxes if box.checked == True]
+    if self.in_ponos.checked:
+      pain = True
+    else:
+      pain = False
+    
+    if self.in_piretos.checked:
+      fever = True
+    else:
+      fever = False      
+    
+    if self.in_rigos.checked:
+      frown = True
+    else:
+      frown = False  
+    
+    if self.in_zali.checked:
+      dizziness = True
+    else:
+      dizziness = False  
+
+    if self.in_emetos.checked:
+      vomit = True
+    else:
+      vomit = False 
+
+    if self.in_diaria.checked:
+      diarrhea = True
+    else:
+      diarrhea = False
+
+    if self.in_travma.checked:
+      wound = True
+    else:
+      wound = False
+
+    if self.in_erithrotita.checked:
+      redness = True
+    else:
+      redness = False
+
+    if self.in_priximo.checked:
+      swelling = True
+    else:
+      swelling  = False   
+
+    if self.in_aimoragia.checked:
+      bleeding = True
+    else:
+      bleeding  = False
+
+    if self.in_xenosoma.checked:
+      foreign_body = True
+    else:
+      foreign_body  = False    
+
+    if self.in_vixas.checked:
+      cough = True
+    else:
+      cough  = False
+
+    if self.in_dispnia.checked:
+      breath_shortness = True
+    else:
+      breath_shortness  = False  
+
+    if self.in_adunamia.checked:
+      weakness = True
+    else:
+      weakness  = False  
+
+    if self.in_apolia.checked:
+      loss_of_senses = True
+    else:
+      loss_of_senses  = False  
+    #end of check boxes 
+    
     other_symptoms = self.in_allasimptomata.text
     
    # email = self.email_box.text
