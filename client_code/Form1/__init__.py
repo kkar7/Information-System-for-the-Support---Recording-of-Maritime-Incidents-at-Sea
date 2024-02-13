@@ -233,7 +233,7 @@ class Form1(Form1Template):
     chronicdis = self.in_xroniespathisis.text
     surg = self.in_proigoumenesxeirourgikesep.text
     
-    #basic symphtoms
+    #basic symphtoms (check boxes area)
     def in_ponos_change(self, **event_args):
       """This method is called when this checkbox is checked or unchecked"""
     pass
