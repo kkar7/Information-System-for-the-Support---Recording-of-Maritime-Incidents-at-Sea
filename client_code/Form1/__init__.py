@@ -45,7 +45,7 @@ class Form1(Form1Template):
     name = self.as_onoma.text
     age = self.as_ilikia.text
     speciality = self.as_eidikotita.text
-    sailor_nationality = self.ethnikotitanaft.text
+    sailor_nationality = self.as_ethnikotitanaft.text
     height = self.as_ipsos.text
     kg = self.as_varos.text
     s_id = self.as_am.text
