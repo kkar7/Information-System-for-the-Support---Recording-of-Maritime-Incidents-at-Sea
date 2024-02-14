@@ -75,7 +75,7 @@ def add_form(ship_name):
     weakness = weakness,  
     loss_of_senses = loss_of_senses, 
     
-    other_symptoms = self.in_allasimptomata.text
+    other_symptoms = other_symptoms
 
     
     #email=email, 
