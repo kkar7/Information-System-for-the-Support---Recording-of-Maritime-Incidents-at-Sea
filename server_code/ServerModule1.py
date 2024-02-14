@@ -21,6 +21,7 @@ def print_my_permissions():
 @anvil.server.callable
 def add_form(ship_name):
   app_tables.add_form.add_row(
+    
     #ship_data
     ship_name=ship_name,
     sign = sign,
@@ -58,7 +59,22 @@ def add_form(ship_name):
     surgeries = surgeries,
     
     #check box symptoms
-    ##########################
+    pain = pain,   
+    fever = fever,        
+    frown = frown,    
+    dizziness = dizziness, 
+    vomit = vomit,
+    diarrhea = diarrhea,
+    wound = wound,
+    redness = redness, 
+    swelling = swelling,   
+    bleeding = bleeding, 
+    foreign_body = foreign_body,     
+    cough = cough, 
+    breath_shortness = breath_shortness,
+    weakness = weakness,  
+    loss_of_senses = loss_of_senses, 
+    
     other_symptoms = self.in_allasimptomata.text
 
     
