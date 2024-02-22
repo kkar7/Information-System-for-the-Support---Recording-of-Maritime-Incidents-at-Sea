@@ -159,11 +159,14 @@ class Form1(Form1Template):
 
   def showbutton_click(self, **event_args):
     "This method is called when the button Show on Map is clicked"
-    marker = GoogleMap.Marker(
-    animation=GoogleMap.Animation.DROP,
-    position=GoogleMap.LatLng(52.2053, 0.1218)
-    )
-    map.add_component(marker)
+    long = self.pi_longitude.text
+    lat = self.pi_latitude.text
+    
+    # Δημιουργούμε το URL για τους Χάρτες Google
+    google_maps_url = f"https://www.google.com/maps?q={lat},{long}"
+    
+    # Ανοίγουμε το URL σε νέο παράθυρο του browser
+    anvil.js.window.open(google_maps_url)
     pass
 
   def outlined_button_1_click(self, **event_args):
