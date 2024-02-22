@@ -19,7 +19,11 @@ def print_my_permissions():
 
 #store data for form
 @anvil.server.callable
-def add_form(ship_name):
+def add_form(ship_name, sign, nationallity, type, eta, zone, weather, origine,
+  destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
+  height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
+  fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
+  cough, breath_shortness, weakness, loss_of_senses, other_symptoms):
   app_tables.add_form.add_row(
     
     #ship_data
@@ -56,7 +60,7 @@ def add_form(ship_name):
     #piesi####################
     pulses = pulses,
     chronicdis = chronicdis,
-    surgeries = surgeries,
+    surgeries = surg,
     
     #check box symptoms
     pain = pain,   

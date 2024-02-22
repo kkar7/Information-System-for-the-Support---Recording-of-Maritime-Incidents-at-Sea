@@ -142,7 +142,11 @@ class Form1(Form1Template):
     
    # email = self.email_box.text
    # feedback = self.feedback_box.text
-    anvil.server.call('add_form',ship_name)
+    anvil.server.call('add_form', ship_name, sign, nationallity, type, eta, zone, weather, origine,
+  destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
+  height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
+  fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
+  cough, breath_shortness, weakness, loss_of_senses, other_symptoms)
     Notification("Η Φόρμα καταχωρήθηκε").show()
     #self.clear_inputs()
     pass
