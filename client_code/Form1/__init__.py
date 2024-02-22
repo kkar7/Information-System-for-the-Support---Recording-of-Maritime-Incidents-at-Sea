@@ -165,6 +165,11 @@ class Form1(Form1Template):
     map.add_component(marker)
     pass
 
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.open_form('Start')
+    pass
+
  
 
 
