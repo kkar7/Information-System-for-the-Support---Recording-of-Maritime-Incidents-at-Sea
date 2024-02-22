@@ -172,4 +172,13 @@ db_schema:
     - name: zone
       admin_ui: {width: 200}
       type: string
+    - name: lat
+      admin_ui: {width: 200}
+      type: string
+    - name: long
+      admin_ui: {width: 200}
+      type: string
+    - name: piesi
+      admin_ui: {width: 200}
+      type: string
 renamed: true
