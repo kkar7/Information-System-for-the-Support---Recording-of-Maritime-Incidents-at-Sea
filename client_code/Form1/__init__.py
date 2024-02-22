@@ -56,8 +56,7 @@ class Form1(Form1Template):
     symptomsfre = self.radio_button_1.get_group_value()
     hours = self.in_ores.text
     days = self.in_meres.text
-
-    #piesi££££££££££££££££££££££££££
+    piesi = self.piesi.text
     pulses = self.in_sfixis.text
     chronicdis = self.in_xroniespathisis.text
     surg = self.in_proigoumenesxeirourgikesep.text
@@ -145,7 +144,7 @@ class Form1(Form1Template):
    # feedback = self.feedback_box.text
     anvil.server.call('add_form', form_datetime, ship_name, sign, nationallity, type, eta, zone, 
     weather, long, lat, origine, destination, cargo, pharm, surname, name, age, speciality, 
-    sailor_nationality, height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
+    sailor_nationality, height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
     fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
     cough, breath_shortness, weakness, loss_of_senses, other_symptoms)
     Notification("Η Φόρμα καταχωρήθηκε").show()

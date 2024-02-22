@@ -21,7 +21,7 @@ def print_my_permissions():
 @anvil.server.callable
 def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weather, long, lat,
   origine, destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
-  height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
+  height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
   fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
   cough, breath_shortness, weakness, loss_of_senses, other_symptoms):
   app_tables.add_form.add_row(
@@ -58,7 +58,7 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     hours = hours,
     days = days,
 
-    #piesi####################
+    piesi = piesi,
     pulses = pulses,
     chronicdis = chronicdis,
     surgeries = surg,
