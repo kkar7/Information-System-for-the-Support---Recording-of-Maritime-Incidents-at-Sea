@@ -5,7 +5,7 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.users
 import anvil.server
-
+import datetime
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -24,8 +24,9 @@ class Form1(Form1Template):
   
 
   def submit_click(self, **event_args):
-    "This method is called when the button is clicked"""
+    "This method is called when the button is clicked"
     #ship_data
+    form_datetime = datetime.datetime.now()
     ship_name = self.pi_shipname.text
     sign = self.pi_diethnessima.text
     nationallity = self.pi_ethnikotita.text
@@ -33,8 +34,8 @@ class Form1(Form1Template):
     eta = self.pi_eta.text
     zone = self.pi_naftikizoni.text
     weather = self.pi_kairos.text
-    #long = self.pi_logitude.text
-    #lat = self.pi_latitude.text
+    long = self.pi_longitude.text
+    lat = self.pi_latitude.text
     origine = self.pi_proeleusi.text
     destination = self.pi_destination.text
     cargo = self.pi_cargo.text
@@ -142,11 +143,11 @@ class Form1(Form1Template):
     
    # email = self.email_box.text
    # feedback = self.feedback_box.text
-    anvil.server.call('add_form', ship_name, sign, nationallity, type, eta, zone, weather, origine,
-  destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
-  height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
-  fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-  cough, breath_shortness, weakness, loss_of_senses, other_symptoms)
+    anvil.server.call('add_form', form_datetime, ship_name, sign, nationallity, type, eta, zone, 
+    weather, long, lat, origine, destination, cargo, pharm, surname, name, age, speciality, 
+    sailor_nationality, height, kg, s_id, symptomsfre, hours, days, pulses, chronicdis, surg, pain,   
+    fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
+    cough, breath_shortness, weakness, loss_of_senses, other_symptoms)
     Notification("Η Φόρμα καταχωρήθηκε").show()
     #self.clear_inputs()
     pass

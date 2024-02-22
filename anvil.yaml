@@ -49,4 +49,127 @@ db_schema:
     - name: ship_name
       admin_ui: {width: 200}
       type: string
+    - name: age
+      admin_ui: {width: 200}
+      type: string
+    - name: bleeding
+      admin_ui: {width: 200}
+      type: bool
+    - name: breath_shortness
+      admin_ui: {width: 200}
+      type: bool
+    - name: cargo
+      admin_ui: {width: 200}
+      type: string
+    - name: chronicdis
+      admin_ui: {width: 200}
+      type: string
+    - name: cough
+      admin_ui: {width: 200}
+      type: bool
+    - name: days
+      admin_ui: {width: 200}
+      type: string
+    - name: destination
+      admin_ui: {width: 200}
+      type: string
+    - name: diarrhea
+      admin_ui: {width: 200}
+      type: bool
+    - name: dizziness
+      admin_ui: {width: 200}
+      type: bool
+    - name: eta
+      admin_ui: {width: 200}
+      type: string
+    - name: fever
+      admin_ui: {width: 200}
+      type: bool
+    - name: foreign_body
+      admin_ui: {width: 200}
+      type: bool
+    - name: form_datetime
+      admin_ui: {order: -1, width: 200}
+      type: datetime
+    - name: frown
+      admin_ui: {width: 200}
+      type: bool
+    - name: height
+      admin_ui: {width: 200}
+      type: string
+    - name: hours
+      admin_ui: {width: 200}
+      type: string
+    - name: kg
+      admin_ui: {width: 200}
+      type: string
+    - name: loss_of_senses
+      admin_ui: {width: 200}
+      type: bool
+    - name: nationallity
+      admin_ui: {width: 200}
+      type: string
+    - name: name
+      admin_ui: {width: 200}
+      type: string
+    - name: origine
+      admin_ui: {width: 200}
+      type: string
+    - name: other_symptoms
+      admin_ui: {width: 200}
+      type: string
+    - name: pain
+      admin_ui: {width: 200}
+      type: bool
+    - name: pharm
+      admin_ui: {width: 200}
+      type: string
+    - name: pulses
+      admin_ui: {width: 200}
+      type: string
+    - name: redness
+      admin_ui: {width: 200}
+      type: bool
+    - name: s_id
+      admin_ui: {width: 200}
+      type: string
+    - name: sailor_nationality
+      admin_ui: {width: 200}
+      type: string
+    - name: sign
+      admin_ui: {width: 200}
+      type: string
+    - name: speciality
+      admin_ui: {width: 200}
+      type: string
+    - name: surgeries
+      admin_ui: {width: 200}
+      type: string
+    - name: surname
+      admin_ui: {width: 200}
+      type: string
+    - name: swelling
+      admin_ui: {width: 200}
+      type: bool
+    - name: symptomsfre
+      admin_ui: {width: 200}
+      type: string
+    - name: type
+      admin_ui: {width: 200}
+      type: string
+    - name: vomit
+      admin_ui: {width: 200}
+      type: bool
+    - name: weakness
+      admin_ui: {width: 200}
+      type: bool
+    - name: weather
+      admin_ui: {width: 200}
+      type: string
+    - name: wound
+      admin_ui: {width: 200}
+      type: bool
+    - name: zone
+      admin_ui: {width: 200}
+      type: string
 renamed: true
