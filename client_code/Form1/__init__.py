@@ -16,9 +16,7 @@ class Form1(Form1Template):
 
 
     
-    # Any code you write here will run before the form opens.
-    anvil.users.login_with_form()  #call login_form
-    anvil.server.call('print_my_permissions')
+    
     
   
   

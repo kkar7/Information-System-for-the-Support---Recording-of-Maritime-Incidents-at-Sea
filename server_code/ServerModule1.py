@@ -4,7 +4,8 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.users
 import anvil.media
-import csv
+
+#import csv
 from io import StringIO
 
 #different user permissions
@@ -97,11 +98,7 @@ def set_marker_position(latitude, longitude):
     return {"latitude": latitude, "longitude": longitude}
 
 
-import anvil.server
-import anvil.media
-import csv
-from io import StringIO
-
+""""
 @anvil.server.callable
 def download_table_as_csv():
     # Create a StringIO object to write CSV data to
@@ -109,14 +106,41 @@ def download_table_as_csv():
     writer = csv.writer(output)
     
     # Assuming 'your_table' is the name of your Data Table
-    rows = app_tables.your_table.search()
+    rows = app_tables.add_form.search()
     
     # Write a header row, based on the columns in your Data Table
-    writer.writerow(['column1', 'column2', 'column3'])  # replace with your actual column names
+    writer.writerow(['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"])  # replace with your actual column names
     
     # Write data rows
     for row in rows:
-        writer.writerow([row['column1'], row['column2'], row['column3']])  # replace with your actual column names
+        writer.writerow(['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"])   # replace with your actual column names
     
     # Return the CSV data as an Anvil Media object
     return anvil.media.from_bytes(output.getvalue(), 'text/csv', name='data.csv')
+    pass """
+
+
+
+@anvil.server.callable
+def get_table_as_csv():
+    output = StringIO()
+    
+    # Write the CSV header
+    header = ['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"]  # Adjust column names as needed
+    output.write(','.join(header) + '\n')
+    
+    # Write the data rows, including the ID
+    rows = app_tables.add_form.search()
+    for row in rows:
+        id_str = str(row.get_id())
+        row_data = [id_str] + [str(row[column_name]) for column_name in header[1:]]
+        output.write(','.join(row_data) + '\n')
+    
+    # Get the CSV string and convert it to bytes
+    csv_string = output.getvalue()
+    csv_bytes = csv_string.encode('utf-8')
+    output.close()
+    
+    # Return the CSV bytes as a media object
+    return anvil.BlobMedia('text/csv', csv_bytes, name='data.csv')
+

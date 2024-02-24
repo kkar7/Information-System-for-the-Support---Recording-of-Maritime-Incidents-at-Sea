@@ -7,7 +7,7 @@ services:
   client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: true, require_secure_passwords: false}
   server_config: {user_table: users}
-startup: {type: form, module: Start}
+startup: {type: form, module: Cover_page}
 package_name: M3_App_1
 allow_embedding: false
 name: M3 App 1
