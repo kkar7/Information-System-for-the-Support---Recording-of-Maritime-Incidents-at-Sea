@@ -97,17 +97,26 @@ def set_marker_position(latitude, longitude):
     return {"latitude": latitude, "longitude": longitude}
 
 
+import anvil.server
+import anvil.media
+import csv
+from io import StringIO
+
 @anvil.server.callable
-def download_table_as_excel():
-    # Query all rows in your Anvil Data Table
+def download_table_as_csv():
+    # Create a StringIO object to write CSV data to
+    output = StringIO()
+    writer = csv.writer(output)
+    
+    # Assuming 'your_table' is the name of your Data Table
     rows = app_tables.your_table.search()
     
-    # Convert to a list of dictionaries
-    data = [{col: getattr(row, col) for col in row} for row in rows]
+    # Write a header row, based on the columns in your Data Table
+    writer.writerow(['column1', 'column2', 'column3'])  # replace with your actual column names
     
-    # Create an Excel file
-    sheet = pe.Sheet(data)
-    with anvil.media.TempFile() as filename:
-        sheet.save_as(filename)
-        # Return a media object that the client can download
-        return anvil.media.from_file(filename, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', name='data.xlsx')
+    # Write data rows
+    for row in rows:
+        writer.writerow([row['column1'], row['column2'], row['column3']])  # replace with your actual column names
+    
+    # Return the CSV data as an Anvil Media object
+    return anvil.media.from_bytes(output.getvalue(), 'text/csv', name='data.csv')
