@@ -23,7 +23,7 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
   origine, destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
   height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
   fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-  cough, breath_shortness, weakness, loss_of_senses, other_symptoms):
+  cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain):
   app_tables.add_form.add_row(
     
     #ship_data
@@ -80,9 +80,9 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     weakness = weakness,  
     loss_of_senses = loss_of_senses, 
     
-    other_symptoms = other_symptoms
+    other_symptoms = other_symptoms,
 
-    
+    photo_pain = photo_pain,
     #email=email, 
     #feedback=feedback, 
     #created=datetime.now()

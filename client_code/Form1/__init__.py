@@ -139,6 +139,9 @@ class Form1(Form1Template):
     #end of check boxes 
     
     other_symptoms = self.in_allasimptomata.text
+
+    #photogrid
+    photo_pain = self.pain_box.text
     
    # email = self.email_box.text
    # feedback = self.feedback_box.text
@@ -146,7 +149,7 @@ class Form1(Form1Template):
     weather, long, lat, origine, destination, cargo, pharm, surname, name, age, speciality, 
     sailor_nationality, height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
     fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-    cough, breath_shortness, weakness, loss_of_senses, other_symptoms)
+    cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain)
     Notification("Η Φόρμα καταχωρήθηκε").show()
     #self.clear_inputs()
     pass
