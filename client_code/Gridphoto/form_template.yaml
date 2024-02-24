@@ -1,7 +1,22 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<center style=\"font-style:italic; color:#888; margin: 3em;\"\
-      >\n  (Insert your custom HTML here)\n</center>\n<div anvil-slot=\"default\"\
-      ></div>"}
+  properties: {html: "<div class=\"image-container\" style=\"position: relative;\"\
+      >\n  <img src=\"/_/theme/standard-page.html\" alt=\"Body Grid\" style=\"width:\
+      \ 100%; height: auto;\">\n  <!-- Invisible clickable areas -->\n  <div class=\"\
+      clickable-area\" data-coord=\"01A\" style=\"top: 10%; left: 20%; width: 5%;\
+      \ height: 10%;\"></div>\n  <!-- Repeat the above div for each area you want\
+      \ to be clickable -->\n</div>\n<style>\n  .image-container {\n  position: relative;\n\
+      }\n\n.clickable-area {\n  position: absolute;\n  background-color: rgba(0, 0,\
+      \ 0, 0); /* Transparent */\n  cursor: pointer;\n}\n\n.clickable-area:hover {\n\
+      \  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white on\
+      \ hover */\n}\n</style>\n<script>\ndocument.addEventListener('DOMContentLoaded',\
+      \ function() {\n  // Add event listeners to each clickable area\n  document.querySelectorAll('.clickable-area').forEach(function(area)\
+      \ {\n    area.addEventListener('click', function() {\n      // Toggle a class\
+      \ or do something else when an area is clicked\n      area.classList.toggle('selected');\n\
+      \n      // Call an Anvil server function to store the selected coordinates\n\
+      \      anvil.server.call('store_coordinates', area.dataset.coord);\n    });\n\
+      \  });\n});\n</script>  \n\n", visible: true}
+  data_bindings:
+  - {property: html, code: 'self.item['''']', writeback: false}
 components: []
 is_package: true
