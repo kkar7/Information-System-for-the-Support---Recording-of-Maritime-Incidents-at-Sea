@@ -34,3 +34,12 @@ class Start(StartTemplate):
 
     pass
 
+  def outlined_button_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    # Log out the current user
+    anvil.users.logout()
+    
+    #redirect to first page
+    anvil.open_form('Cover_page')
+    pass
+
