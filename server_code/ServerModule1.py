@@ -3,6 +3,9 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
 import anvil.users
+import anvil.media
+import pyexcel as pe
+
 
 #different user permissions
 @anvil.server.callable
@@ -92,3 +95,19 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
 @anvil.server.callable
 def set_marker_position(latitude, longitude):
     return {"latitude": latitude, "longitude": longitude}
+
+
+@anvil.server.callable
+def download_table_as_excel():
+    # Query all rows in your Anvil Data Table
+    rows = app_tables.your_table.search()
+    
+    # Convert to a list of dictionaries
+    data = [{col: getattr(row, col) for col in row} for row in rows]
+    
+    # Create an Excel file
+    sheet = pe.Sheet(data)
+    with anvil.media.TempFile() as filename:
+        sheet.save_as(filename)
+        # Return a media object that the client can download
+        return anvil.media.from_file(filename, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', name='data.xlsx')

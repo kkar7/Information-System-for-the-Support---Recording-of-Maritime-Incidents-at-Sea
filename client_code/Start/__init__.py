@@ -22,3 +22,12 @@ class Start(StartTemplate):
     """This method is called when the button is clicked"""
     anvil.open_form('Form1')
     pass
+
+  def button_download_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    
+    # Call the server function to get the Excel file
+    excel_media = anvil.server.call('download_table_as_excel')
+    # Trigger a download in the user's browser
+    anvil.media.download(excel_media)
+    pass
