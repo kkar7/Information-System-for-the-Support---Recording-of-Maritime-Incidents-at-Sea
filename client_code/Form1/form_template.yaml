@@ -435,25 +435,49 @@ components:
       properties: {}
       type: TextBox
       layout_properties: {grid_position: 'NPQOWE,VVIYHS'}
-    - name: spacer_4
-      properties: {height: 32}
-      type: Spacer
-      layout_properties: {grid_position: 'DDPEFA,CLJGFE'}
     - name: submit
       properties: {text: Καταχώρηση, bold: true, role: filled-button}
       type: Button
       layout_properties: {grid_position: 'OBHWRK,VZRYQQ'}
       event_bindings: {click: submit_click}
-    - name: button_download
-      properties: {text: 'Λήψη φόρμας ', align: left, role: tonal-button}
-      type: Button
-      layout_properties: {grid_position: 'KSIYUJ,TZDWNV'}
-      event_bindings: {click: button_download_click}
-    - name: print
-      properties: {text: Eκτύπωση, role: tonal-button, align: left, icon_align: right}
-      type: Button
-      layout_properties: {grid_position: 'RXHRZC,QFJQLR'}
-      event_bindings: {hide: print_hide}
+    - name: flow_panel_2
+      properties: {visible: true, align: center}
+      type: FlowPanel
+      layout_properties: {grid_position: 'KQFWGL,EZQQZT'}
+      components:
+      - name: button_download
+        properties: {text: 'Λήψη Φόρμας ', align: left, role: tonal-button}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: button_download_click}
+      - name: spacer_5
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_6
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_8
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_10
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_11
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_9
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_7
+        properties: {height: 32}
+        type: Spacer
+      - name: spacer_4
+        properties: {height: 32}
+        type: Spacer
+      - name: print
+        properties: {text: Eκτύπωση Φόρμας, role: tonal-button, align: center}
+        type: Button
+        layout_properties: {}
     layout_properties: {slot: nav-right, grid_position: 'DMPPOV,SYSBHA'}
 - type: FlowPanel
   properties: {}
