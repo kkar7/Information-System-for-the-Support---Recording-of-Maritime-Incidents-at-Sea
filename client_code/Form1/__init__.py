@@ -173,6 +173,15 @@ class Form1(Form1Template):
     anvil.open_form('Start')
     pass
 
+  def button_download_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass
+
+  def print_hide(self, **event_args):
+    "This method is called when the Button is removed from the screen""
+    #if form is not saved
+    pass
+
  
 
 

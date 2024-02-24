@@ -417,10 +417,24 @@ components:
       layout_properties: {grid_position: 'OPZARC,MOMXFV'}
       components:
       - name: submit
-        properties: {text: Καταχώρηση, bold: true}
+        properties: {text: Καταχώρηση, bold: true, role: filled-button}
         type: Button
         layout_properties: {}
         event_bindings: {click: submit_click}
+      - name: spacer_4
+        properties: {height: 32}
+        type: Spacer
+        layout_properties: {}
+      - name: button_download
+        properties: {text: 'Λήψη φόρμας ', align: left, role: tonal-button}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: button_download_click}
+    - name: print
+      properties: {text: Eκτύπωση, role: tonal-button, align: right, icon_align: right}
+      type: Button
+      layout_properties: {grid_position: 'PAQWRI,ZQUHAP'}
+      event_bindings: {hide: print_hide}
     - name: label_14
       properties: {text: Σημειώσατε το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος.,
         visible: false}
