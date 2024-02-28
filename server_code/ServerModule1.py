@@ -115,3 +115,40 @@ def get_table_as_csv():
     # Return the CSV bytes as a media object
     return anvil.BlobMedia('text/csv', csv_bytes, name='data.csv')
 
+
+@anvil.server.callable
+def get_age_statistics():
+    # Παίρνουμε όλες τις ηλικίες από τον πίνακα
+    ages = [row['age'] for row in app_tables.add_form.search() if row['age'] is not None]
+    
+    # Υπολογισμός Μέσου Όρου
+    mean_age = sum(ages) / len(ages)
+    
+    # Υπολογισμός Διάμεσου
+    sorted_ages = sorted(ages)
+    middle_index = len(sorted_ages) // 2
+    if len(sorted_ages) % 2 == 0:
+        median_age = (sorted_ages[middle_index - 1] + sorted_ages[middle_index]) / 2
+    else:
+        median_age = sorted_ages[middle_index]
+    
+    # Υπολογισμός Εύρους
+    age_range = max(ages) - min(ages) if ages else 0
+    
+    # Υπολογισμός Διακύμανσης και Τυπικής Απόκλισης
+    variance_age = sum((x - mean_age) ** 2 for x in ages) / len(ages) if ages else 0
+    std_dev_age = variance_age ** 0.5
+    
+    # Ελάχιστη και Μέγιστη Τιμή
+    min_age = min(ages) if ages else None
+    max_age = max(ages) if ages else None
+    
+    return {
+        "mean": mean_age,
+        "median": median_age,
+        "range": age_range,
+        "variance": variance_age,
+        "std_dev": std_dev_age,
+        "min": min_age,
+        "max": max_age
+    }
