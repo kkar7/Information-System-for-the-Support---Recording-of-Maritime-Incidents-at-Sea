@@ -92,35 +92,6 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     #created=datetime.now()
   )
 
-#map
-@anvil.server.callable
-def set_marker_position(latitude, longitude):
-    return {"latitude": latitude, "longitude": longitude}
-
-
-""""
-@anvil.server.callable
-def download_table_as_csv():
-    # Create a StringIO object to write CSV data to
-    output = StringIO()
-    writer = csv.writer(output)
-    
-    # Assuming 'your_table' is the name of your Data Table
-    rows = app_tables.add_form.search()
-    
-    # Write a header row, based on the columns in your Data Table
-    writer.writerow(['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"])  # replace with your actual column names
-    
-    # Write data rows
-    for row in rows:
-        writer.writerow(['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"])   # replace with your actual column names
-    
-    # Return the CSV data as an Anvil Media object
-    return anvil.media.from_bytes(output.getvalue(), 'text/csv', name='data.csv')
-    pass """
-
-
-
 @anvil.server.callable
 def get_table_as_csv():
     output = StringIO()
