@@ -50,40 +50,40 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     - name: age
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.99993896484375, width: 200}
       type: string
     - name: bleeding
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999999944120646, width: 200}
       type: bool
     - name: breath_shortness
-      admin_ui: {width: 200}
+      admin_ui: {order: 4.625, width: 200}
       type: bool
     - name: cargo
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9990234375, width: 200}
       type: string
     - name: chronicdis
-      admin_ui: {width: 200}
+      admin_ui: {order: 12.5, width: 200}
       type: string
     - name: cough
       admin_ui: {width: 200}
       type: bool
     - name: days
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.994140625, width: 200}
       type: string
     - name: destination
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.998046875, width: 200}
       type: string
     - name: diarrhea
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999999701976776, width: 200}
       type: bool
     - name: dizziness
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999998807907104, width: 200}
       type: bool
     - name: eta
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.875, width: 200}
       type: string
     - name: fever
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999995231628418, width: 200}
       type: bool
     - name: foreign_body
       admin_ui: {width: 200}
@@ -92,94 +92,94 @@ db_schema:
       admin_ui: {order: -1, width: 200}
       type: datetime
     - name: frown
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.999999761581421, width: 200}
       type: bool
     - name: height
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999923706054688, width: 200}
       type: string
     - name: hours
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.98828125, width: 200}
       type: string
     - name: kg
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999961853027344, width: 200}
       type: string
     - name: loss_of_senses
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.90625, width: 200}
       type: bool
     - name: nationallity
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.5, width: 200}
       type: string
     - name: name
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9998779296875, width: 200}
       type: string
     - name: origine
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.99609375, width: 200}
       type: string
     - name: other_symptoms
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.953125, width: 200}
       type: string
     - name: pain
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999990463256836, width: 200}
       type: bool
     - name: pharm
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.99951171875, width: 200}
       type: string
     - name: pulses
       admin_ui: {width: 200}
       type: string
     - name: redness
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999999776482582, width: 200}
       type: bool
     - name: s_id
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999980926513672, width: 200}
       type: string
     - name: sailor_nationality
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999847412109375, width: 200}
       type: string
     - name: sign
       admin_ui: {width: 200}
       type: string
     - name: speciality
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.999969482421875, width: 200}
       type: string
     - name: surgeries
       admin_ui: {width: 200}
       type: string
     - name: surname
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.999755859375, width: 200}
       type: string
     - name: swelling
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.999999988824129, width: 200}
       type: bool
     - name: symptomsfre
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.9765625, width: 200}
       type: string
     - name: type
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.75, width: 200}
       type: string
     - name: vomit
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9999999403953552, width: 200}
       type: bool
     - name: weakness
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.25, width: 200}
       type: bool
     - name: weather
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.96875, width: 200}
       type: string
     - name: wound
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.999999973922968, width: 200}
       type: bool
     - name: zone
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9375, width: 200}
       type: string
     - name: lat
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.9921875, width: 200}
       type: string
     - name: long
-      admin_ui: {width: 200}
+      admin_ui: {order: 1.984375, width: 200}
       type: string
     - name: piesi
-      admin_ui: {width: 200}
+      admin_ui: {order: 6.9970703125, width: 200}
       type: string
     - name: photo_pain
       admin_ui: {width: 200}
