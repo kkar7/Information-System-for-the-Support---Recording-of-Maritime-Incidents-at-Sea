@@ -152,3 +152,10 @@ def get_age_statistics():
         "min": min_age,
         "max": max_age
     }
+
+
+@anvil.server.callable
+def get_unique_sign_count():
+    # Μετράει τα μοναδικά σήματα στη στήλη 'sign'
+    unique_signs = set(row['sign'] for row in app_tables.add_form.search() if row['sign'] is not None)
+    return len(unique_signs)

@@ -20,6 +20,10 @@ components:
     properties: {text: 'Εθνικότητες Πλοίων που έχουν ζητήσει βοήθεια:'}
     type: Label
     layout_properties: {grid_position: 'CRMSJR,VRITRM YCTADS,EUWVCR'}
+  - name: label_unique_signs
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CRMSJR,AZZDMR'}
   - name: text_box_4
     properties: {}
     type: TextBox
