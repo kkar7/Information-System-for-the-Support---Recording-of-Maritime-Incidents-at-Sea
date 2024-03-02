@@ -27,14 +27,14 @@ class Stats(StatsTemplate):
     
 
  
-    #stats = anvil.server.call('get_age_statistics')
-   # self.label_mean.text = f"Μέσος Όρος: {stats['mean']:.2f}"
-   # self.label_median.text = f"Διάμεσος: {stats['median']:.2f}"
-   # self.label_range.text = f"Εύρος: {stats['range']}"
-   # self.label_variance.text = f"Διακύμανση: {stats['variance']:.2f}"
-   ## self.label_std_dev.text = f"Τυπική Απόκλιση: {stats['std_dev']:.2f}"
-   # self.label_min.text = f"Ελάχιστη Τιμή: {stats['min']}"
-   # self.label_max.text = f"Μέγιστη Τιμή: {stats['max']}"
+    stats = anvil.server.call('get_age_statistics')
+    self.label_mean.text = f"Μέσος Όρος: {stats['mean']:.2f}"
+    self.label_median.text = f"Διάμεσος: {stats['median']:.2f}"
+    self.label_range.text = f"Εύρος: {stats['range']}"
+    self.label_variance.text = f"Διακύμανση: {stats['variance']:.2f}"
+    self.label_std_dev.text = f"Τυπική Απόκλιση: {stats['std_dev']:.2f}"
+    self.label_min.text = f"Ελάχιστη Τιμή: {stats['min']}"
+    self.label_max.text = f"Μέγιστη Τιμή: {stats['max']}"
 
 
 
