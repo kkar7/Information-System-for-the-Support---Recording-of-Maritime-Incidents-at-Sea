@@ -6,7 +6,7 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
-
+import anvil.plotly.graph_objs as go
 
 class Stats(StatsTemplate):
   def __init__(self, **properties):
@@ -20,7 +20,27 @@ class Stats(StatsTemplate):
     self.label_unique_signs.text = f"Μοναδικά σήματα: {unique_sign_count}"
     # Αυτή η συνάρτηση μπορεί να καλεστεί όταν φορτώνει η φόρμα ή όταν πατηθεί ένα κουμπί
     #def refresh_unique_sign_count():
-   
+    
+    
+    def show_nationality_chart(self):
+      # Καλεί την server function για να πάρει τα δεδομένα για το διάγραμμα
+      nationality_counts = anvil.server.call('get_nationality_counts')
+    
+      # Δημιουργία δεδομένων για το διάγραμμα
+      data = go.Bar(
+        x=list(nationality_counts.keys()),
+        y=list(nationality_counts.values())
+      )
+    
+      # Ορισμός της διάταξης του διαγράμματος
+      layout = go.Layout(
+        title='Εθνικότητες Πλοίων που Έχουν Ζητήσει Βοήθεια',
+        xaxis=dict(title='Εθνικότητα'),
+        yaxis=dict(title='Πλήθος')
+      )
+    
+    # Δημιουργία του διαγράμματος και εμφάνιση στο στοιχείο Plot της φόρμας
+    self.plot_nationalities.figure = go.Figure(data=[data], layout=layout)
 
 
     #stats = anvil.server.call('get_age_statistics')

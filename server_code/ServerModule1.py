@@ -4,6 +4,7 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.users
 import anvil.media
+from collections import Counter
 
 #import csv
 from io import StringIO
@@ -159,3 +160,13 @@ def get_unique_sign_count():
     # Μετράει τα μοναδικά σήματα στη στήλη 'sign'
     unique_signs = set(row['sign'] for row in app_tables.add_form.search() if row['sign'] is not None)
     return len(unique_signs)
+
+
+
+@anvil.server.callable
+def get_nationality_counts():
+    # Αντικαταστήστε 'your_table' με το όνομα του πίνακα σας
+    nationalities = [row['nationallity'] for row in app_tables.add_form.search()]
+    nationality_counts = Counter(nationalities)
+    # Επιστρέφει ένα λεξικό με τις εθνικότητες και το πλήθος τους
+    return nationality_counts
