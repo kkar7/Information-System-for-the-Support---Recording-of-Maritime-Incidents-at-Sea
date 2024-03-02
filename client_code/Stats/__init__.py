@@ -25,16 +25,16 @@ class Stats(StatsTemplate):
 
     self.label_unique_sailorid.text = f"Ασθενείς που έχουν ζητήσει βοήθεια: {unique_sailorid_count}"
     
+    #self.load_age_statistics()
 
- 
+    #def load_age_statistics(self):
     stats = anvil.server.call('get_age_statistics')
-    self.label_mean.text = f"Μέσος Όρος: {stats['mean']:.2f}"
-    self.label_median.text = f"Διάμεσος: {stats['median']:.2f}"
-    self.label_range.text = f"Εύρος: {stats['range']}"
-    self.label_variance.text = f"Διακύμανση: {stats['variance']:.2f}"
-    self.label_std_dev.text = f"Τυπική Απόκλιση: {stats['std_dev']:.2f}"
-    self.label_min.text = f"Ελάχιστη Τιμή: {stats['min']}"
-    self.label_max.text = f"Μέγιστη Τιμή: {stats['max']}"
-
+    self.label_mean_age.text = f"Μέση Ηλικία: {stats['mean_age']:.2f}"
+    self.label_median_age.text = f"Διάμεσος: {stats['median_age']:.2f}"
+    self.label_age_range.text = f"Εύρος Ηλικίας: {stats['age_range']}"
+    self.label_min_age.text = f"Ελάχιστη Ηλικία: {stats['min_age']}"
+    self.label_max_age.text = f"Μέγιστη Ηλικία: {stats['max_age']}"
+ 
+  
 
 
