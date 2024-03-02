@@ -17,5 +17,5 @@ class Form2(Form2Template):
     def load_chart(self):
       # Πάρτε τα δεδομένα από τον server
       data = anvil.server.call('get_nationality_data')
-      # Ενημερώστε το διάγραμμα με τα νέα δεδομένα
+     # Ενημερώστε το διάγραμμα με τα νέα δεδομένα
       anvil.js.call_js('updateChart', data)
