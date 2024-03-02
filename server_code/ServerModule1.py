@@ -163,10 +163,14 @@ def get_unique_sign_count():
 
 
 
+# Server Code
+import anvil.server
+from anvil.tables import app_tables
+from collections import defaultdict
+
 @anvil.server.callable
-def get_nationality_counts():
-    # Αντικαταστήστε 'your_table' με το όνομα του πίνακα σας
-    nationalities = [row['nationallity'] for row in app_tables.add_form.search()]
-    nationality_counts = Counter(nationalities)
-    # Επιστρέφει ένα λεξικό με τις εθνικότητες και το πλήθος τους
-    return nationality_counts
+def get_nationality_data():
+    nationality_counter = defaultdict(int)
+    for row in app_tables.add_form.search():
+        nationality_counter[row['nationallity']] += 1
+    return dict(nationality_counter)

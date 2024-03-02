@@ -21,28 +21,21 @@ class Stats(StatsTemplate):
     # Αυτή η συνάρτηση μπορεί να καλεστεί όταν φορτώνει η φόρμα ή όταν πατηθεί ένα κουμπί
     #def refresh_unique_sign_count():
     
-    
+    # Client Code
+    import anvil.server
+    import anvil.plotly.graph_objs as go
+
     def show_nationality_chart(self):
-      # Καλεί την server function για να πάρει τα δεδομένα για το διάγραμμα
-      nationality_counts = anvil.server.call('get_nationality_counts')
+     data = anvil.server.call('get_nationality_data')
+     nations = list(data.keys())
+     counts = list(data.values())
     
-      # Δημιουργία δεδομένων για το διάγραμμα
-      data = go.Bar(
-        x=list(nationality_counts.keys()),
-        y=list(nationality_counts.values())
-      )
+     chart_data = go.Bar(x=nations, y=counts)
+     layout = go.Layout(title="Εθνικότητες Πλοίων που Ζητούν Βοήθεια")
     
-      # Ορισμός της διάταξης του διαγράμματος
-      layout = go.Layout(
-        title='Εθνικότητες Πλοίων που Έχουν Ζητήσει Βοήθεια',
-        xaxis=dict(title='Εθνικότητα'),
-        yaxis=dict(title='Πλήθος')
-      )
-    
-    # Δημιουργία του διαγράμματος και εμφάνιση στο στοιχείο Plot της φόρμας
-    self.plot_nationalities.figure = go.Figure(data=[data], layout=layout)
+     self.plot_1.figure = go.Figure(data=[chart_data], layout=layout)
 
-
+ 
     #stats = anvil.server.call('get_age_statistics')
    # self.label_mean.text = f"Μέσος Όρος: {stats['mean']:.2f}"
    # self.label_median.text = f"Διάμεσος: {stats['median']:.2f}"
