@@ -23,7 +23,7 @@ class Stats(StatsTemplate):
 
     unique_sailorid_count = anvil.server.call('get_unique_sailorid_count')
 
-    self.label_unique_sailorid.text = f"Ασθενείς που έχουν ζητήσει βοήθεια: {unique_sign_count}"
+    self.label_unique_sailorid.text = f"Ασθενείς που έχουν ζητήσει βοήθεια: {unique_sailorid_count}"
     
 
  
