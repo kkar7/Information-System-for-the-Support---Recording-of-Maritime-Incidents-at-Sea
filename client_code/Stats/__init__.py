@@ -34,6 +34,8 @@ class Stats(StatsTemplate):
     self.label_age_range.text = f"Εύρος Ηλικίας: {stats['age_range']}"
     self.label_min_age.text = f"Ελάχιστη Ηλικία: {stats['min_age']}"
     self.label_max_age.text = f"Μέγιστη Ηλικία: {stats['max_age']}"
+
+    
  
   
 

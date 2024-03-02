@@ -1,0 +1,17 @@
+container:
+  type: HtmlTemplate
+  properties: {html: "<!-- \u03a0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c4\u03b5\
+      \ \u03c3\u03c4\u03bf <head> -->\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"\
+      ></script>\n\n<!-- \u03a0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c4\u03b5 \u03c3\
+      \u03c4\u03bf <body> -->\n<canvas id=\"myChart\" width=\"400\" height=\"400\"\
+      ></canvas>\n<script>\nfunction updateChart(nationalities) {\n    var ctx = document.getElementById('myChart').getContext('2d');\n\
+      \    var myChart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n\
+      \            labels: Object.keys(nationalities),\n            datasets: [{\n\
+      \                label: '# of Votes',\n                data: Object.values(nationalities),\n\
+      \                backgroundColor: 'rgba(255, 99, 132, 0.2)',\n             \
+      \   borderColor: 'rgba(255, 99, 132, 1)',\n                borderWidth: 1\n\
+      \            }]\n        },\n        options: {\n            scales: {\n   \
+      \             y: {\n                    beginAtZero: true\n                }\n\
+      \            }\n        }\n    });\n}\n</script>\n"}
+components: []
+is_package: true

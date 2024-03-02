@@ -159,3 +159,16 @@ def get_age_statistics():
         "min_age": min_age,
         "max_age": max_age
     }
+
+import anvil.server
+from anvil.tables import app_tables
+from collections import Counter
+
+@anvil.server.callable
+def get_nationality_data():
+    # Αντικαταστήστε 'your_table_name' με το όνομα του πραγματικού πίνακα σας
+    rows = app_tables.add_form.search()
+    nationalities = [row['nationallity'] for row in rows if row['nationallity'] is not None]
+    counts = Counter(nationalities)
+    return dict(counts)
+
