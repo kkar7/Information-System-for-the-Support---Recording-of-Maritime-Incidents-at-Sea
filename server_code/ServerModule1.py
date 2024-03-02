@@ -161,16 +161,10 @@ def get_unique_sign_count():
     unique_signs = set(row['sign'] for row in app_tables.add_form.search() if row['sign'] is not None)
     return len(unique_signs)
 
-
-
-# Server Code
-import anvil.server
-from anvil.tables import app_tables
-from collections import defaultdict
-
 @anvil.server.callable
-def get_nationality_data():
-    nationality_counter = defaultdict(int)
-    for row in app_tables.add_form.search():
-        nationality_counter[row['nationallity']] += 1
-    return dict(nationality_counter)
+def get_unique_sailorid_count():
+    # Μετράει τους μοναδικούς αριθμούς διαβατηρίου ή ΜΕΘ 's_id'
+    unique_sailorid = set(row['s_id'] for row in app_tables.add_form.search() if row['s_id'] is not None)
+    return len(unique_sailorid)
+
+

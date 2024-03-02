@@ -16,6 +16,10 @@ components:
     properties: {text: Πλοία που έχουν ζητήσει βοήθεια}
     type: Label
     layout_properties: {grid_position: 'CRMSJR,VRITRM IIYQKU,VCHRAP'}
+  - name: label_unique_sailorid
+    properties: {}
+    type: Label
+    layout_properties: {grid_position: 'CRMSJR,VRITRM IPILGJ,QOIXAM'}
   - name: label_8
     properties: {text: 'Εθνικότητες Πλοίων που έχουν ζητήσει βοήθεια:'}
     type: Label
