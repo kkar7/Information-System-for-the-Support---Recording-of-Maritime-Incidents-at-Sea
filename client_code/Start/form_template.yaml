@@ -24,6 +24,7 @@ components:
     - name: outlined_button_3
       properties: {text: Στατιστικά, role: outlined-button, align: left}
       type: Button
+      event_bindings: {click: outlined_button_3_click}
     - name: button_download
       properties: {text: Λήψη Φορμών, role: outlined-button}
       type: Button

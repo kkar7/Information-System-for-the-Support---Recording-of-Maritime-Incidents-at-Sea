@@ -43,3 +43,8 @@ class Start(StartTemplate):
     anvil.open_form('Cover_page')
     pass
 
+  def outlined_button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.open_form('Stats')
+    pass
+
