@@ -192,6 +192,12 @@ class Form1(Form1Template):
     anvil.open_form('Cover_page')
     pass
 
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    #redirect to stats page
+    anvil.open_form('Stats')
+    pass
+
  
 
 
