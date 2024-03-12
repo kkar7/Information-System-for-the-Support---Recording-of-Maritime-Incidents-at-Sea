@@ -18,50 +18,32 @@ class Stats(StatsTemplate):
     unique_sign_count = anvil.server.call('get_unique_sign_count')
     # Εμφανίζει τον αριθμό σε ένα label
     self.label_unique_signs.text = f"Πλοία που έχουν ζητήσει βοήθεια: {unique_sign_count}"
-    # Αυτή η συνάρτηση μπορεί να καλεστεί όταν φορτώνει η φόρμα ή όταν πατηθεί ένα κουμπί
-    #def refresh_unique_sign_count():
+  
+    
+    nationallity_counts = anvil.server.call('get_nationallity_counts')
+    display_text = ""
+    for nationallity, count in nationallity_counts:
+      display_text += f"{nationallity}: {count}\n"
+        
+    # Assuming you have a Label named 'label_nationallities' on your form
+    self.label_nationallities.text = display_text
 
+
+    ship_type_counts = anvil.server.call('get_ship_type_counts')
+    display_text = ""
+    for ship_type, count in ship_type_counts:
+      display_text += f"{ship_type}: {count}\n"
+        
+      # Assuming you have a Label named 'label_ship_types' on your form
+      self.label_ship_types.text = display_text
+
+    
     unique_sailorid_count = anvil.server.call('get_unique_sailorid_count')
 
     self.label_unique_sailorid.text = f"Ασθενείς που έχουν ζητήσει βοήθεια: {unique_sailorid_count}"
 
 
-
-    #nationality
-    # Call the server function to get the data
-    nationality_counts = anvil.server.call('get_nationality_counts')
-
-    # Convert the data into a list of dictionaries for display in the DataGrid
-    items_to_display = [{'Nationallity': nat, 'Count': count} for nat, count in nationality_counts.items()]
-    print(items_to_display)  # Debug print
-    # Set the items for the DataGrid
-    self.data_grid_nationalities.items = items_to_display
-
-    self.label_2.items = items_to_display
-
-    #########################
-
-    import anvil.server
-
-    def display_nationalities():
-      nationality_counts = anvil.server.call('get_nationality_counts')
-      display_text = ""
-      for nationality, count in nationality_counts:
-        display_text += f"{nationality}: {count}\n"
     
-     # Assuming you have a Label named 'label_nationalities'
-      self.label_nationalities.text = display_text
-
-
-
-
-
-
-
-    
-    #self.load_age_statistics()
-
-    #def load_age_statistics(self):
     stats = anvil.server.call('get_age_statistics')
     self.label_mean_age.text = f"Μέση Ηλικία: {stats['mean_age']:.2f}"
     self.label_median_age.text = f"Διάμεσος: {stats['median_age']:.2f}"
@@ -69,6 +51,22 @@ class Stats(StatsTemplate):
     self.label_min_age.text = f"Ελάχιστη Ηλικία: {stats['min_age']}"
     self.label_max_age.text = f"Μέγιστη Ηλικία: {stats['max_age']}"
 
+    sailor_nationality_counts = anvil.server.call('get_sailor_nationality_counts')
+    display_text = ""
+    for sailor_nationality, count in sailor_nationality_counts:
+      display_text += f"{sailor_nationality}: {count}\n"
+        
+      # Assuming you have a Label named 'label_sailor_nationalities' on your form
+      self.label_sailor_nationalities.text = display_text
+
+    
+    speciality_counts = anvil.server.call('get_speciality_counts')
+    display_text = ""
+    for speciality, count in speciality_counts:
+      display_text += f"{speciality}: {count}\n"
+        
+      # Assuming you have a Label named 'label_specialties' on your form
+      self.label_specialties.text = display_text
     
  
   

@@ -123,12 +123,44 @@ def get_unique_sign_count():
     return len(unique_signs)
 
 @anvil.server.callable
+def get_nationallity_counts():
+    # Fetch all rows from the 'add_form' table
+    all_entries = app_tables.add_form.search()
+    
+    # Create a dictionary to count nationalities
+    nationallity_counts = {}
+    for entry in all_entries:
+        nationallity = entry['nationallity']  # Corrected column name
+        if nationallity in nationallity_counts:
+            nationallity_counts[nationallity] += 1
+        else:
+            nationallity_counts[nationallity] = 1
+            
+    # Convert the counts to a list of tuples and return
+    return list(nationallity_counts.items())
+
+@anvil.server.callable
+def get_ship_type_counts():
+    # Fetch all rows from the 'add_form' table
+    all_entries = app_tables.add_form.search()
+    
+    # Create a dictionary to count ship types
+    type_counts = {}
+    for entry in all_entries:
+        ship_type = entry['type']  # Adjusted to focus on the 'type' column
+        if ship_type in type_counts:
+            type_counts[ship_type] += 1
+        else:
+            type_counts[ship_type] = 1
+            
+    # Convert the counts to a list of tuples and return
+    return list(type_counts.items())
+
+@anvil.server.callable
 def get_unique_sailorid_count():
     # Μετράει τους μοναδικούς αριθμούς διαβατηρίου ή ΜΕΘ 's_id'
     unique_sailorid = set(row['s_id'] for row in app_tables.add_form.search() if row['s_id'] is not None)
     return len(unique_sailorid)
-
-
 
 @anvil.server.callable
 def get_age_statistics():
@@ -160,23 +192,36 @@ def get_age_statistics():
         "max_age": max_age
     }
 
-import anvil.server
-from anvil.tables import app_tables
-from collections import Counter
 @anvil.server.callable
-def get_nationality_counts():
-    # Fetch all rows from the table (assuming the table is named 'ships')
-    all_ships = app_tables.ships.search()
+def get_sailor_nationality_counts():
+    # Fetch all rows from the 'add_form' table
+    all_entries = app_tables.add_form.search()
     
-    # Create a dictionary to count nationalities
-    nationality_counts = {}
-    for ship in all_ships:
-        nationality = ship['nationality']
-        if nationality in nationality_counts:
-            nationality_counts[nationality] += 1
+    # Create a dictionary to count sailor nationalities
+    sailor_nationality_counts = {}
+    for entry in all_entries:
+        sailor_nationality = entry['sailor_nationality']  # Focus on the 'sailor_nationality' column
+        if sailor_nationality in sailor_nationality_counts:
+            sailor_nationality_counts[sailor_nationality] += 1
         else:
-            nationality_counts[nationality] = 1
+            sailor_nationality_counts[sailor_nationality] = 1
             
     # Convert the counts to a list of tuples and return
-    return list(nationality_counts.items())
+    return list(sailor_nationality_counts.items())
 
+@anvil.server.callable
+def get_speciality_counts():
+    # Fetch all rows from the 'add_form' table
+    all_entries = app_tables.add_form.search()
+    
+    # Create a dictionary to count sailor specialties
+    speciality_counts = {}
+    for entry in all_entries:
+        speciality = entry['speciality']  # Focus on the 'speciality' column
+        if speciality in speciality_counts:
+            speciality_counts[speciality] += 1
+        else:
+            speciality_counts[speciality] = 1
+            
+    # Convert the counts to a list of tuples and return
+    return list(speciality_counts.items())
