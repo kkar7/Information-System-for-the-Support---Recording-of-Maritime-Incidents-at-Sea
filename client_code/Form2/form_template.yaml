@@ -1,17 +1,30 @@
 container:
   type: HtmlTemplate
-  properties: {html: "<!-- \u03a0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c4\u03b5\
-      \ \u03c3\u03c4\u03bf <head> -->\n<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"\
-      ></script>\n\n<!-- \u03a0\u03c1\u03bf\u03c3\u03b8\u03ad\u03c3\u03c4\u03b5 \u03c3\
-      \u03c4\u03bf <body> -->\n<canvas id=\"myChart\" width=\"400\" height=\"400\"\
-      ></canvas>\n<script>\nfunction updateChart(nationalities) {\n    var ctx = document.getElementById('myChart').getContext('2d');\n\
-      \    var myChart = new Chart(ctx, {\n        type: 'bar',\n        data: {\n\
-      \            labels: Object.keys(nationalities),\n            datasets: [{\n\
-      \                label: '# of Votes',\n                data: Object.values(nationalities),\n\
-      \                backgroundColor: 'rgba(255, 99, 132, 0.2)',\n             \
-      \   borderColor: 'rgba(255, 99, 132, 1)',\n                borderWidth: 1\n\
-      \            }]\n        },\n        options: {\n            scales: {\n   \
-      \             y: {\n                    beginAtZero: true\n                }\n\
-      \            }\n        }\n    });\n}\n</script>\n"}
+  properties: {html: "<script>\ndocument.addEventListener('DOMContentLoaded', (event)\
+      \ => {\n    // \u039f\u03c1\u03af\u03c3\u03c4\u03b5 \u03c4\u03b7 \u03c3\u03c5\
+      \u03bd\u03ac\u03c1\u03c4\u03b7\u03c3\u03b7 drawNationalityChart \u03b5\u03b4\
+      \u03ce \u03ae \u03b2\u03b5\u03b2\u03b1\u03b9\u03c9\u03b8\u03b5\u03af\u03c4\u03b5\
+      \ \u03cc\u03c4\u03b9 \u03b5\u03af\u03bd\u03b1\u03b9 \u03b4\u03b9\u03b1\u03b8\
+      \u03ad\u03c3\u03b9\u03bc\u03b7 \u03c0\u03b1\u03b3\u03ba\u03bf\u03c3\u03bc\u03af\
+      \u03c9\u03c2\n    function drawNationalityChart(data) {\n        const ctx =\
+      \ document.getElementById('nationalityChart').getContext('2d');\n        new\
+      \ Chart(ctx, {\n            type: 'bar',\n            data: {\n            \
+      \    labels: Object.keys(data),\n                datasets: [{\n            \
+      \        label: '\u0395\u03b8\u03bd\u03b9\u03ba\u03cc\u03c4\u03b7\u03c4\u03b5\
+      \u03c2 \u03a0\u03bb\u03bf\u03af\u03c9\u03bd',\n                    data: Object.values(data),\n\
+      \                    backgroundColor: 'rgba(54, 162, 235, 0.2)',\n         \
+      \           borderColor: 'rgba(54, 162, 235, 1)',\n                    borderWidth:\
+      \ 1\n                }]\n            },\n            options: {\n          \
+      \      scales: {\n                    y: {\n                        beginAtZero:\
+      \ true\n                    }\n                }\n            }\n        });\n\
+      \    }\n    \n    // \u039a\u03b1\u03bb\u03ad\u03c3\u03c4\u03b5 \u03c4\u03b7\
+      \ \u03c3\u03c5\u03bd\u03ac\u03c1\u03c4\u03b7\u03c3\u03b7 drawNationalityChart\
+      \ \u03b1\u03c0\u03b5\u03c5\u03b8\u03b5\u03af\u03b1\u03c2 \u03b5\u03b4\u03ce\
+      \ \u03ae \u03bc\u03b5\u03c4\u03ac \u03b1\u03c0\u03cc \u03ad\u03bd\u03b1 \u03c3\
+      \u03c5\u03bc\u03b2\u03ac\u03bd, \u03c0.\u03c7., \u03ba\u03bb\u03b9\u03ba \u03c3\
+      \u03b5 \u03ad\u03bd\u03b1 \u03ba\u03bf\u03c5\u03bc\u03c0\u03af\n    // \u03a0\
+      \u03b1\u03c1\u03ac\u03b4\u03b5\u03b9\u03b3\u03bc\u03b1: drawNationalityChart(\u03c4\
+      \u03b1\u0394\u03b5\u03b4\u03bf\u03bc\u03ad\u03bd\u03b1\u03a3\u03b1\u03c2);\n\
+      });\n</script>\n"}
 components: []
 is_package: true
