@@ -172,3 +172,4 @@ def get_nationality_data():
     counts = Counter(nationalities)
     return dict(counts)
 
+
