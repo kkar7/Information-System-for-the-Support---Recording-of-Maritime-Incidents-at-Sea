@@ -102,3 +102,24 @@ components:
   properties: {}
   type: ColumnPanel
   layout_properties: {slot: left-nav}
+  components:
+  - name: column_panel_2
+    properties: {}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'GUXBCS,VJUWWM'}
+    components:
+    - name: outlined_button_1
+      properties: {text: Αρχική σελίδα, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'QWVEYO,MSWKNH'}
+      event_bindings: {click: outlined_button_1_click}
+    - name: outlined_button_2
+      properties: {text: Φόρμα, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'WCJEWB,EOKJZD'}
+      event_bindings: {click: outlined_button_2_click}
+    - name: outlined_button_3
+      properties: {text: Έξοδος, role: outlined-button}
+      type: Button
+      layout_properties: {grid_position: 'YBYQWC,PKXNGT'}
+      event_bindings: {click: outlined_button_3_click}

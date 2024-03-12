@@ -67,6 +67,27 @@ class Stats(StatsTemplate):
         
       # Assuming you have a Label named 'label_specialties' on your form
       self.label_specialties.text = display_text
+
+  def outlined_button_1_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.open_form('Start')
+    pass
+
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.open_form('Form1')
+    pass
+
+  def outlined_button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+     # Log out the current user
+    anvil.users.logout()
+    
+    #redirect to first page
+    anvil.open_form('Cover_page')
+    pass
+
+
     
  
   
