@@ -163,17 +163,20 @@ def get_age_statistics():
 import anvil.server
 from anvil.tables import app_tables
 from collections import Counter
-
 @anvil.server.callable
 def get_nationality_counts():
-    # Retrieve all records from the table and extract the list of nationalities
-    all_records = app_tables.add_form.search()
-    nationalities = [record['nationallity'] for record in all_records if record['nationallity'] is not None]
-
-    # Use Counter to count the occurrences of each nationality
-    nationality_counts = Counter(nationalities)
-
-    # Return the dictionary of nationalities and their respective counts
-    return dict(nationality_counts)
-
+    # Fetch all rows from the table (assuming the table is named 'ships')
+    all_ships = app_tables.ships.search()
+    
+    # Create a dictionary to count nationalities
+    nationality_counts = {}
+    for ship in all_ships:
+        nationality = ship['nationality']
+        if nationality in nationality_counts:
+            nationality_counts[nationality] += 1
+        else:
+            nationality_counts[nationality] = 1
+            
+    # Convert the counts to a list of tuples and return
+    return list(nationality_counts.items())
 

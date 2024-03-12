@@ -33,9 +33,24 @@ class Stats(StatsTemplate):
 
     # Convert the data into a list of dictionaries for display in the DataGrid
     items_to_display = [{'Nationallity': nat, 'Count': count} for nat, count in nationality_counts.items()]
-
+    print(items_to_display)  # Debug print
     # Set the items for the DataGrid
     self.data_grid_nationalities.items = items_to_display
+
+    self.label_2.items = items_to_display
+
+    #########################
+
+    import anvil.server
+
+    def display_nationalities():
+      nationality_counts = anvil.server.call('get_nationality_counts')
+      display_text = ""
+      for nationality, count in nationality_counts:
+        display_text += f"{nationality}: {count}\n"
+    
+     # Assuming you have a Label named 'label_nationalities'
+      self.label_nationalities.text = display_text
 
 
 
