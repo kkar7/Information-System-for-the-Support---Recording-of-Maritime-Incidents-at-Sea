@@ -12,26 +12,14 @@ components:
     properties: {text: Πλοία, align: center, bold: true, underline: true}
     type: Label
     layout_properties: {grid_position: 'GFONBN,SPYXGH'}
-  - name: label_7
-    properties: {text: Πλοία που έχουν ζητήσει βοήθεια}
-    type: Label
-    layout_properties: {grid_position: 'CRMSJR,VRITRM IIYQKU,VCHRAP'}
-  - name: label_8
-    properties: {text: 'Εθνικότητες Πλοίων που έχουν ζητήσει βοήθεια:'}
-    type: Label
-    layout_properties: {grid_position: 'CRMSJR,VRITRM YCTADS,EUWVCR'}
   - name: label_unique_signs
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'CRMSJR,AZZDMR'}
-  - name: text_box_4
-    properties: {}
-    type: TextBox
-    layout_properties: {grid_position: 'CRMSJR,ZSVTNC'}
-  - name: plot_1
-    properties: {}
-    type: Plot
-    layout_properties: {grid_position: 'DUZBLS,XPVLCU'}
+    layout_properties: {grid_position: 'ZJOFJK,MXUOKY'}
+  - name: label_8
+    properties: {text: 'Εθνικότητες Πλοίων που έχουν ζητήσει βοήθεια:'}
+    type: Label
+    layout_properties: {grid_position: 'CRMSJR,VRITRM'}
   - name: label_9
     properties: {text: Τύπος πλοίων που έχουν ζητήσει βοήθεια.}
     type: Label

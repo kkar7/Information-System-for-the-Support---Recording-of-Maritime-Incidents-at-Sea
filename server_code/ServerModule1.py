@@ -165,12 +165,15 @@ from anvil.tables import app_tables
 from collections import Counter
 
 @anvil.server.callable
-def get_nationality_data():
-    # Αντικαταστήστε 'your_table_name' με το όνομα του πραγματικού πίνακα σας
-    rows = app_tables.add_form.search()
-    nationalities = [row['nationallity'] for row in rows if row['nationallity'] is not None]
-    counts = Counter(nationalities)
-    return dict(counts)
+def get_nationality_counts():
+    # Retrieve all records from the table and extract the list of nationalities
+    all_records = app_tables.add_form.search()
+    nationalities = [record['nationallity'] for record in all_records if record['nationallity'] is not None]
 
+    # Use Counter to count the occurrences of each nationality
+    nationality_counts = Counter(nationalities)
+
+    # Return the dictionary of nationalities and their respective counts
+    return dict(nationality_counts)
 
 

@@ -17,13 +17,32 @@ class Stats(StatsTemplate):
     # Καλεί την server function για να πάρει τον αριθμό των μοναδικών σημάτων
     unique_sign_count = anvil.server.call('get_unique_sign_count')
     # Εμφανίζει τον αριθμό σε ένα label
-    self.label_unique_signs.text = f"Μοναδικά σήματα: {unique_sign_count}"
+    self.label_unique_signs.text = f"Πλοία που έχουν ζητήσει βοήθεια: {unique_sign_count}"
     # Αυτή η συνάρτηση μπορεί να καλεστεί όταν φορτώνει η φόρμα ή όταν πατηθεί ένα κουμπί
     #def refresh_unique_sign_count():
 
     unique_sailorid_count = anvil.server.call('get_unique_sailorid_count')
 
     self.label_unique_sailorid.text = f"Ασθενείς που έχουν ζητήσει βοήθεια: {unique_sailorid_count}"
+
+
+
+    #nationality
+    # Call the server function to get the data
+    nationality_counts = anvil.server.call('get_nationality_counts')
+
+    # Convert the data into a list of dictionaries for display in the DataGrid
+    items_to_display = [{'Nationallity': nat, 'Count': count} for nat, count in nationality_counts.items()]
+
+    # Set the items for the DataGrid
+    self.data_grid_nationalities.items = items_to_display
+
+
+
+
+
+
+
     
     #self.load_age_statistics()
 
