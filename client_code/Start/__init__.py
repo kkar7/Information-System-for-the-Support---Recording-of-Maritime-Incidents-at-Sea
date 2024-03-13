@@ -14,6 +14,12 @@ class Start(StartTemplate):
     # Any code you write here will run before the form opens.
     anvil.users.login_with_form()  #call login_form
     anvil.server.call('print_my_permissions')
+
+    # Asynchronously call 'get_user_role' to get the current user's role
+    user_role = anvil.server.call('get_current_user_role')
+        
+    # Hide the button if the user's role is 'guest'
+    self.outlined_button_2.visible = (user_role != 'guest')
   
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
@@ -47,4 +53,6 @@ class Start(StartTemplate):
     """This method is called when the button is clicked"""
     anvil.open_form('Stats')
     pass
+
+
 

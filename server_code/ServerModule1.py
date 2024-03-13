@@ -225,3 +225,12 @@ def get_speciality_counts():
             
     # Convert the counts to a list of tuples and return
     return list(speciality_counts.items())
+
+@anvil.server.callable
+def get_current_user_role():
+    user = anvil.users.get_user()
+    if user:
+        # Assuming 'role' is the column name in the 'Users' table where roles are stored
+        return user['role']
+    return None  # No user is logged in
+
