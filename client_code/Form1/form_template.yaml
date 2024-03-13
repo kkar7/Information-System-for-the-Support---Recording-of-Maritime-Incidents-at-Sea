@@ -443,13 +443,8 @@ components:
     - name: flow_panel_2
       properties: {visible: true, align: center}
       type: FlowPanel
-      layout_properties: {grid_position: 'KQFWGL,EZQQZT'}
+      layout_properties: {grid_position: 'NOCELO,LEGZKE'}
       components:
-      - name: button_download
-        properties: {text: 'Λήψη Φόρμας ', align: left, role: tonal-button}
-        type: Button
-        layout_properties: {}
-        event_bindings: {click: button_download_click}
       - name: spacer_5
         properties: {height: 32}
         type: Spacer
@@ -462,6 +457,12 @@ components:
       - name: spacer_10
         properties: {height: 32}
         type: Spacer
+      - name: new_form
+        properties: {text: Καθαρισμός και υποβολή νέας φόρμας, role: tonal-button,
+          align: center}
+        type: Button
+        layout_properties: {}
+        event_bindings: {click: new_form_click}
       - name: spacer_11
         properties: {height: 32}
         type: Spacer
@@ -474,10 +475,6 @@ components:
       - name: spacer_4
         properties: {height: 32}
         type: Spacer
-      - name: print
-        properties: {text: Eκτύπωση Φόρμας, role: tonal-button, align: center}
-        type: Button
-        layout_properties: {}
     layout_properties: {slot: nav-right, grid_position: 'DMPPOV,SYSBHA'}
 - type: FlowPanel
   properties: {}

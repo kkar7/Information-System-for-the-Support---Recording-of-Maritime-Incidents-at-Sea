@@ -6,6 +6,7 @@ from anvil.tables import app_tables
 import anvil.users
 import anvil.server
 import datetime
+import anvil.js
 
 class Form1(Form1Template):
   def __init__(self, **properties):
@@ -149,6 +150,9 @@ class Form1(Form1Template):
     fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
     cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain)
     Notification("Η Φόρμα καταχωρήθηκε").show()
+    #print form
+    if anvil.js.window.confirm("Θέλετε να εκτυπώσετε τη φόρμα;"):
+        anvil.js.window.print()
     #self.clear_inputs()
     pass
     
