@@ -18,8 +18,10 @@ class Start(StartTemplate):
     # Asynchronously call 'get_user_role' to get the current user's role
     user_role = anvil.server.call('get_current_user_role')
         
-    # Hide the button if the user's role is 'guest'
+    # Hide the buttons if the user's role is 'guest'
     self.outlined_button_2.visible = (user_role != 'guest')
+    self.button_download.visible = (user_role != 'guest')
+    
   
   def outlined_button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
