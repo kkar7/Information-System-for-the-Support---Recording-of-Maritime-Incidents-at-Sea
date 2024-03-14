@@ -7,7 +7,7 @@ import anvil.media
 from collections import Counter
 from io import StringIO
 
-#different user permissions
+#Different user permissions
 @anvil.server.callable
 def print_my_permissions():
   super_user = 'konstantinoschios@hotmail.com'
@@ -19,7 +19,7 @@ def print_my_permissions():
     print("This path is for minimum-access users.")
     
 #Form 
-#store data for form
+#Store Form data
 @anvil.server.callable
 def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weather, long, lat,
   origine, destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
@@ -155,24 +155,22 @@ def get_ship_type_counts():
     # Convert the counts to a list of tuples and return
     return list(type_counts.items())
 
-#Get patients number
+#Get the number of patients 
 @anvil.server.callable
 def get_unique_sailorid_count():
     unique_sailorid = set(row['sailor_id'] for row in app_tables.add_form.search() if row['sailor_id'] is not None)
     return len(unique_sailorid)
 
+#Get age statistics
 @anvil.server.callable
 def get_age_statistics():
     ages = []
     for row in app_tables.add_form.search():
         try:
-            # Μετατροπή της τιμής σε ακέραιο και προσθήκη στη λίστα
             age = int(row['age'])
             ages.append(age)
         except (ValueError, TypeError):
-            # Αγνοήστε την τιμή αν δεν είναι μετατρέψιμη σε ακέραιο
             continue
-
     if not ages:
         return {"mean_age": 0, "median_age": 0, "age_range": 0, "min_age": 0, "max_age": 0}
 
@@ -191,6 +189,7 @@ def get_age_statistics():
         "max_age": max_age
     }
 
+#Get sailor nationalities
 @anvil.server.callable
 def get_sailor_nationality_counts():
     # Fetch all rows from the 'add_form' table
@@ -208,6 +207,7 @@ def get_sailor_nationality_counts():
     # Convert the counts to a list of tuples and return
     return list(sailor_nationality_counts.items())
 
+#Get sailors speciality
 @anvil.server.callable
 def get_speciality_counts():
     # Fetch all rows from the 'add_form' table
@@ -225,6 +225,7 @@ def get_speciality_counts():
     # Convert the counts to a list of tuples and return
     return list(speciality_counts.items())
 
+#User role check
 @anvil.server.callable
 def get_current_user_role():
     user = anvil.users.get_user()
