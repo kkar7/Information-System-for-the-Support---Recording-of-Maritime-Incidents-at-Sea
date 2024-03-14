@@ -16,12 +16,6 @@ class Form1(Form1Template):
     #στην πανω γραμμη πρεπει να αλλαξω τα ονοματα με αυτα π εχω εγω στα selfcheck boxes
 
 
-    
-    
-    
-  
-  
-
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"
     #ship_data

@@ -5,8 +5,6 @@ import anvil.server
 import anvil.users
 import anvil.media
 from collections import Counter
-
-#import csv
 from io import StringIO
 
 #different user permissions
@@ -20,8 +18,7 @@ def print_my_permissions():
   else:
     print("This path is for minimum-access users.")
     
-# Add more server functions as needed for your application
-
+#Form 
 #store data for form
 @anvil.server.callable
 def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weather, long, lat,
@@ -31,44 +28,44 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
   cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain):
   app_tables.add_form.add_row(
     
-    #ship_data
     form_datetime = form_datetime,
-    ship_name=ship_name,
-    sign = sign,
-    nationallity = nationallity,
-    type = type,
+   
+    #ship data
+    ship_name = ship_name,
+    national_sign = sign, ####################
+    ship_nationality = ship_nationality, #######
+    ship_type = ship_type, #####
     eta = eta,
-    zone = zone,
+    naval_zone = zone,   #####
     weather = weather,
-    long = long,
-    lat = lat,
+    longitude = long,   ######
+    latitude = lat,     #######
     origine = origine,
     destination = destination,
     cargo = cargo,
-    pharm = pharm,
+    pharmacy = pharmacy, ##########
 
     #sailor_data
     surname = surname,
     name = name,
     age = age,
-    speciality = speciality,
+    specialty = specialty,  ###################
     sailor_nationality = sailor_nationality,
     height = height,
-    kg = kg,
-    s_id = s_id,
+    weight = weight,    ##############
+    sailor_id = sailor_id, #############
     
     #symptoms
-    #symptoms_intro
-    symptomsfre = symptomsfre,
+    symptoms_frequency = symptoms_frequency,  ############
     hours = hours,
     days = days,
 
-    piesi = piesi,
+    blood_pressure = blood_pressure,    ##########
     pulses = pulses,
-    chronicdis = chronicdis,
-    surgeries = surg,
+    chronic_diseases = chronic_diseases,  #######
+    previous_surgeries = previous_surgeries,    ##########
     
-    #check box symptoms
+    #symptoms checkboxes
     pain = pain,   
     fever = fever,        
     frown = frown,    
@@ -87,17 +84,15 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     
     other_symptoms = other_symptoms,
 
-    photo_pain = photo_pain,
-    #email=email, 
-    #feedback=feedback, 
-    #created=datetime.now()
+    pain_diagram_position = pain_diagram_position,    ###############################
   )
 
+#Download the form data table (add_form) to CSV
 @anvil.server.callable
 def get_table_as_csv():
     output = StringIO()
     
-    # Write the CSV header
+    #CSV header
     header = ['ID',"form_datetime","ship_name","sign","foreign_body","cough","pain","cargo","age","pulses","s_id","kg","zone","nationallity","name","bleeding","surname","days","type","origine","surgeries","chronicdis","other_symptoms","weakness","pharm","dizziness","redness","fever","symptomsfre","wound","hours","breath_shortness","weather","sailor_nationality","swelling","loss_of_senses","vomit","frown","destination","diarrhea","height","eta","speciality","long","lat","piesi","photo_pain"]  # Adjust column names as needed
     output.write(','.join(header) + '\n')
     
@@ -116,12 +111,15 @@ def get_table_as_csv():
     # Return the CSV bytes as a media object
     return anvil.BlobMedia('text/csv', csv_bytes, name='data.csv')
 
+#Stats
+#Find the number of ships in the data table
 @anvil.server.callable
 def get_unique_sign_count():
-    # Μετράει τα μοναδικά σήματα στη στήλη 'sign'
-    unique_signs = set(row['sign'] for row in app_tables.add_form.search() if row['sign'] is not None)
+    # Count unique 'national_sign's to find
+    unique_signs = set(row['national_sign'] for row in app_tables.add_form.search() if row['national_sign'] is not None)
     return len(unique_signs)
 
+#Find ship nationalities
 @anvil.server.callable
 def get_nationallity_counts():
     # Fetch all rows from the 'add_form' table
@@ -130,15 +128,16 @@ def get_nationallity_counts():
     # Create a dictionary to count nationalities
     nationallity_counts = {}
     for entry in all_entries:
-        nationallity = entry['nationallity']  # Corrected column name
-        if nationallity in nationallity_counts:
-            nationallity_counts[nationallity] += 1
+        nationality = entry['ship_nationality'] 
+        if nationality in nationality_counts:
+            nationality_counts[nationality] += 1
         else:
-            nationallity_counts[nationallity] = 1
+            nationality_counts[nationality] = 1
             
     # Convert the counts to a list of tuples and return
     return list(nationallity_counts.items())
 
+#Get ship types
 @anvil.server.callable
 def get_ship_type_counts():
     # Fetch all rows from the 'add_form' table
@@ -147,7 +146,7 @@ def get_ship_type_counts():
     # Create a dictionary to count ship types
     type_counts = {}
     for entry in all_entries:
-        ship_type = entry['type']  # Adjusted to focus on the 'type' column
+        ship_type = entry['ship_type']  # Adjusted to focus on the 'type' column
         if ship_type in type_counts:
             type_counts[ship_type] += 1
         else:
@@ -156,10 +155,10 @@ def get_ship_type_counts():
     # Convert the counts to a list of tuples and return
     return list(type_counts.items())
 
+#Get patients number
 @anvil.server.callable
 def get_unique_sailorid_count():
-    # Μετράει τους μοναδικούς αριθμούς διαβατηρίου ή ΜΕΘ 's_id'
-    unique_sailorid = set(row['s_id'] for row in app_tables.add_form.search() if row['s_id'] is not None)
+    unique_sailorid = set(row['sailor_id'] for row in app_tables.add_form.search() if row['sailor_id'] is not None)
     return len(unique_sailorid)
 
 @anvil.server.callable
