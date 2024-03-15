@@ -41,7 +41,7 @@ components:
       properties: {text: 'ONOMA:'}
       type: Label
       layout_properties: {grid_position: 'PNORHN,ACWALG'}
-    - name: pi_shipname
+    - name: ship_name
       properties: {role: outlined, visible: true}
       type: TextBox
       layout_properties: {grid_position: 'PNORHN,SFLHOK'}
@@ -50,7 +50,7 @@ components:
       properties: {text: 'ΔΙΕΘΝΕΣ ΣΗΜΑ:'}
       type: Label
       layout_properties: {grid_position: 'PNORHN,ZCJWTP'}
-    - name: pi_diethnessima
+    - name: ship_national_sign
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PNORHN,XYTKXN'}
@@ -59,7 +59,7 @@ components:
       properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
       type: Label
       layout_properties: {grid_position: 'CQHEEY,OKQYXV'}
-    - name: pi_ethnikotita
+    - name: ship_nationality
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'CQHEEY,EFCNMW'}
@@ -68,7 +68,7 @@ components:
       properties: {text: 'ΤΥΠΟΣ:'}
       type: Label
       layout_properties: {grid_position: 'CQHEEY,RCSPXP'}
-    - name: pi_type
+    - name: ship_type
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'CQHEEY,DFQWMT'}
@@ -77,7 +77,7 @@ components:
       properties: {text: 'E.T.A.:'}
       type: Label
       layout_properties: {grid_position: 'QEXUCE,JLAKLR'}
-    - name: pi_eta
+    - name: ship_eta
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'QEXUCE,KDRQQX'}
@@ -86,7 +86,7 @@ components:
       properties: {text: 'ΝΑΥΤ. ΖΩΝΗ:'}
       type: Label
       layout_properties: {grid_position: 'QEXUCE,TNOSAM'}
-    - name: pi_naftikizoni
+    - name: naval_zone
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'QEXUCE,CJSWGT'}
@@ -95,7 +95,7 @@ components:
       properties: {text: 'ΚΑΙΡΟΣ:'}
       type: Label
       layout_properties: {grid_position: 'SCKQMN,MLWVJQ'}
-    - name: pi_kairos
+    - name: ship_weather
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'SCKQMN,MUPHYF'}
@@ -104,7 +104,7 @@ components:
       properties: {text: 'LONG:'}
       type: Label
       layout_properties: {grid_position: 'PUHGDY,KCNRTB'}
-    - name: pi_longitude
+    - name: ship_longitude
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PUHGDY,ZSBTTA'}
@@ -113,7 +113,7 @@ components:
       properties: {text: 'LAT:'}
       type: Label
       layout_properties: {grid_position: 'PUHGDY,EUOMWK'}
-    - name: pi_latitude
+    - name: ship_latitude
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PUHGDY,CVKJCF'}
@@ -127,7 +127,7 @@ components:
       properties: {text: 'ΠΡΟΕΛΕΥΣΗ:'}
       type: Label
       layout_properties: {grid_position: 'HVEYBQ,KDXGZN'}
-    - name: pi_proeleusi
+    - name: ship_origin
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'HVEYBQ,TWMQMO'}
@@ -136,7 +136,7 @@ components:
       properties: {text: 'ΠΡΟΟΡΙΣΜΟΣ:'}
       type: Label
       layout_properties: {grid_position: 'HVEYBQ,TXFBPI'}
-    - name: pi_destination
+    - name: ship_destination
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'HVEYBQ,SOVUJL'}
@@ -145,7 +145,7 @@ components:
       properties: {text: 'ΜΕΤΑΦΕΡΟΜΕΝΟ ΦΟΡΤΙΟ:'}
       type: Label
       layout_properties: {grid_position: 'RWLULJ,RXRQHR'}
-    - name: pi_cargo
+    - name: ship_cargo
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'RWLULJ,DNDPBV'}
@@ -154,7 +154,7 @@ components:
       properties: {text: 'ΕΙΔΟΣ ΦΑΡΜΑΚΕΙΟΥ:'}
       type: Label
       layout_properties: {grid_position: 'RWLULJ,RZCZDB'}
-    - name: pi_pharm
+    - name: ship_pharmacy
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'RWLULJ,SMMPGE'}

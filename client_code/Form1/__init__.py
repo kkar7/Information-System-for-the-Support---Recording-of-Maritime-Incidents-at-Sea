@@ -20,19 +20,19 @@ class Form1(Form1Template):
     "This method is called when the button is clicked"
     #ship_data
     form_datetime = datetime.datetime.now()
-    ship_name = self.pi_shipname.text
-    sign = self.pi_diethnessima.text
-    nationallity = self.pi_ethnikotita.text
-    type = self.pi_type.text
-    eta = self.pi_eta.text
-    zone = self.pi_naftikizoni.text
-    weather = self.pi_kairos.text
-    long = self.pi_longitude.text
-    lat = self.pi_latitude.text
-    origine = self.pi_proeleusi.text
-    destination = self.pi_destination.text
-    cargo = self.pi_cargo.text
-    pharm = self.pi_pharm.text
+    ship_name = self.ship_name.text
+    national_sign = self.ship_national_sign.text
+    ship_nationality = self.ship_nationality.text
+    ship_type = self.ship_type.text
+    eta = self.ship_eta.text
+    naval_zone = self.naval_zone.text
+    weather = self.ship_weather.text
+    longitude = self.ship_longitude.text
+    latitude = self.ship_latitude.text
+    origine = self.ship_origin.text
+    destination = self.ship_destination.text
+    cargo = self.ship_cargo.text
+    pharmacy = self.ship_pharmacy.text
 
     #sailor (patient) data
     surname = self.as_eponimo.text
