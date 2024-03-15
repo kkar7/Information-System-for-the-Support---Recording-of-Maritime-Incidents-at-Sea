@@ -121,7 +121,7 @@ def get_unique_sign_count():
 
 #Find ship nationalities
 @anvil.server.callable
-def get_nationallity_counts():
+def get_nationality_counts():
     # Fetch all rows from the 'add_form' table
     all_entries = app_tables.add_form.search()
     
