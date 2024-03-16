@@ -118,11 +118,11 @@ components:
       type: TextBox
       layout_properties: {grid_position: 'PUHGDY,CVKJCF'}
       event_bindings: {pressed_enter: pi_latitude_pressed_enter}
-    - name: showbutton
+    - name: show_map_button
       properties: {text: Show on Map}
       type: Button
       layout_properties: {grid_position: 'PUHGDY,MNPLDS'}
-      event_bindings: {click: showbutton_click}
+      event_bindings: {click: show_map_button_click}
     - name: label_24
       properties: {text: 'ΠΡΟΕΛΕΥΣΗ:'}
       type: Label
@@ -457,12 +457,12 @@ components:
       - name: spacer_10
         properties: {height: 32}
         type: Spacer
-      - name: new_form
+      - name: new_form_button
         properties: {text: Καθαρισμός και υποβολή νέας φόρμας, role: tonal-button,
           align: center}
         type: Button
         layout_properties: {}
-        event_bindings: {click: new_form_click}
+        event_bindings: {click: new_form_button_click}
       - name: spacer_11
         properties: {height: 32}
         type: Spacer
@@ -485,21 +485,21 @@ components:
   type: ColumnPanel
   layout_properties: {slot: left-nav}
   components:
-  - name: outlined_button_1
+  - name: start_page_button
     properties: {text: Αρχική, role: outlined-button}
     type: Button
     layout_properties: {grid_position: 'YJGCUI,HYPJDC'}
-    event_bindings: {click: outlined_button_1_click}
-  - name: outlined_button_2
+    event_bindings: {click: start_page_button_click}
+  - name: stats_page_button
     properties: {text: Στατιστικά, role: outlined-button}
     type: Button
     layout_properties: {grid_position: 'JKEEHA,KUDMLP'}
-    event_bindings: {click: outlined_button_2_click}
-  - name: outlined_button_3
+    event_bindings: {click: stats_page_button_click}
+  - name: exit_button
     properties: {text: Έξοδος, role: outlined-button}
     type: Button
     layout_properties: {grid_position: 'EJYEWT,XBGAJM'}
-    event_bindings: {click: outlined_button_3_click}
+    event_bindings: {click: exit_button_click}
 container:
   type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}

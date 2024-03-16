@@ -137,16 +137,10 @@ class Form1(Form1Template):
     pain_diagram_position = self.pain_box.text
     
     anvil.server.call('add_form', form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
-    latitude, origine, destination, cargo, pharmacy, 
-    surname, name, age, speciality, sailor_nationality, height, weight,
-    sailor_id,
-                       symptomsfre, hours, days, piesi, pulses, chronicdis, surg, 
-                      
-                      pain,   
-    fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-    cough, breath_shortness, weakness, loss_of_senses, other_symptoms,
-                      
-                      photo_pain)
+    latitude, origine, destination, cargo, pharmacy, surname, name, age, speciality, sailor_nationality, height, weight,
+    sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
+    pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
+    loss_of_senses, other_symptoms, pain_diagram_position)
     
     Notification("Η Φόρμα καταχωρήθηκε").show()
     
@@ -161,33 +155,28 @@ class Form1(Form1Template):
     #self.email_box.text = ""
     #self.feedback_box.text = ""
 
-  def showbutton_click(self, **event_args):
+  def show_map_button(self, **event_args):
     "This method is called when the button Show on Map is clicked"
-    long = self.pi_longitude.text
-    lat = self.pi_latitude.text
-    
-    # Δημιουργούμε το URL για τους Χάρτες Google
+    long = self.ship_longitude.text
+    lat = self.ship_latitude.text
+    #Creates URL for Google Maps
     google_maps_url = f"https://www.google.com/maps?q={lat},{long}"
     
-    # Ανοίγουμε το URL σε νέο παράθυρο του browser
+    #Opens the URL to new Window
     anvil.js.window.open(google_maps_url)
     pass
 
-  def outlined_button_1_click(self, **event_args):
+  def start_page_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.open_form('Start')
     pass
 
-  def button_download_click(self, **event_args):
+  def stats_page_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    anvil.open_form('Stats')
     pass
-
-  def print_hide(self, **event_args):
-    "This method is called when the Button is removed from the screen""
-    #if form is not saved
-    pass
-
-  def outlined_button_3_click(self, **event_args):
+ 
+  def exit_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Log out the current user
     anvil.users.logout()
@@ -196,14 +185,7 @@ class Form1(Form1Template):
     anvil.open_form('Cover_page')
     pass
 
-  def outlined_button_2_click(self, **event_args):
+  def new_form_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    #redirect to stats page
-    anvil.open_form('Stats')
     pass
-
- 
-
-
   
-    
