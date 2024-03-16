@@ -7,7 +7,7 @@ services:
   client_config: {allow_signup: false, enable_automatically: true, use_email: true,
     confirm_email: true, require_secure_passwords: false}
   server_config: {user_table: users}
-startup: {type: form, module: Form1}
+startup: {type: form, module: Cover_page}
 package_name: Information_System_for_the_Support___Recording_of_Maritime_Incidents_at_Sea
 allow_embedding: false
 name: Information System for the Support - Recording of Maritime Incidents at Sea

@@ -178,10 +178,10 @@ class Form1(Form1Template):
  
   def exit_button_click(self, **event_args):
     """This method is called when the button is clicked"""
-    # Log out the current user
+    #Log out the current user
     anvil.users.logout()
     
-    #redirect to first page
+    #Redirect to first page
     anvil.open_form('Cover_page')
     pass
 
