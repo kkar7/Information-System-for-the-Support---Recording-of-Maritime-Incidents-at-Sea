@@ -12,10 +12,10 @@ class Form1(Form1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-    self.check_boxes = [self.in_ponos, self.in_piretos, self.in_rigos, self.in_zali, self.in_emetos, self.in_diaria, self.in_travma, self.in_erithrotita, self.in_priximo, self.in_aimoragia, self.in_xenosoma, self.in_vixas, self.in_dispnia, self.in_adunamia, self.in_apolia]
-    #στην πανω γραμμη πρεπει να αλλαξω τα ονοματα με αυτα π εχω εγω στα selfcheck boxes
+    self.check_boxes = [self.check_pain, self.check_fever, self.check_frown, self.check_dizziness, self.check_vomit, self.check_diarrhea, self.check_wound, self.check_redness,
+                        self.check_swelling, self.check_bleeding, self.check_foreign_body, self.check_cough, self.check_breath_shortness, self.check_weakness, self.check_loss_of_senses]
 
-
+#Τhis code runs when the Submit (Καταχώρηση) button is clicked
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"
     #ship_data
@@ -133,16 +133,24 @@ class Form1(Form1Template):
     
     other_symptoms = self.other_symptoms.text
 
-    #photogrid
+    #Photo grid
     pain_diagram_position = self.pain_box.text
     
-    anvil.server.call('add_form', form_datetime, ship_name, sign, nationallity, type, eta, zone, 
-    weather, long, lat, origine, destination, cargo, pharm, surname, name, age, speciality, 
-    sailor_nationality, height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
+    anvil.server.call('add_form', form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
+    latitude, origine, destination, cargo, pharmacy, 
+    surname, name, age, speciality, sailor_nationality, height, weight,
+    sailor_id,
+                       symptomsfre, hours, days, piesi, pulses, chronicdis, surg, 
+                      
+                      pain,   
     fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-    cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain)
+    cough, breath_shortness, weakness, loss_of_senses, other_symptoms,
+                      
+                      photo_pain)
+    
     Notification("Η Φόρμα καταχωρήθηκε").show()
-    #print form
+    
+    #Print form 
     if anvil.js.window.confirm("Θέλετε να εκτυπώσετε τη φόρμα;"):
         anvil.js.window.print()
     #self.clear_inputs()
