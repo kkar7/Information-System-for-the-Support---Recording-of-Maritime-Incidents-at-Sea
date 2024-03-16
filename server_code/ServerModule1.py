@@ -32,38 +32,38 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
    
     #ship data
     ship_name = ship_name,
-    national_sign = sign, ####################
-    ship_nationality = ship_nationality, #######
-    ship_type = ship_type, #####
+    national_sign = national_sign, 
+    ship_nationality = ship_nationality,
+    ship_type = ship_type, 
     eta = eta,
-    naval_zone = zone,   #####
+    naval_zone = naval_zone,   
     weather = weather,
-    longitude = long,   ######
-    latitude = lat,     #######
+    longitude = longitude,   
+    latitude = latitude,     
     origine = origine,
     destination = destination,
     cargo = cargo,
-    pharmacy = pharmacy, ##########
+    pharmacy = pharmacy, 
 
     #sailor_data
     surname = surname,
     name = name,
     age = age,
-    specialty = specialty,  ###################
+    specialty = specialty,  
     sailor_nationality = sailor_nationality,
     height = height,
-    weight = weight,    ##############
-    sailor_id = sailor_id, #############
+    weight = weight,    
+    sailor_id = sailor_id, 
     
     #symptoms
-    symptoms_frequency = symptoms_frequency,  ############
+    symptoms_frequency = symptoms_frequency,  
     hours = hours,
     days = days,
 
-    blood_pressure = blood_pressure,    ##########
+    blood_pressure = blood_pressure,    
     pulses = pulses,
-    chronic_diseases = chronic_diseases,  #######
-    previous_surgeries = previous_surgeries,    ##########
+    chronic_diseases = chronic_diseases,  
+    previous_surgeries = previous_surgeries,    
     
     #symptoms checkboxes
     pain = pain,   
@@ -84,7 +84,7 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     
     other_symptoms = other_symptoms,
 
-    pain_diagram_position = pain_diagram_position,    ###############################
+    pain_diagram_position = pain_diagram_position,    
   )
 
 #Download the form data table (add_form) to CSV
