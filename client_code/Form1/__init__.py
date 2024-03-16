@@ -29,7 +29,7 @@ class Form1(Form1Template):
     weather = self.ship_weather.text
     longitude = self.ship_longitude.text
     latitude = self.ship_latitude.text
-    origine = self.ship_origin.text
+    origin = self.ship_origin.text
     destination = self.ship_destination.text
     cargo = self.ship_cargo.text
     pharmacy = self.ship_pharmacy.text
@@ -38,7 +38,7 @@ class Form1(Form1Template):
     surname = self.s_surname.text
     name = self.s_name.text
     age = self.s_age.text
-    speciality = self.s_speciality.text
+    specialty = self.s_speciality.text
     sailor_nationality = self.s_nationality.text
     height = self.s_height.text
     weight = self.s_weight.text
@@ -137,7 +137,7 @@ class Form1(Form1Template):
     pain_diagram_position = self.pain_box.text
     
     anvil.server.call('add_form', form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
-    latitude, origine, destination, cargo, pharmacy, surname, name, age, speciality, sailor_nationality, height, weight,
+    latitude, origin, destination, cargo, pharmacy, surname, name, age, specialty, sailor_nationality, height, weight,
     sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
     pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
     loss_of_senses, other_symptoms, pain_diagram_position)
@@ -155,7 +155,7 @@ class Form1(Form1Template):
     #self.email_box.text = ""
     #self.feedback_box.text = ""
 
-  def show_map_button(self, **event_args):
+  def show_map_button_click(self, **event_args):
     "This method is called when the button Show on Map is clicked"
     long = self.ship_longitude.text
     lat = self.ship_latitude.text
@@ -188,4 +188,6 @@ class Form1(Form1Template):
   def new_form_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     pass
+
+
   

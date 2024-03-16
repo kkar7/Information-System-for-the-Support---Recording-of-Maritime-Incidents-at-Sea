@@ -21,11 +21,11 @@ def print_my_permissions():
 #Form 
 #Store Form data
 @anvil.server.callable
-def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weather, long, lat,
-  origine, destination, cargo, pharm, surname, name, age, speciality, sailor_nationality,
-  height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
-  fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body,     
-  cough, breath_shortness, weakness, loss_of_senses, other_symptoms, photo_pain):
+def add_form(form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
+    latitude, origin, destination, cargo, pharmacy, surname, name, age, specialty, sailor_nationality, height, weight,
+    sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
+    pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
+    loss_of_senses, other_symptoms, pain_diagram_position):
   app_tables.add_form.add_row(
     
     form_datetime = form_datetime,
@@ -40,7 +40,7 @@ def add_form(form_datetime, ship_name, sign, nationallity, type, eta, zone, weat
     weather = weather,
     longitude = longitude,   
     latitude = latitude,     
-    origine = origine,
+    origin = origin,
     destination = destination,
     cargo = cargo,
     pharmacy = pharmacy, 

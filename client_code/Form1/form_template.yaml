@@ -410,7 +410,7 @@ components:
       properties: {auto_expand: true}
       type: TextArea
       layout_properties: {grid_position: 'QQAKYH,CRKBLX'}
-      event_bindings: {change: in_allasimptomata_change}
+      event_bindings: {change: other_symptoms_change}
     - name: data_row_panel_1
       properties: {}
       type: DataRowPanel
