@@ -172,7 +172,7 @@ components:
       properties: {text: 'ΕΠΩΝΥΜΟ:'}
       type: Label
       layout_properties: {grid_position: 'BZDIGP,XTINGB'}
-    - name: as_eponimo
+    - name: s_surname
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'BZDIGP,FLAWUU'}
@@ -181,7 +181,7 @@ components:
       properties: {text: 'ONOMA:'}
       type: Label
       layout_properties: {grid_position: 'BZDIGP,CTPHBR'}
-    - name: as_onoma
+    - name: s_name
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'BZDIGP,KLARZD'}
@@ -190,7 +190,7 @@ components:
       properties: {text: 'ΗΛΙΚΙΑ:'}
       type: Label
       layout_properties: {grid_position: 'BZDIGP,FHCMKX'}
-    - name: as_ilikia
+    - name: s_age
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'BZDIGP,BKPGPI'}
@@ -199,7 +199,7 @@ components:
       properties: {text: 'ΕΙΔΙΚΟΤΗΤΑ:'}
       type: Label
       layout_properties: {grid_position: 'PZZJFK,MUDUCV'}
-    - name: as_eidikotita
+    - name: s_speciality
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PZZJFK,OOFWCA'}
@@ -208,7 +208,7 @@ components:
       properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
       type: Label
       layout_properties: {grid_position: 'PZZJFK,HQVERZ'}
-    - name: as_ethnikotitanaft
+    - name: s_nationality
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'PZZJFK,BKPHST'}
@@ -217,7 +217,7 @@ components:
       properties: {text: 'ΥΨΟΣ (cm):'}
       type: Label
       layout_properties: {grid_position: 'DLOTXM,IAZHPZ'}
-    - name: as_ipsos
+    - name: s_height
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'DLOTXM,WPRDHG'}
@@ -226,7 +226,7 @@ components:
       properties: {text: 'ΒΑΡΟΣ (kg):'}
       type: Label
       layout_properties: {grid_position: 'DLOTXM,VBRICW'}
-    - name: as_varos
+    - name: s_weight
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'DLOTXM,MMNQBY'}
@@ -235,7 +235,7 @@ components:
       properties: {text: 'ΜΕΘ. Η ΑΡΙΘΜΟΣ ΔΙΑΒΑΤΗΡΙΟΥ:'}
       type: Label
       layout_properties: {grid_position: 'GVAHNF,WMJIZL'}
-    - name: as_am
+    - name: s_id
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'GVAHNF,DWUUAA'}
@@ -253,7 +253,7 @@ components:
       properties: {text: ΚΥΡΙΟ ΣΥΜΠΤΩΜΑ, align: left, underline: true}
       type: Label
       layout_properties: {grid_position: 'YGLXXC,JLGGDQ'}
-    - name: in_ponos
+    - name: check_pain
       properties: {text: ΠΟΝΟΣ}
       type: CheckBox
       layout_properties: {grid_position: 'PHSHTM,JCWPWF'}
@@ -262,7 +262,7 @@ components:
       properties: {text: 1. ΤΡΟΠΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ}
       type: Label
       layout_properties: {grid_position: 'PHSHTM,RWDTOC'}
-    - name: in_piretos
+    - name: check_fever
       properties: {text: ΠΥΡΕΤΟΣ}
       type: CheckBox
       layout_properties: {grid_position: 'KTELOX,MLXMIM'}
@@ -275,7 +275,7 @@ components:
       properties: {text: ΣΤΑΔΙΑΚΑ, value: ΣΤΑΔΙΑΚΑ}
       type: RadioButton
       layout_properties: {grid_position: 'KTELOX,UTYZCS'}
-    - name: in_rigos
+    - name: check_frown
       properties: {text: ΡΙΓΟΣ}
       type: CheckBox
       layout_properties: {grid_position: 'DQBYIL,VTUDDN'}
@@ -284,7 +284,7 @@ components:
       properties: {text: '2. ΧΡΟΝΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ '}
       type: Label
       layout_properties: {grid_position: 'DQBYIL,AHNHOE'}
-    - name: in_zali
+    - name: check_dizziness
       properties: {text: ΖΑΛΗ}
       type: CheckBox
       layout_properties: {grid_position: 'WICJCB,GAWAPO'}
@@ -293,7 +293,7 @@ components:
       properties: {text: 'ΠΡΙΝ (ώρες):', align: right}
       type: Label
       layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,XDBHTR'}
-    - name: in_ores
+    - name: hours
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,KYGDBL'}
@@ -302,17 +302,17 @@ components:
       properties: {text: 'ΠΡΙΝ (ημέρες):', align: right}
       type: Label
       layout_properties: {grid_position: 'WICJCB,HVKUQH'}
-    - name: in_meres
+    - name: days
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'WICJCB,VUEBTD'}
       event_bindings: {pressed_enter: in_meres_pressed_enter}
-    - name: in_emetos
+    - name: check_vomit
       properties: {text: ΕΜΕΤΟΣ}
       type: CheckBox
       layout_properties: {grid_position: 'YHAAEI,FFAQYE HWWPKW,PCIQYQ'}
       event_bindings: {change: in_emetos_change}
-    - name: in_diaria
+    - name: check_diarrhea
       properties: {text: ΔΙΑΡΡΟΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'YHAAEI,FFAQYE PNUUGH,LLZQZM'}
@@ -321,7 +321,7 @@ components:
       properties: {text: 3. ΜΕΤΡΗΣΗ ΖΩΤΙΚΩΝ ΣΗΜΕΙΩΝ}
       type: Label
       layout_properties: {grid_position: 'YHAAEI,BQTPDG'}
-    - name: in_travma
+    - name: check_wound
       properties: {text: ΤΡΑΥΜΑ}
       type: CheckBox
       layout_properties: {grid_position: 'TKBETC,UPRORQ'}
@@ -330,12 +330,12 @@ components:
       properties: {text: 'ΑΡΤΗΡΙΑΚΗ ΠΙΕΣΗ (... / ..):', align: right}
       type: Label
       layout_properties: {grid_position: 'TKBETC,VEJBHS'}
-    - name: piesi
+    - name: b_pressure
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'TKBETC,BWVSVG'}
       event_bindings: {pressed_enter: outlined_15_pressed_enter}
-    - name: in_erithrotita
+    - name: check_redness
       properties: {text: ΕΡΥΘΡΟΤΗΤΑ}
       type: CheckBox
       layout_properties: {grid_position: 'RVZONS,IWEWAH'}
@@ -344,12 +344,12 @@ components:
       properties: {text: 'ΣΦΙΞΕΙΣ (/min):', align: right}
       type: Label
       layout_properties: {grid_position: 'RVZONS,HKBPKE'}
-    - name: in_sfixis
+    - name: pulses
       properties: {role: outlined}
       type: TextBox
       layout_properties: {grid_position: 'RVZONS,SPNRAQ'}
       event_bindings: {pressed_enter: in_sfixis_pressed_enter}
-    - name: in_priximo
+    - name: check_swelling
       properties: {text: ΠΡΗΞΙΜΟ}
       type: CheckBox
       layout_properties: {grid_position: 'KTRAAC,UNJLYG'}
@@ -358,17 +358,17 @@ components:
       properties: {text: 4. ΧΡΟΝΙΕΣ ΠΑΘΗΣΕΙΣ ΑΠΟ ΤΙΣ ΟΠΟΙΕΣ ΠΑΣΧΕΙ Ο ΝΑΥΤΙΚΟΣ}
       type: Label
       layout_properties: {grid_position: 'KTRAAC,PCTAFF'}
-    - name: in_aimoragia
+    - name: check_bleeding
       properties: {text: ΑΙΜΟΡΡΑΓΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'PJWFKU,DKCCQM'}
       event_bindings: {change: in_aimoragia_change}
-    - name: in_xroniespathisis
+    - name: c_diseases
       properties: {}
       type: TextArea
       layout_properties: {grid_position: 'PJWFKU,CIFFHZ'}
       event_bindings: {change: in_xroniespathisis_change}
-    - name: in_xenosoma
+    - name: check_foreign_body
       properties: {text: ΞΕΝΟ ΣΩΜΑ, allow_indeterminate: false, enabled: true}
       type: CheckBox
       layout_properties: {grid_position: 'MPDAPM,WOQUSA'}
@@ -377,27 +377,27 @@ components:
       properties: {text: 5. ΠΡΟΗΓΟΥΜΕΝΕΣ ΧΕΙΡΟΥΡΓΙΚΕΣ ΕΠΕΜΒΑΣΕΙΣ}
       type: Label
       layout_properties: {grid_position: 'MPDAPM,NZSGDY'}
-    - name: in_vixas
+    - name: check_cough
       properties: {text: ΒΗΧΑΣ}
       type: CheckBox
       layout_properties: {grid_position: 'IAUUQS,LLDLKK'}
       event_bindings: {change: in_vixas_change}
-    - name: in_proigoumenesxeirourgikesep
+    - name: prev_surgeries
       properties: {}
       type: TextArea
       layout_properties: {grid_position: 'IAUUQS,OVLTET'}
       event_bindings: {change: in_proigoumenesxeirourgikesep_change}
-    - name: in_dispnia
+    - name: check_breath_shortness
       properties: {text: ΔΥΣΠΝΟΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'AXECZD,PQKNRS'}
       event_bindings: {change: in_dispnia_change}
-    - name: in_adunamia
+    - name: check_weakness
       properties: {text: ΑΔΥΝΑΜΙΑ}
       type: CheckBox
       layout_properties: {grid_position: 'ITHHBP,YRAXPF'}
       event_bindings: {change: in_adunamia_change}
-    - name: in_apolia
+    - name: check_loss_of_senses
       properties: {text: ΑΠΩΛΕΙΑ ΑΣΘΗΣΕΩΝ}
       type: CheckBox
       layout_properties: {grid_position: 'DLVBSE,JRYEFK'}
@@ -406,7 +406,7 @@ components:
       properties: {text: ΑΛΛΑ}
       type: Label
       layout_properties: {grid_position: 'THDSLX,IOJZWZ'}
-    - name: in_allasimptomata
+    - name: other_symptoms
       properties: {auto_expand: true}
       type: TextArea
       layout_properties: {grid_position: 'QQAKYH,CRKBLX'}

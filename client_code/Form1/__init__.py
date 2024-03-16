@@ -35,109 +35,107 @@ class Form1(Form1Template):
     pharmacy = self.ship_pharmacy.text
 
     #sailor (patient) data
-    surname = self.as_eponimo.text
-    name = self.as_onoma.text
-    age = self.as_ilikia.text
-    speciality = self.as_eidikotita.text
-    sailor_nationality = self.as_ethnikotitanaft.text
-    height = self.as_ipsos.text
-    kg = self.as_varos.text
-    s_id = self.as_am.text
+    surname = self.s_surname.text
+    name = self.s_name.text
+    age = self.s_age.text
+    speciality = self.s_speciality.text
+    sailor_nationality = self.s_nationality.text
+    height = self.s_height.text
+    weight = self.s_weight.text
+    sailor_id = self.s_id.text
 
     #symptomps
-    #symptomps_intro
-    symptomsfre = self.radio_button_1.get_group_value()
-    hours = self.in_ores.text
-    days = self.in_meres.text
-    piesi = self.piesi.text
-    pulses = self.in_sfixis.text
-    chronicdis = self.in_xroniespathisis.text
-    surg = self.in_proigoumenesxeirourgikesep.text
+    #symptomps intro
+    symptoms_frequency = self.radio_button_1.get_group_value()
+    hours = self.hours.text
+    days = self.days.text
+    blood_pressure = self.b_pressure.text
+    pulses = self.pulses.text
+    chronic_diseases = self.c_diseases.text
+    previous_surgeries = self.prev_surgeries.text
     
     #basic symphtoms (check boxes area)
-    if self.in_ponos.checked:
+    if self.check_pain.checked:
       pain = True
     else:
       pain = False
     
-    if self.in_piretos.checked:
+    if self.check_fever.checked:
       fever = True
     else:
       fever = False      
     
-    if self.in_rigos.checked:
+    if self.check_frown.checked:
       frown = True
     else:
       frown = False  
     
-    if self.in_zali.checked:
+    if self.check_dizziness.checked:
       dizziness = True
     else:
       dizziness = False  
 
-    if self.in_emetos.checked:
+    if self.check_vomit.checked:
       vomit = True
     else:
       vomit = False 
 
-    if self.in_diaria.checked:
+    if self.check_diarrhea.checked:
       diarrhea = True
     else:
       diarrhea = False
 
-    if self.in_travma.checked:
+    if self.check_wound.checked:
       wound = True
     else:
       wound = False
 
-    if self.in_erithrotita.checked:
+    if self.check_redness.checked:
       redness = True
     else:
       redness = False
 
-    if self.in_priximo.checked:
+    if self.check_swelling.checked:
       swelling = True
     else:
       swelling  = False   
 
-    if self.in_aimoragia.checked:
+    if self.check_bleeding.checked:
       bleeding = True
     else:
       bleeding  = False
 
-    if self.in_xenosoma.checked:
+    if self.check_foreign_body.checked:
       foreign_body = True
     else:
       foreign_body  = False    
 
-    if self.in_vixas.checked:
+    if self.check_cough.checked:
       cough = True
     else:
       cough  = False
 
-    if self.in_dispnia.checked:
+    if self.check_breath_shortness.checked:
       breath_shortness = True
     else:
       breath_shortness  = False  
 
-    if self.in_adunamia.checked:
+    if self.check_weakness.checked:
       weakness = True
     else:
       weakness  = False  
 
-    if self.in_apolia.checked:
+    if self.check_loss_of_senses.checked:
       loss_of_senses = True
     else:
       loss_of_senses  = False  
     #end of check boxes 
     
-    other_symptoms = self.in_allasimptomata.text
+    other_symptoms = self.other_symptoms.text
 
     #photogrid
-    photo_pain = self.pain_box.text
+    pain_diagram_position = self.pain_box.text
     
-   # email = self.email_box.text
-   # feedback = self.feedback_box.text
     anvil.server.call('add_form', form_datetime, ship_name, sign, nationallity, type, eta, zone, 
     weather, long, lat, origine, destination, cargo, pharm, surname, name, age, speciality, 
     sailor_nationality, height, kg, s_id, symptomsfre, hours, days, piesi, pulses, chronicdis, surg, pain,   
