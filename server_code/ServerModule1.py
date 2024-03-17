@@ -21,12 +21,12 @@ def print_my_permissions():
 #Form 
 #Store Form data
 @anvil.server.callable
-def add_form(form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
+def Incidents_table(form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
     latitude, origin, destination, cargo, pharmacy, surname, name, age, specialty, sailor_nationality, height, weight,
     sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
     pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
     loss_of_senses, other_symptoms, pain_diagram_position):
-  app_tables.add_form.add_row(
+   app_tables.Incidents_table.add_row(
     
     form_datetime = form_datetime,
    
@@ -87,7 +87,7 @@ def add_form(form_datetime, ship_name, national_sign, ship_nationality, ship_typ
     pain_diagram_position = pain_diagram_position,    
   )
 
-#Download the form data table (add_form) to CSV
+#Download the form data table (Incidents_table) to CSV
 @anvil.server.callable
 def get_table_as_csv():
     output = StringIO()
@@ -97,7 +97,7 @@ def get_table_as_csv():
     output.write(','.join(header) + '\n')
     
     # Write the data rows, including the ID
-    rows = app_tables.add_form.search()
+    rows = app_tables.Incidents_table.search()
     for row in rows:
         id_str = str(row.get_id())
         row_data = [id_str] + [str(row[column_name]) for column_name in header[1:]]
@@ -116,14 +116,14 @@ def get_table_as_csv():
 @anvil.server.callable
 def get_unique_sign_count():
     # Count unique 'national_sign's to find
-    unique_signs = set(row['national_sign'] for row in app_tables.add_form.search() if row['national_sign'] is not None)
+    unique_signs = set(row['national_sign'] for row in app_tables.Incidents_table.search() if row['national_sign'] is not None)
     return len(unique_signs)
 
 #Find ship nationalities
 @anvil.server.callable
 def get_nationality_counts():
-    # Fetch all rows from the 'add_form' table
-    all_entries = app_tables.add_form.search()
+    # Fetch all rows from the 'Incidents_table' table
+    all_entries = app_tables.Incidents_table.search()
     
     # Create a dictionary to count nationalities
     nationallity_counts = {}
@@ -140,8 +140,8 @@ def get_nationality_counts():
 #Get ship types
 @anvil.server.callable
 def get_ship_type_counts():
-    # Fetch all rows from the 'add_form' table
-    all_entries = app_tables.add_form.search()
+    # Fetch all rows from the 'Incidents_table' table
+    all_entries = app_tables.Incidents_table.search()
     
     # Create a dictionary to count ship types
     type_counts = {}
@@ -158,14 +158,14 @@ def get_ship_type_counts():
 #Get the number of patients 
 @anvil.server.callable
 def get_unique_sailorid_count():
-    unique_sailorid = set(row['sailor_id'] for row in app_tables.add_form.search() if row['sailor_id'] is not None)
+    unique_sailorid = set(row['sailor_id'] for row in app_tables.Incidents_table.search() if row['sailor_id'] is not None)
     return len(unique_sailorid)
 
 #Get age statistics
 @anvil.server.callable
 def get_age_statistics():
     ages = []
-    for row in app_tables.add_form.search():
+    for row in app_tables.Incidents_table.search():
         try:
             age = int(row['age'])
             ages.append(age)
@@ -192,8 +192,8 @@ def get_age_statistics():
 #Get sailor nationalities
 @anvil.server.callable
 def get_sailor_nationality_counts():
-    # Fetch all rows from the 'add_form' table
-    all_entries = app_tables.add_form.search()
+    # Fetch all rows from the 'Incidents_table' table
+    all_entries = app_tables.Incidents_table.search()
     
     # Create a dictionary to count sailor nationalities
     sailor_nationality_counts = {}
@@ -210,8 +210,8 @@ def get_sailor_nationality_counts():
 #Get sailors speciality
 @anvil.server.callable
 def get_speciality_counts():
-    # Fetch all rows from the 'add_form' table
-    all_entries = app_tables.add_form.search()
+    # Fetch all rows from the 'Incidents_table' table
+    all_entries = app_tables.Incidents_table.search()
     
     # Create a dictionary to count sailor specialties
     speciality_counts = {}
@@ -233,4 +233,3 @@ def get_current_user_role():
         # Assuming 'role' is the column name in the 'Users' table where roles are stored
         return user['role']
     return None  # No user is logged in
-

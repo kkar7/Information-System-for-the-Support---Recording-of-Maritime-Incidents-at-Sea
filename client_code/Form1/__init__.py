@@ -136,7 +136,7 @@ class Form1(Form1Template):
     #Photo grid
     pain_diagram_position = self.pain_box.text
     
-    anvil.server.call('add_form', form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
+    anvil.server.call('Incidents_table', form_datetime, ship_name, national_sign, ship_nationality, ship_type, eta, naval_zone, weather, longitude, 
     latitude, origin, destination, cargo, pharmacy, surname, name, age, specialty, sailor_nationality, height, weight,
     sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
     pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
