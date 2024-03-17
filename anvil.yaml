@@ -187,10 +187,5 @@ db_schema:
     - name: photo_pain
       admin_ui: {width: 200}
       type: string
-  table_3:
-    client: none
-    server: full
-    columns: []
-    title: Table 3
   incidents_table: {title: Incidents_table}
 renamed: true

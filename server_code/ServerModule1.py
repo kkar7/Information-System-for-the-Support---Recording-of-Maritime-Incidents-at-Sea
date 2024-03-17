@@ -26,7 +26,7 @@ def Incidents_table(form_datetime, ship_name, national_sign, ship_nationality, s
     sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
     pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
     loss_of_senses, other_symptoms, pain_diagram_position):
-   app_tables.Incidents_table.add_row(
+  app_tables.incidents_table.add_row(
     
     form_datetime = form_datetime,
    
