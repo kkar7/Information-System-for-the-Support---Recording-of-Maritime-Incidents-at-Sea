@@ -97,7 +97,7 @@ def get_table_as_csv():
     output.write(','.join(header) + '\n')
     
     # Write the data rows, including the ID
-    rows = app_tables.Incidents_table.search()
+    rows = app_tables.incidents_table.search()
     for row in rows:
         id_str = str(row.get_id())
         row_data = [id_str] + [str(row[column_name]) for column_name in header[1:]]
@@ -116,17 +116,17 @@ def get_table_as_csv():
 @anvil.server.callable
 def get_unique_sign_count():
     # Count unique 'national_sign's to find
-    unique_signs = set(row['national_sign'] for row in app_tables.Incidents_table.search() if row['national_sign'] is not None)
+    unique_signs = set(row['national_sign'] for row in app_tables.incidents_table.search() if row['national_sign'] is not None)
     return len(unique_signs)
 
 #Find ship nationalities
 @anvil.server.callable
 def get_nationality_counts():
     # Fetch all rows from the 'Incidents_table' table
-    all_entries = app_tables.Incidents_table.search()
+    all_entries = app_tables.incidents_table.search()
     
     # Create a dictionary to count nationalities
-    nationallity_counts = {}
+    nationality_counts = {}
     for entry in all_entries:
         nationality = entry['ship_nationality'] 
         if nationality in nationality_counts:
@@ -135,13 +135,13 @@ def get_nationality_counts():
             nationality_counts[nationality] = 1
             
     # Convert the counts to a list of tuples and return
-    return list(nationallity_counts.items())
+    return list(nationality_counts.items())
 
 #Get ship types
 @anvil.server.callable
 def get_ship_type_counts():
     # Fetch all rows from the 'Incidents_table' table
-    all_entries = app_tables.Incidents_table.search()
+    all_entries = app_tables.incidents_table.search()
     
     # Create a dictionary to count ship types
     type_counts = {}
@@ -158,14 +158,14 @@ def get_ship_type_counts():
 #Get the number of patients 
 @anvil.server.callable
 def get_unique_sailorid_count():
-    unique_sailorid = set(row['sailor_id'] for row in app_tables.Incidents_table.search() if row['sailor_id'] is not None)
+    unique_sailorid = set(row['sailor_id'] for row in app_tables.incidents_table.search() if row['sailor_id'] is not None)
     return len(unique_sailorid)
 
 #Get age statistics
 @anvil.server.callable
 def get_age_statistics():
     ages = []
-    for row in app_tables.Incidents_table.search():
+    for row in app_tables.incidents_table.search():
         try:
             age = int(row['age'])
             ages.append(age)
@@ -193,7 +193,7 @@ def get_age_statistics():
 @anvil.server.callable
 def get_sailor_nationality_counts():
     # Fetch all rows from the 'Incidents_table' table
-    all_entries = app_tables.Incidents_table.search()
+    all_entries = app_tables.incidents_table.search()
     
     # Create a dictionary to count sailor nationalities
     sailor_nationality_counts = {}
@@ -211,12 +211,12 @@ def get_sailor_nationality_counts():
 @anvil.server.callable
 def get_speciality_counts():
     # Fetch all rows from the 'Incidents_table' table
-    all_entries = app_tables.Incidents_table.search()
+    all_entries = app_tables.incidents_table.search()
     
     # Create a dictionary to count sailor specialties
     speciality_counts = {}
     for entry in all_entries:
-        speciality = entry['speciality']  # Focus on the 'speciality' column
+        speciality = entry['specialty']  # Focus on the 'speciality' column
         if speciality in speciality_counts:
             speciality_counts[speciality] += 1
         else:
