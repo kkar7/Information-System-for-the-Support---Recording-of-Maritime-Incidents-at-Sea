@@ -13,6 +13,15 @@ class Stats(StatsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
+    
+   #Asynchronously call 'get_user_role' to get the current user's role
+    user_role = anvil.server.call('get_current_user_role')
+        
+    # Hide the buttons if the user's role is 'guest'
+    self.form_page_button.visible = (user_role != 'guest')
+
+
+    
     #The code that is written here runs before the form opens
     #Calls the server function to get the number of unique ship signs
     unique_sign_count = anvil.server.call('get_unique_sign_count')
