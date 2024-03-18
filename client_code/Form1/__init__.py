@@ -187,6 +187,10 @@ class Form1(Form1Template):
 
   def new_form_button_click(self, **event_args):
     """This method is called when the button is clicked"""
+    #Open new clean form
+    anvil.open_form('Form1') 
+     # Call JavaScript function to scroll to the top of the page
+    anvil.js.window.scrollTo(0, 0)
     pass
 
 
