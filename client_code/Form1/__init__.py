@@ -37,9 +37,11 @@ class Form1(Form1Template):
     if not self.s_age.text:
         empty_fields.append("Ηλικία Ασθενή")
     if not self.s_speciality.text:
-       empty_fields.append("Ειδικότητα Πλοίου")
-    if not self.s_speciality.text:
-       empty_fields.append("Ειδικότητα Πλοίου")
+       empty_fields.append("Ειδικότητα Ασθενή")
+    if not self.s_nationality.text:
+       empty_fields.append("Εθνικότητα Ασθενή")
+    if not self.s_id.text:
+       empty_fields.append("ΜΕΘ. η Αρ. Διαβατηρίου Ασθενή")  
     
     # If there are empty fields, display a warning message and prevent form submission
     if empty_fields:
