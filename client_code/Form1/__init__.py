@@ -18,6 +18,26 @@ class Form1(Form1Template):
 #Τhis code runs when the Submit (Καταχώρηση) button is clicked
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"
+   
+    # Initialize a list to store the names of empty fields
+    empty_fields = []
+
+    # Check each field in the form and add its name to the list if it's empty
+    if not self.ship_name.text:
+        empty_fields.append("Όνομα Πλοίου")
+    if not self.ship_national_sign.text:
+        empty_fields.append("Εθνικό Σήμα Πλοίου")
+    # Add more checks for other fields as needed
+    
+    # If there are empty fields, display a warning message and prevent form submission
+    if empty_fields:
+        alert(f"Παρακαλώ συμπληρώστε τα εξής πεδία: {', '.join(empty_fields)}")
+        return
+
+    # If all required fields are filled, proceed with form submission
+    # Your existing code for form submission goes here...
+    
+    
     #ship_data
     form_datetime = datetime.datetime.now()
     ship_name = self.ship_name.text
@@ -147,14 +167,8 @@ class Form1(Form1Template):
     #Print form 
     if anvil.js.window.confirm("Θέλετε να εκτυπώσετε τη φόρμα;"):
         anvil.js.window.print()
-    #self.clear_inputs()
     pass
     
- # def clear_inputs(self):
-    #self.name_box.text = ""
-    #self.email_box.text = ""
-    #self.feedback_box.text = ""
-
   def show_map_button_click(self, **event_args):
     "This method is called when the button Show on Map is clicked"
     long = self.ship_longitude.text
