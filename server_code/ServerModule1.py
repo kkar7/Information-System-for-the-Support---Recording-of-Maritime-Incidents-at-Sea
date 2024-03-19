@@ -92,12 +92,14 @@ def Incidents_table(form_datetime, ship_name, national_sign, ship_nationality, s
 def get_table_as_csv():
     output = StringIO()
     
-    #CSV header
-    header = ['ID',"form_datetime", "ship_name", "national_sign", "ship_nationality", "ship_type", "eta", "naval_zone", "weather", "longitude", 
+    # CSV header
+    header = ['ID', "form_datetime", "ship_name", "national_sign", "ship_nationality", "ship_type", "eta", "naval_zone", "weather", "longitude", 
     "latitude", "origin", "destination", "cargo", "pharmacy", "surname", "name", "age", "specialty", "sailor_nationality", "height", "weight",
     "sailor_id", "symptoms_frequency", "hours", "days", "blood_pressure", "pulses", "chronic_diseases", "previous_surgeries",                  
     "pain", "fever", "frown", "dizziness", "vomit", "diarrhea", "wound", "redness", "swelling", "bleeding", "foreign_body", "cough", "breath_shortness", "weakness",
     "loss_of_senses", "other_symptoms", "pain_diagram_position"]
+    
+    # Write the CSV header
     output.write(','.join(header) + '\n')
     
     # Write the data rows, including the ID
@@ -107,10 +109,14 @@ def get_table_as_csv():
         row_data = [id_str] + [str(row[column_name]) for column_name in header[1:]]
         output.write(','.join(row_data) + '\n')
     
-    # Get the CSV string and convert it to bytes
+    # Get the CSV string
     csv_string = output.getvalue()
-    csv_bytes = csv_string.encode('utf-8')
+    
+    # Close the StringIO object
     output.close()
+    
+    # Convert the CSV string to bytes with UTF-8 encoding
+    csv_bytes = csv_string.encode('utf-8')
     
     # Return the CSV bytes as a media object
     return anvil.BlobMedia('text/csv', csv_bytes, name='data.csv')
