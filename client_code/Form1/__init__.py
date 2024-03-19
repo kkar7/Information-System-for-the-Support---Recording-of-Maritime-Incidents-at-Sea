@@ -19,25 +19,35 @@ class Form1(Form1Template):
   def submit_click(self, **event_args):
     "This method is called when the button is clicked"
    
-    # Initialize a list to store the names of empty fields
+    # Initializing list to store the names of empty fields
     empty_fields = []
 
     # Check each field in the form and add its name to the list if it's empty
     if not self.ship_name.text:
         empty_fields.append("Όνομα Πλοίου")
     if not self.ship_national_sign.text:
-        empty_fields.append("Εθνικό Σήμα Πλοίου")
-    # Add more checks for other fields as needed
+        empty_fields.append("Διεθνές Σήμα Πλοίου")
+    if not self.ship_nationality.text:
+        empty_fields.append("Εθνικότητα Πλοίου")
+
+    if not self.s_surname.text:
+        empty_fields.append("Επίθετο Ασθενή")
+    if not self.s_name.text:
+        empty_fields.append("Όνομα Ασθενή")
+    if not self.s_age.text:
+        empty_fields.append("Ηλικία Ασθενή")
+    if not self.s_speciality.text:
+       empty_fields.append("Ειδικότητα Πλοίου")
+    if not self.s_speciality.text:
+       empty_fields.append("Ειδικότητα Πλοίου")
     
     # If there are empty fields, display a warning message and prevent form submission
     if empty_fields:
         alert(f"Παρακαλώ συμπληρώστε τα εξής πεδία: {', '.join(empty_fields)}")
         return
 
-    # If all required fields are filled, proceed with form submission
-    # Your existing code for form submission goes here...
-    
-    
+    #If all required fields are filled, proceed with form submission
+   
     #ship_data
     form_datetime = datetime.datetime.now()
     ship_name = self.ship_name.text
