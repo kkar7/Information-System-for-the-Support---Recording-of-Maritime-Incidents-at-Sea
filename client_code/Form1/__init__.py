@@ -180,7 +180,8 @@ class Form1(Form1Template):
     if anvil.js.window.confirm("Θέλετε να εκτυπώσετε τη φόρμα;"):
         anvil.js.window.print()
     pass
-    
+
+  #Τhis code runs when the Show on Map button is clicked
   def show_map_button_click(self, **event_args):
     "This method is called when the button Show on Map is clicked"
     long = self.ship_longitude.text

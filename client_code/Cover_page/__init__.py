@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 
 class Cover_page(Cover_pageTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
+    #Set Form properties and Data Bindings.
     self.init_components(**properties)
 
   def log_in_click(self, **event_args):
