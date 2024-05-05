@@ -26,66 +26,66 @@ def Incidents_table(form_datetime, ship_name, national_sign, ship_nationality, s
     sailor_id, symptoms_frequency, hours, days, blood_pressure, pulses, chronic_diseases, previous_surgeries,                  
     pain, fever, frown, dizziness, vomit, diarrhea, wound, redness, swelling, bleeding, foreign_body, cough, breath_shortness, weakness,
     loss_of_senses, other_symptoms, pain_diagram_position):
-  app_tables.incidents_table.add_row(
+    app_tables.incidents_table.add_row(
     
-    form_datetime = form_datetime,
+      form_datetime = form_datetime,
    
-    #ship data
-    ship_name = ship_name,
-    national_sign = national_sign, 
-    ship_nationality = ship_nationality,
-    ship_type = ship_type, 
-    eta = eta,
-    naval_zone = naval_zone,   
-    weather = weather,
-    longitude = longitude,   
-    latitude = latitude,     
-    origin = origin,
-    destination = destination,
-    cargo = cargo,
-    pharmacy = pharmacy, 
+      #ship data
+      ship_name = ship_name,
+      national_sign = national_sign, 
+      ship_nationality = ship_nationality,
+      ship_type = ship_type, 
+      eta = eta,
+      naval_zone = naval_zone,   
+      weather = weather,
+      longitude = longitude,   
+      latitude = latitude,     
+      origin = origin,
+      destination = destination,
+      cargo = cargo,
+      pharmacy = pharmacy, 
 
-    #sailor_data
-    surname = surname,
-    name = name,
-    age = age,
-    specialty = specialty,  
-    sailor_nationality = sailor_nationality,
-    height = height,
-    weight = weight,    
-    sailor_id = sailor_id, 
+      #sailor_data
+      surname = surname,
+      name = name,
+      age = age,
+      specialty = specialty,  
+      sailor_nationality = sailor_nationality,
+      height = height,
+      weight = weight,    
+      sailor_id = sailor_id, 
     
-    #symptoms
-    symptoms_frequency = symptoms_frequency,  
-    hours = hours,
-    days = days,
+      #symptoms
+      symptoms_frequency = symptoms_frequency,  
+      hours = hours,
+      days = days,
 
-    blood_pressure = blood_pressure,    
-    pulses = pulses,
-    chronic_diseases = chronic_diseases,  
-    previous_surgeries = previous_surgeries,    
+      blood_pressure = blood_pressure,    
+      pulses = pulses,
+      chronic_diseases = chronic_diseases,  
+      previous_surgeries = previous_surgeries,    
     
-    #symptoms checkboxes
-    pain = pain,   
-    fever = fever,        
-    frown = frown,    
-    dizziness = dizziness, 
-    vomit = vomit,
-    diarrhea = diarrhea,
-    wound = wound,
-    redness = redness, 
-    swelling = swelling,   
-    bleeding = bleeding, 
-    foreign_body = foreign_body,     
-    cough = cough, 
-    breath_shortness = breath_shortness,
-    weakness = weakness,  
-    loss_of_senses = loss_of_senses, 
+      #symptoms checkboxes
+      pain = pain,   
+      fever = fever,        
+      frown = frown,    
+      dizziness = dizziness, 
+      vomit = vomit,
+      diarrhea = diarrhea,
+      wound = wound,
+      redness = redness, 
+      swelling = swelling,   
+      bleeding = bleeding, 
+      foreign_body = foreign_body,     
+      cough = cough, 
+      breath_shortness = breath_shortness,
+      weakness = weakness,  
+      loss_of_senses = loss_of_senses, 
     
-    other_symptoms = other_symptoms,
+      other_symptoms = other_symptoms,
 
-    pain_diagram_position = pain_diagram_position,    
-  )
+      pain_diagram_position = pain_diagram_position)  
+  
 
 #Download the form data table (Incidents_table) to CSV
 @anvil.server.callable
