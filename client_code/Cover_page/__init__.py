@@ -15,3 +15,5 @@ class Cover_page(Cover_pageTemplate):
     """This method is called when the button is clicked"""
     anvil.open_form('Start')
     pass
+
+
