@@ -1,6 +1,5 @@
 from ._anvil_designer import StatsTemplate
 from anvil import *
-import plotly.graph_objects as go
 import anvil.server
 import anvil.users
 import anvil.tables as tables
