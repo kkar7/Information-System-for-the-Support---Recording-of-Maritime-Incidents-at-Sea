@@ -4,7 +4,6 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.users
 import anvil.media
-from collections import Counter
 from io import StringIO
 
 #Different user permissions
