@@ -9,9 +9,7 @@ components:
   layout_properties: {slot: default}
   components:
   - name: image_1
-    properties: {source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring
-        a large anchor representing the sea, with a ship on top of it. The ship should
-        have a medical Red Cross symbol as its flag, sy.png', height: 227}
+    properties: {source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png', height: 227}
     type: Image
     layout_properties: {grid_position: 'WWLYRD,JPDJLU'}
   - name: label_2
@@ -19,9 +17,7 @@ components:
     type: Label
     layout_properties: {grid_position: 'ZRULIJ,QSHBUZ'}
   - name: rich_text_1
-    properties: {content: 'Το παρών είναι Πληροφοριακό σύστημα Καταγραφής Περιστατικών
-        Ναυτικών εν Πλω και χειρίζεται ευαίσθητα προσωπικά δεδομένα, συνεπώς απευθύνεται
-        μόνο σε εξουσιοδοτημένους χρήστες.', align: left, font_size: 14}
+    properties: {content: 'Το παρών είναι Πληροφοριακό σύστημα Καταγραφής Περιστατικών Ναυτικών εν Πλω και χειρίζεται ευαίσθητα προσωπικά δεδομένα, συνεπώς απευθύνεται μόνο σε εξουσιοδοτημένους χρήστες.', align: left, font_size: 14}
     type: RichText
     layout_properties: {grid_position: 'ZTGLER,SYKFMP'}
     components:
@@ -42,8 +38,11 @@ components:
       properties: {italic: true, text: Αν δεν έχετε στοιχεία σύνδεσης απευθυνθείτε στο διαχειριστή του συστήματος.}
       type: Label
       layout_properties: {}
+    - name: label_5
+      properties: {text: Το σύστημα έχει δημιουργηθεί  στο πλαίσιο εκπόνησης διπλωματικής εργασίας του Διιδρυματικού Προγράμματος Μεταπτυχιακών Σπουδών  με ειδίκευση στην Πληροφορική Υγείας του Τμήματος Νοσηλευτικής του ΕΚΠΑ και δεν είναι σύστημα πραγματικής λειτουργίας., italic: true, font_size: 11}
+      type: Label
+      layout_properties: {}
 - name: label_1
-  properties: {text: Πληροφοριακό Συστήμα Υποστήριξης – Καταγραφής Περιστατικών Ναυτικών εν Πλω,
-    font_size: 21, italic: false, underline: false, bold: true, align: right}
+  properties: {text: Πληροφοριακό Συστήμα Τηλεϊατρικής Υποστήριξης – Καταγραφής Υγειονομικών Περιστατικών Ναυτικών εν Πλω, font_size: 21, italic: false, underline: false, bold: true, align: right}
   type: Label
   layout_properties: {slot: title}
