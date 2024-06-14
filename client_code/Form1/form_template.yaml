@@ -5,7 +5,7 @@ events:
 custom_component: true
 components:
 - name: label_15
-  properties: {text: Φόρμα – Καταγραφής Υγειονομικών Περιστατικών Ναυτικών εν Πλω, align: right, bold: true, underline: false, role: headline, icon_align: top, font_size: 21}
+  properties: {text: Φόρμα – Καταγραφής Υγειονομικών Περιστατικών εν Πλω, align: right, bold: true, underline: false, role: headline, icon_align: top, font_size: 21}
   type: Label
   layout_properties: {slot: title}
 - type: ColumnPanel
