@@ -1,443 +1,427 @@
-properties: []
-is_package: true
-events:
-- {name: event, default_event: true}
-custom_component: true
 components:
-- name: label_15
-  properties: {text: Φόρμα – Καταγραφής Υγειονομικών Περιστατικών εν Πλω, align: right, bold: true, underline: false, role: headline, icon_align: top, font_size: 21}
+- layout_properties: {slot: title}
+  name: label_15
+  properties: {align: right, bold: true, font_size: 21, icon_align: top, role: headline, text: Φόρμα – Καταγραφής Υγειονομικών Περιστατικών εν Πλω, underline: false}
   type: Label
-  layout_properties: {slot: title}
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: column_panel_1
-  layout_properties: {slot: default}
-  components:
-  - type: ColumnPanel
-    properties: {col_widths: '{}', visible: true, spacing_below: small}
-    name: content_panel
-    components:
-    - name: image_1
-      properties: {source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png', height: 174}
+- components:
+  - components:
+    - layout_properties: {grid_position: 'JCHUZM,SKADEP'}
+      name: image_1
+      properties: {height: 174, source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png'}
       type: Image
-      layout_properties: {grid_position: 'JCHUZM,SKADEP'}
-    - name: spacer_3
+    - layout_properties: {grid_position: 'VTWDHL,FLWRTC'}
+      name: spacer_3
       properties: {height: 16}
       type: Spacer
-      layout_properties: {grid_position: 'VTWDHL,FLWRTC'}
-    - name: label_1
-      properties: {text: ΕΝΗΜΕΡΩΤΙΚΟ ΔΕΛΤΙΟ ΥΓΕΙΑΣ, align: center, bold: true, underline: true, role: title}
+    - layout_properties: {grid_position: 'CNYUXA,DPVLBM'}
+      name: label_1
+      properties: {align: center, bold: true, role: title, text: ΕΝΗΜΕΡΩΤΙΚΟ ΔΕΛΤΙΟ ΥΓΕΙΑΣ, underline: true}
       type: Label
-      layout_properties: {grid_position: 'CNYUXA,DPVLBM'}
-    - name: label_2
-      properties: {text: ΣΤΟΙΧΕΙΑ ΠΛΟΙΟΥ, align: left, underline: true, role: body}
+    - layout_properties: {grid_position: 'BUDLON,URCNXJ'}
+      name: label_2
+      properties: {align: left, role: body, text: ΣΤΟΙΧΕΙΑ ΠΛΟΙΟΥ, underline: true}
       type: Label
-      layout_properties: {grid_position: 'BUDLON,URCNXJ'}
-    - name: label_16
+    - layout_properties: {grid_position: 'PNORHN,ACWALG'}
+      name: label_16
       properties: {text: 'ONOMA:'}
       type: Label
-      layout_properties: {grid_position: 'PNORHN,ACWALG'}
-    - name: ship_name
+    - event_bindings: {pressed_enter: pi_shipname_pressed_enter}
+      layout_properties: {grid_position: 'PNORHN,SFLHOK'}
+      name: ship_name
       properties: {role: outlined, visible: true}
       type: TextBox
-      layout_properties: {grid_position: 'PNORHN,SFLHOK'}
-      event_bindings: {pressed_enter: pi_shipname_pressed_enter}
-    - name: label_17
+    - layout_properties: {grid_position: 'PNORHN,ZCJWTP'}
+      name: label_17
       properties: {text: 'ΔΙΕΘΝΕΣ ΣΗΜΑ:'}
       type: Label
-      layout_properties: {grid_position: 'PNORHN,ZCJWTP'}
-    - name: ship_national_sign
+    - event_bindings: {pressed_enter: pi_diethnessima_pressed_enter}
+      layout_properties: {grid_position: 'PNORHN,XYTKXN'}
+      name: ship_national_sign
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'PNORHN,XYTKXN'}
-      event_bindings: {pressed_enter: pi_diethnessima_pressed_enter}
-    - name: label_18
+    - layout_properties: {grid_position: 'CQHEEY,OKQYXV'}
+      name: label_18
       properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
       type: Label
-      layout_properties: {grid_position: 'CQHEEY,OKQYXV'}
-    - name: ship_nationality
+    - event_bindings: {pressed_enter: pi_ethnikotita_pressed_enter}
+      layout_properties: {grid_position: 'CQHEEY,EFCNMW'}
+      name: ship_nationality
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'CQHEEY,EFCNMW'}
-      event_bindings: {pressed_enter: pi_ethnikotita_pressed_enter}
-    - name: label_19
+    - layout_properties: {grid_position: 'CQHEEY,RCSPXP'}
+      name: label_19
       properties: {text: 'ΤΥΠΟΣ:'}
       type: Label
-      layout_properties: {grid_position: 'CQHEEY,RCSPXP'}
-    - name: ship_type
+    - event_bindings: {pressed_enter: pi_type_pressed_enter}
+      layout_properties: {grid_position: 'CQHEEY,DFQWMT'}
+      name: ship_type
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'CQHEEY,DFQWMT'}
-      event_bindings: {pressed_enter: pi_type_pressed_enter}
-    - name: label_20
+    - layout_properties: {grid_position: 'QEXUCE,JLAKLR'}
+      name: label_20
       properties: {text: 'E.T.A.:'}
       type: Label
-      layout_properties: {grid_position: 'QEXUCE,JLAKLR'}
-    - name: ship_eta
+    - event_bindings: {pressed_enter: pi_eta_pressed_enter}
+      layout_properties: {grid_position: 'QEXUCE,KDRQQX'}
+      name: ship_eta
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'QEXUCE,KDRQQX'}
-      event_bindings: {pressed_enter: pi_eta_pressed_enter}
-    - name: label_21
+    - layout_properties: {grid_position: 'QEXUCE,TNOSAM'}
+      name: label_21
       properties: {text: 'ΝΑΥΤ. ΖΩΝΗ:'}
       type: Label
-      layout_properties: {grid_position: 'QEXUCE,TNOSAM'}
-    - name: naval_zone
+    - event_bindings: {pressed_enter: pi_naftikizoni_pressed_enter}
+      layout_properties: {grid_position: 'QEXUCE,CJSWGT'}
+      name: naval_zone
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'QEXUCE,CJSWGT'}
-      event_bindings: {pressed_enter: pi_naftikizoni_pressed_enter}
-    - name: label_22
+    - layout_properties: {grid_position: 'SCKQMN,MLWVJQ'}
+      name: label_22
       properties: {text: 'ΚΑΙΡΟΣ:'}
       type: Label
-      layout_properties: {grid_position: 'SCKQMN,MLWVJQ'}
-    - name: ship_weather
+    - event_bindings: {pressed_enter: pi_kairos_pressed_enter}
+      layout_properties: {grid_position: 'SCKQMN,MUPHYF'}
+      name: ship_weather
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'SCKQMN,MUPHYF'}
-      event_bindings: {pressed_enter: pi_kairos_pressed_enter}
-    - name: label_23
+    - layout_properties: {grid_position: 'PUHGDY,KCNRTB'}
+      name: label_23
       properties: {text: 'LONG:'}
       type: Label
-      layout_properties: {grid_position: 'PUHGDY,KCNRTB'}
-    - name: ship_longitude
+    - event_bindings: {pressed_enter: pi_longitude_pressed_enter}
+      layout_properties: {grid_position: 'PUHGDY,ZSBTTA'}
+      name: ship_longitude
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'PUHGDY,ZSBTTA'}
-      event_bindings: {pressed_enter: pi_longitude_pressed_enter}
-    - name: label_26
+    - layout_properties: {grid_position: 'PUHGDY,EUOMWK'}
+      name: label_26
       properties: {text: 'LAT:'}
       type: Label
-      layout_properties: {grid_position: 'PUHGDY,EUOMWK'}
-    - name: ship_latitude
+    - event_bindings: {pressed_enter: pi_latitude_pressed_enter}
+      layout_properties: {grid_position: 'PUHGDY,CVKJCF'}
+      name: ship_latitude
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'PUHGDY,CVKJCF'}
-      event_bindings: {pressed_enter: pi_latitude_pressed_enter}
-    - name: show_map_button
+    - event_bindings: {click: show_map_button_click}
+      layout_properties: {grid_position: 'PUHGDY,MNPLDS'}
+      name: show_map_button
       properties: {text: Show on Map}
       type: Button
-      layout_properties: {grid_position: 'PUHGDY,MNPLDS'}
-      event_bindings: {click: show_map_button_click}
-    - name: label_24
+    - layout_properties: {grid_position: 'HVEYBQ,KDXGZN'}
+      name: label_24
       properties: {text: 'ΠΡΟΕΛΕΥΣΗ:'}
       type: Label
-      layout_properties: {grid_position: 'HVEYBQ,KDXGZN'}
-    - name: ship_origin
+    - event_bindings: {pressed_enter: pi_proeleusi_pressed_enter}
+      layout_properties: {grid_position: 'HVEYBQ,TWMQMO'}
+      name: ship_origin
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'HVEYBQ,TWMQMO'}
-      event_bindings: {pressed_enter: pi_proeleusi_pressed_enter}
-    - name: label_25
+    - layout_properties: {grid_position: 'HVEYBQ,TXFBPI'}
+      name: label_25
       properties: {text: 'ΠΡΟΟΡΙΣΜΟΣ:'}
       type: Label
-      layout_properties: {grid_position: 'HVEYBQ,TXFBPI'}
-    - name: ship_destination
+    - event_bindings: {pressed_enter: pi_destination_pressed_enter}
+      layout_properties: {grid_position: 'HVEYBQ,SOVUJL'}
+      name: ship_destination
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'HVEYBQ,SOVUJL'}
-      event_bindings: {pressed_enter: pi_destination_pressed_enter}
-    - name: label_27
+    - layout_properties: {grid_position: 'RWLULJ,RXRQHR'}
+      name: label_27
       properties: {text: 'ΜΕΤΑΦΕΡΟΜΕΝΟ ΦΟΡΤΙΟ:'}
       type: Label
-      layout_properties: {grid_position: 'RWLULJ,RXRQHR'}
-    - name: ship_cargo
+    - event_bindings: {pressed_enter: pi_cargo_pressed_enter}
+      layout_properties: {grid_position: 'RWLULJ,DNDPBV'}
+      name: ship_cargo
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'RWLULJ,DNDPBV'}
-      event_bindings: {pressed_enter: pi_cargo_pressed_enter}
-    - name: label_28
+    - layout_properties: {grid_position: 'RWLULJ,RZCZDB'}
+      name: label_28
       properties: {text: 'ΕΙΔΟΣ ΦΑΡΜΑΚΕΙΟΥ:'}
       type: Label
-      layout_properties: {grid_position: 'RWLULJ,RZCZDB'}
-    - name: ship_pharmacy
+    - event_bindings: {pressed_enter: pi_pharm_pressed_enter}
+      layout_properties: {grid_position: 'RWLULJ,SMMPGE'}
+      name: ship_pharmacy
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'RWLULJ,SMMPGE'}
-      event_bindings: {pressed_enter: pi_pharm_pressed_enter}
-    - name: spacer_2
+    - layout_properties: {grid_position: 'WYIOIE,OXKHSB'}
+      name: spacer_2
       properties: {height: 12}
       type: Spacer
-      layout_properties: {grid_position: 'WYIOIE,OXKHSB'}
-    - name: label_4
-      properties: {text: ΣΤΟΙΧΕΙΑ ΑΣΘΕΝΟΥΣ, underline: true, role: body, spacing_below: medium, spacing_above: medium}
+    - layout_properties: {grid_position: 'RSTAQG,UMCGPB'}
+      name: label_4
+      properties: {role: body, spacing_above: medium, spacing_below: medium, text: ΣΤΟΙΧΕΙΑ ΑΣΘΕΝΟΥΣ, underline: true}
       type: Label
-      layout_properties: {grid_position: 'RSTAQG,UMCGPB'}
-    - name: label_29
+    - layout_properties: {grid_position: 'BZDIGP,XTINGB'}
+      name: label_29
       properties: {text: 'ΕΠΩΝΥΜΟ:'}
       type: Label
-      layout_properties: {grid_position: 'BZDIGP,XTINGB'}
-    - name: s_surname
+    - event_bindings: {pressed_enter: as_eponimo_pressed_enter}
+      layout_properties: {grid_position: 'BZDIGP,FLAWUU'}
+      name: s_surname
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'BZDIGP,FLAWUU'}
-      event_bindings: {pressed_enter: as_eponimo_pressed_enter}
-    - name: label_30
+    - layout_properties: {grid_position: 'BZDIGP,CTPHBR'}
+      name: label_30
       properties: {text: 'ONOMA:'}
       type: Label
-      layout_properties: {grid_position: 'BZDIGP,CTPHBR'}
-    - name: s_name
+    - event_bindings: {pressed_enter: as_onoma_pressed_enter}
+      layout_properties: {grid_position: 'BZDIGP,KLARZD'}
+      name: s_name
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'BZDIGP,KLARZD'}
-      event_bindings: {pressed_enter: as_onoma_pressed_enter}
-    - name: label_31
+    - layout_properties: {grid_position: 'BZDIGP,FHCMKX'}
+      name: label_31
       properties: {text: 'ΗΛΙΚΙΑ:'}
       type: Label
-      layout_properties: {grid_position: 'BZDIGP,FHCMKX'}
-    - name: s_age
+    - event_bindings: {pressed_enter: as_ilikia_pressed_enter}
+      layout_properties: {grid_position: 'BZDIGP,BKPGPI'}
+      name: s_age
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'BZDIGP,BKPGPI'}
-      event_bindings: {pressed_enter: as_ilikia_pressed_enter}
-    - name: label_32
+    - layout_properties: {grid_position: 'PZZJFK,MUDUCV'}
+      name: label_32
       properties: {text: 'ΕΙΔΙΚΟΤΗΤΑ:'}
       type: Label
-      layout_properties: {grid_position: 'PZZJFK,MUDUCV'}
-    - name: s_speciality
+    - event_bindings: {pressed_enter: as_eidikotita_pressed_enter}
+      layout_properties: {grid_position: 'PZZJFK,OOFWCA'}
+      name: s_speciality
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'PZZJFK,OOFWCA'}
-      event_bindings: {pressed_enter: as_eidikotita_pressed_enter}
-    - name: label_33
+    - layout_properties: {grid_position: 'PZZJFK,HQVERZ'}
+      name: label_33
       properties: {text: 'ΕΘΝΙΚΟΤΗΤΑ:'}
       type: Label
-      layout_properties: {grid_position: 'PZZJFK,HQVERZ'}
-    - name: s_nationality
+    - event_bindings: {pressed_enter: as_ethnikotitanaft_pressed_enter}
+      layout_properties: {grid_position: 'PZZJFK,BKPHST'}
+      name: s_nationality
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'PZZJFK,BKPHST'}
-      event_bindings: {pressed_enter: as_ethnikotitanaft_pressed_enter}
-    - name: label_34
+    - layout_properties: {grid_position: 'DLOTXM,IAZHPZ'}
+      name: label_34
       properties: {text: 'ΥΨΟΣ (cm):'}
       type: Label
-      layout_properties: {grid_position: 'DLOTXM,IAZHPZ'}
-    - name: s_height
+    - event_bindings: {pressed_enter: as_ipsos_pressed_enter}
+      layout_properties: {grid_position: 'DLOTXM,WPRDHG'}
+      name: s_height
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'DLOTXM,WPRDHG'}
-      event_bindings: {pressed_enter: as_ipsos_pressed_enter}
-    - name: label_35
+    - layout_properties: {grid_position: 'DLOTXM,VBRICW'}
+      name: label_35
       properties: {text: 'ΒΑΡΟΣ (kg):'}
       type: Label
-      layout_properties: {grid_position: 'DLOTXM,VBRICW'}
-    - name: s_weight
+    - event_bindings: {pressed_enter: as_varos_pressed_enter}
+      layout_properties: {grid_position: 'DLOTXM,MMNQBY'}
+      name: s_weight
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'DLOTXM,MMNQBY'}
-      event_bindings: {pressed_enter: as_varos_pressed_enter}
-    - name: label_36
+    - layout_properties: {grid_position: 'GVAHNF,WMJIZL'}
+      name: label_36
       properties: {text: 'ΜΕΘ. Η ΑΡΙΘΜΟΣ ΔΙΑΒΑΤΗΡΙΟΥ:'}
       type: Label
-      layout_properties: {grid_position: 'GVAHNF,WMJIZL'}
-    - name: s_id
+    - event_bindings: {pressed_enter: as_am_pressed_enter}
+      layout_properties: {grid_position: 'GVAHNF,DWUUAA'}
+      name: s_id
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'GVAHNF,DWUUAA'}
-      event_bindings: {pressed_enter: as_am_pressed_enter}
-    - name: spacer_1
+    - layout_properties: {grid_position: 'ZUSGQU,JAVRML'}
+      name: spacer_1
       properties: {height: 78}
       type: Spacer
-      layout_properties: {grid_position: 'ZUSGQU,JAVRML'}
-    - name: label_3
-      properties: {text: ΙΑΤΡΙΚΕΣ ΠΛΗΡΟΦΟΡΙΕΣ ΠΟΥ ΔΙΝΕΙ ΤΟ ΠΛΟΙΟ, align: center, bold: true, underline: true}
+    - layout_properties: {grid_position: 'WKJEBX,WSYIHH'}
+      name: label_3
+      properties: {align: center, bold: true, text: ΙΑΤΡΙΚΕΣ ΠΛΗΡΟΦΟΡΙΕΣ ΠΟΥ ΔΙΝΕΙ ΤΟ ΠΛΟΙΟ, underline: true}
       type: Label
-      layout_properties: {grid_position: 'WKJEBX,WSYIHH'}
-    - name: label_5
-      properties: {text: ΚΥΡΙΟ ΣΥΜΠΤΩΜΑ, align: left, underline: true}
+    - layout_properties: {grid_position: 'YGLXXC,JLGGDQ'}
+      name: label_5
+      properties: {align: left, text: ΚΥΡΙΟ ΣΥΜΠΤΩΜΑ, underline: true}
       type: Label
-      layout_properties: {grid_position: 'YGLXXC,JLGGDQ'}
-    - name: check_pain
+    - event_bindings: {change: in_ponos_change}
+      layout_properties: {grid_position: 'PHSHTM,JCWPWF'}
+      name: check_pain
       properties: {text: ΠΟΝΟΣ}
       type: CheckBox
-      layout_properties: {grid_position: 'PHSHTM,JCWPWF'}
-      event_bindings: {change: in_ponos_change}
-    - name: label_6
+    - layout_properties: {grid_position: 'PHSHTM,RWDTOC'}
+      name: label_6
       properties: {text: 1. ΤΡΟΠΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ}
       type: Label
-      layout_properties: {grid_position: 'PHSHTM,RWDTOC'}
-    - name: check_fever
+    - event_bindings: {change: in_piretos_change}
+      layout_properties: {grid_position: 'KTELOX,MLXMIM'}
+      name: check_fever
       properties: {text: ΠΥΡΕΤΟΣ}
       type: CheckBox
-      layout_properties: {grid_position: 'KTELOX,MLXMIM'}
-      event_bindings: {change: in_piretos_change}
-    - name: radio_button_1
-      properties: {text: ΞΑΦΝΙΚΑ, selected: false, value: ΞΑΦΝΙΚΑ}
+    - layout_properties: {grid_position: 'KTELOX,CEYMGV'}
+      name: radio_button_1
+      properties: {selected: false, text: ΞΑΦΝΙΚΑ, value: ΞΑΦΝΙΚΑ}
       type: RadioButton
-      layout_properties: {grid_position: 'KTELOX,CEYMGV'}
-    - name: radio_button_2
+    - layout_properties: {grid_position: 'KTELOX,UTYZCS'}
+      name: radio_button_2
       properties: {text: ΣΤΑΔΙΑΚΑ, value: ΣΤΑΔΙΑΚΑ}
       type: RadioButton
-      layout_properties: {grid_position: 'KTELOX,UTYZCS'}
-    - name: check_frown
+    - event_bindings: {change: in_rigos_change}
+      layout_properties: {grid_position: 'DQBYIL,VTUDDN'}
+      name: check_frown
       properties: {text: ΡΙΓΟΣ}
       type: CheckBox
-      layout_properties: {grid_position: 'DQBYIL,VTUDDN'}
-      event_bindings: {change: in_rigos_change}
-    - name: label_7
+    - layout_properties: {grid_position: 'DQBYIL,AHNHOE'}
+      name: label_7
       properties: {text: '2. ΧΡΟΝΟΣ ΕΜΦΑΝΙΣΗΣ ΣΥΜΠΤΩΜΑΤΩΝ '}
       type: Label
-      layout_properties: {grid_position: 'DQBYIL,AHNHOE'}
-    - name: check_dizziness
+    - event_bindings: {change: in_zali_change}
+      layout_properties: {grid_position: 'WICJCB,GAWAPO'}
+      name: check_dizziness
       properties: {text: ΖΑΛΗ}
       type: CheckBox
-      layout_properties: {grid_position: 'WICJCB,GAWAPO'}
-      event_bindings: {change: in_zali_change}
-    - name: label_38
-      properties: {text: 'ΠΡΙΝ (ώρες):', align: right}
+    - layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,XDBHTR'}
+      name: label_38
+      properties: {align: right, text: 'ΠΡΙΝ (ώρες):'}
       type: Label
-      layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,XDBHTR'}
-    - name: hours
-      properties: {role: outlined}
-      type: TextBox
+    - event_bindings: {pressed_enter: in_ores_pressed_enter}
       layout_properties: {grid_position: 'WICJCB,ANPPHT HLFDRH,KYGDBL'}
-      event_bindings: {pressed_enter: in_ores_pressed_enter}
-    - name: label_39
-      properties: {text: 'ΠΡΙΝ (ημέρες):', align: right}
-      type: Label
-      layout_properties: {grid_position: 'WICJCB,HVKUQH'}
-    - name: days
+      name: hours
       properties: {role: outlined}
       type: TextBox
+    - layout_properties: {grid_position: 'WICJCB,HVKUQH'}
+      name: label_39
+      properties: {align: right, text: 'ΠΡΙΝ (ημέρες):'}
+      type: Label
+    - event_bindings: {pressed_enter: in_meres_pressed_enter}
       layout_properties: {grid_position: 'WICJCB,VUEBTD'}
-      event_bindings: {pressed_enter: in_meres_pressed_enter}
-    - name: check_vomit
+      name: days
+      properties: {role: outlined}
+      type: TextBox
+    - event_bindings: {change: in_emetos_change}
+      layout_properties: {grid_position: 'YHAAEI,FFAQYE HWWPKW,PCIQYQ'}
+      name: check_vomit
       properties: {text: ΕΜΕΤΟΣ}
       type: CheckBox
-      layout_properties: {grid_position: 'YHAAEI,FFAQYE HWWPKW,PCIQYQ'}
-      event_bindings: {change: in_emetos_change}
-    - name: check_diarrhea
+    - event_bindings: {change: in_diaria_change}
+      layout_properties: {grid_position: 'YHAAEI,FFAQYE PNUUGH,LLZQZM'}
+      name: check_diarrhea
       properties: {text: ΔΙΑΡΡΟΙΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'YHAAEI,FFAQYE PNUUGH,LLZQZM'}
-      event_bindings: {change: in_diaria_change}
-    - name: label_8
+    - layout_properties: {grid_position: 'YHAAEI,BQTPDG'}
+      name: label_8
       properties: {text: 3. ΜΕΤΡΗΣΗ ΖΩΤΙΚΩΝ ΣΗΜΕΙΩΝ}
       type: Label
-      layout_properties: {grid_position: 'YHAAEI,BQTPDG'}
-    - name: check_wound
+    - event_bindings: {change: in_travma_change}
+      layout_properties: {grid_position: 'TKBETC,UPRORQ'}
+      name: check_wound
       properties: {text: ΤΡΑΥΜΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'TKBETC,UPRORQ'}
-      event_bindings: {change: in_travma_change}
-    - name: label_10
-      properties: {text: 'ΑΡΤΗΡΙΑΚΗ ΠΙΕΣΗ (... / ..):', align: right}
+    - layout_properties: {grid_position: 'TKBETC,VEJBHS'}
+      name: label_10
+      properties: {align: right, text: 'ΑΡΤΗΡΙΑΚΗ ΠΙΕΣΗ (... / ..):'}
       type: Label
-      layout_properties: {grid_position: 'TKBETC,VEJBHS'}
-    - name: b_pressure
+    - event_bindings: {pressed_enter: outlined_15_pressed_enter}
+      layout_properties: {grid_position: 'TKBETC,BWVSVG'}
+      name: b_pressure
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'TKBETC,BWVSVG'}
-      event_bindings: {pressed_enter: outlined_15_pressed_enter}
-    - name: check_redness
+    - event_bindings: {change: in_erithrotita_change}
+      layout_properties: {grid_position: 'RVZONS,IWEWAH'}
+      name: check_redness
       properties: {text: ΕΡΥΘΡΟΤΗΤΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'RVZONS,IWEWAH'}
-      event_bindings: {change: in_erithrotita_change}
-    - name: label_11
-      properties: {text: 'ΣΦΙΞΕΙΣ (/min):', align: right}
+    - layout_properties: {grid_position: 'RVZONS,HKBPKE'}
+      name: label_11
+      properties: {align: right, text: 'ΣΦΙΞΕΙΣ (/min):'}
       type: Label
-      layout_properties: {grid_position: 'RVZONS,HKBPKE'}
-    - name: pulses
+    - event_bindings: {pressed_enter: in_sfixis_pressed_enter}
+      layout_properties: {grid_position: 'RVZONS,SPNRAQ'}
+      name: pulses
       properties: {role: outlined}
       type: TextBox
-      layout_properties: {grid_position: 'RVZONS,SPNRAQ'}
-      event_bindings: {pressed_enter: in_sfixis_pressed_enter}
-    - name: check_swelling
+    - event_bindings: {change: in_priximo_change}
+      layout_properties: {grid_position: 'KTRAAC,UNJLYG'}
+      name: check_swelling
       properties: {text: ΠΡΗΞΙΜΟ}
       type: CheckBox
-      layout_properties: {grid_position: 'KTRAAC,UNJLYG'}
-      event_bindings: {change: in_priximo_change}
-    - name: label_12
+    - layout_properties: {grid_position: 'KTRAAC,PCTAFF'}
+      name: label_12
       properties: {text: 4. ΧΡΟΝΙΕΣ ΠΑΘΗΣΕΙΣ ΑΠΟ ΤΙΣ ΟΠΟΙΕΣ ΠΑΣΧΕΙ Ο ΝΑΥΤΙΚΟΣ}
       type: Label
-      layout_properties: {grid_position: 'KTRAAC,PCTAFF'}
-    - name: check_bleeding
+    - event_bindings: {change: in_aimoragia_change}
+      layout_properties: {grid_position: 'PJWFKU,DKCCQM'}
+      name: check_bleeding
       properties: {text: ΑΙΜΟΡΡΑΓΙΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'PJWFKU,DKCCQM'}
-      event_bindings: {change: in_aimoragia_change}
-    - name: c_diseases
+    - event_bindings: {change: in_xroniespathisis_change}
+      layout_properties: {grid_position: 'PJWFKU,CIFFHZ'}
+      name: c_diseases
       properties: {}
       type: TextArea
-      layout_properties: {grid_position: 'PJWFKU,CIFFHZ'}
-      event_bindings: {change: in_xroniespathisis_change}
-    - name: check_foreign_body
-      properties: {text: ΞΕΝΟ ΣΩΜΑ, allow_indeterminate: false, enabled: true}
-      type: CheckBox
+    - event_bindings: {change: in_xenosoma_change, show: in_xenosoma_show}
       layout_properties: {grid_position: 'MPDAPM,WOQUSA'}
-      event_bindings: {change: in_xenosoma_change, show: in_xenosoma_show}
-    - name: label_13
+      name: check_foreign_body
+      properties: {allow_indeterminate: false, enabled: true, text: ΞΕΝΟ ΣΩΜΑ}
+      type: CheckBox
+    - layout_properties: {grid_position: 'MPDAPM,NZSGDY'}
+      name: label_13
       properties: {text: 5. ΠΡΟΗΓΟΥΜΕΝΕΣ ΧΕΙΡΟΥΡΓΙΚΕΣ ΕΠΕΜΒΑΣΕΙΣ}
       type: Label
-      layout_properties: {grid_position: 'MPDAPM,NZSGDY'}
-    - name: check_cough
+    - event_bindings: {change: in_vixas_change}
+      layout_properties: {grid_position: 'IAUUQS,LLDLKK'}
+      name: check_cough
       properties: {text: ΒΗΧΑΣ}
       type: CheckBox
-      layout_properties: {grid_position: 'IAUUQS,LLDLKK'}
-      event_bindings: {change: in_vixas_change}
-    - name: prev_surgeries
+    - event_bindings: {change: in_proigoumenesxeirourgikesep_change}
+      layout_properties: {grid_position: 'IAUUQS,OVLTET'}
+      name: prev_surgeries
       properties: {}
       type: TextArea
-      layout_properties: {grid_position: 'IAUUQS,OVLTET'}
-      event_bindings: {change: in_proigoumenesxeirourgikesep_change}
-    - name: check_breath_shortness
+    - event_bindings: {change: in_dispnia_change}
+      layout_properties: {grid_position: 'AXECZD,PQKNRS'}
+      name: check_breath_shortness
       properties: {text: ΔΥΣΠΝΟΙΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'AXECZD,PQKNRS'}
-      event_bindings: {change: in_dispnia_change}
-    - name: check_weakness
+    - event_bindings: {change: in_adunamia_change}
+      layout_properties: {grid_position: 'ITHHBP,YRAXPF'}
+      name: check_weakness
       properties: {text: ΑΔΥΝΑΜΙΑ}
       type: CheckBox
-      layout_properties: {grid_position: 'ITHHBP,YRAXPF'}
-      event_bindings: {change: in_adunamia_change}
-    - name: check_loss_of_senses
+    - event_bindings: {change: in_apolia_change}
+      layout_properties: {grid_position: 'DLVBSE,JRYEFK'}
+      name: check_loss_of_senses
       properties: {text: ΑΠΩΛΕΙΑ ΑΣΘΗΣΕΩΝ}
       type: CheckBox
-      layout_properties: {grid_position: 'DLVBSE,JRYEFK'}
-      event_bindings: {change: in_apolia_change}
-    - name: label_37
+    - layout_properties: {grid_position: 'THDSLX,IOJZWZ'}
+      name: label_37
       properties: {text: ΑΛΛΑ}
       type: Label
-      layout_properties: {grid_position: 'THDSLX,IOJZWZ'}
-    - name: other_symptoms
+    - event_bindings: {change: other_symptoms_change}
+      layout_properties: {grid_position: 'QQAKYH,CRKBLX'}
+      name: other_symptoms
       properties: {auto_expand: true}
       type: TextArea
-      layout_properties: {grid_position: 'QQAKYH,CRKBLX'}
-      event_bindings: {change: other_symptoms_change}
-    - name: data_row_panel_1
+    - components: []
+      layout_properties: {grid_position: 'OPZARC,MOMXFV'}
+      name: data_row_panel_1
       properties: {}
       type: DataRowPanel
-      layout_properties: {grid_position: 'OPZARC,MOMXFV'}
-      components: []
-    - name: label_14
-      properties: {text: Γράψτε στο παρακάτω πλαίσιο το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος., visible: true, italic: false, bold: true}
+    - layout_properties: {grid_position: 'EHBBYN,MMFVYM'}
+      name: label_14
+      properties: {bold: true, italic: false, text: Γράψτε στο παρακάτω πλαίσιο το σημείο στο σώμα που εντοπίζεται το κύριο σύμπτωμα (π.χ. πόνος) και αν επεκτείνεται σε κάποιο άλλο σημείο του σώματος., visible: true}
       type: Label
-      layout_properties: {grid_position: 'EHBBYN,MMFVYM'}
-    - name: image_2
-      properties: {source: _/theme/grid photo.png, display_mode: fill_width}
+    - layout_properties: {grid_position: 'FYWGRN,ATRVPJ'}
+      name: image_2
+      properties: {display_mode: fill_width, source: _/theme/grid photo.png}
       type: Image
-      layout_properties: {grid_position: 'FYWGRN,ATRVPJ'}
-    - name: label_9
+    - layout_properties: {grid_position: 'NPQOWE,YXWETF'}
+      name: label_9
       properties:
         text: |
           ΣΗΜΕΙΟ(-Α) ΠΟΝΟΥ:
       type: Label
-      layout_properties: {grid_position: 'NPQOWE,YXWETF'}
-    - name: pain_box
+    - layout_properties: {grid_position: 'NPQOWE,VVIYHS'}
+      name: pain_box
       properties: {}
       type: TextBox
-      layout_properties: {grid_position: 'NPQOWE,VVIYHS'}
-    - name: submit
-      properties: {text: Καταχώρηση, bold: true, role: filled-button}
-      type: Button
+    - event_bindings: {click: submit_click}
       layout_properties: {grid_position: 'OBHWRK,VZRYQQ'}
-      event_bindings: {click: submit_click}
-    - name: flow_panel_2
-      properties: {visible: true, align: center}
-      type: FlowPanel
-      layout_properties: {grid_position: 'NOCELO,LEGZKE'}
-      components:
+      name: submit
+      properties: {bold: true, role: filled-button, text: Καταχώρηση}
+      type: Button
+    - components:
       - name: spacer_5
         properties: {height: 32}
         type: Spacer
@@ -450,11 +434,11 @@ components:
       - name: spacer_10
         properties: {height: 32}
         type: Spacer
-      - name: new_form_button
-        properties: {text: Καθαρισμός και υποβολή νέας φόρμας, role: tonal-button, align: center}
-        type: Button
+      - event_bindings: {click: new_form_button_click}
         layout_properties: {}
-        event_bindings: {click: new_form_button_click}
+        name: new_form_button
+        properties: {align: center, role: tonal-button, text: Καθαρισμός και υποβολή νέας φόρμας}
+        type: Button
       - name: spacer_11
         properties: {height: 32}
         type: Spacer
@@ -467,31 +451,47 @@ components:
       - name: spacer_4
         properties: {height: 32}
         type: Spacer
-    layout_properties: {slot: nav-right, grid_position: 'DMPPOV,SYSBHA'}
-- type: FlowPanel
-  properties: {}
+      layout_properties: {grid_position: 'NOCELO,LEGZKE'}
+      name: flow_panel_2
+      properties: {align: center, visible: true}
+      type: FlowPanel
+    layout_properties: {grid_position: 'DMPPOV,SYSBHA', slot: nav-right}
+    name: content_panel
+    properties: {col_widths: '{}', spacing_below: small, visible: true}
+    type: ColumnPanel
+  layout_properties: {slot: default}
+  name: column_panel_1
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: flow_panel_1
-  layout_properties: {slot: nav-right}
-- name: column_panel_2
+  properties: {}
+  type: FlowPanel
+- components:
+  - event_bindings: {click: start_page_button_click}
+    layout_properties: {grid_position: 'YJGCUI,HYPJDC'}
+    name: start_page_button
+    properties: {role: outlined-button, text: Αρχική}
+    type: Button
+  - event_bindings: {click: stats_page_button_click}
+    layout_properties: {grid_position: 'JKEEHA,KUDMLP'}
+    name: stats_page_button
+    properties: {role: outlined-button, text: Στατιστικά}
+    type: Button
+  - event_bindings: {click: exit_button_click}
+    layout_properties: {grid_position: 'EJYEWT,XBGAJM'}
+    name: exit_button
+    properties: {role: outlined-button, text: Έξοδος}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: column_panel_2
   properties: {}
   type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: start_page_button
-    properties: {text: Αρχική, role: outlined-button}
-    type: Button
-    layout_properties: {grid_position: 'YJGCUI,HYPJDC'}
-    event_bindings: {click: start_page_button_click}
-  - name: stats_page_button
-    properties: {text: Στατιστικά, role: outlined-button}
-    type: Button
-    layout_properties: {grid_position: 'JKEEHA,KUDMLP'}
-    event_bindings: {click: stats_page_button_click}
-  - name: exit_button
-    properties: {text: Έξοδος, role: outlined-button}
-    type: Button
-    layout_properties: {grid_position: 'EJYEWT,XBGAJM'}
-    event_bindings: {click: exit_button_click}
 container:
-  type: HtmlTemplate
   properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+custom_component: true
+events:
+- {default_event: true, name: event}
+is_package: true
+properties: []

@@ -1,44 +1,44 @@
-dependencies: []
-services:
-- source: /runtime/services/tables.yml
-  client_config: {}
-  server_config: {auto_create_missing_columns: false}
-- source: /runtime/services/anvil/users.yml
-  client_config: {allow_signup: false, enable_automatically: true, use_email: true, confirm_email: true, require_secure_passwords: false}
-  server_config: {user_table: users}
-startup: {type: form, module: Cover_page}
-package_name: Information_System_for_the_Support___Recording_of_Maritime_Incidents_at_Sea
 allow_embedding: false
-name: Information System for the Support - Recording of Maritime Incidents at Sea
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox, server_spec: null}
-metadata: {logo_img: 'asset:DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png', title: Information System for the Support - Recording of Maritime Incidents at Sea}
-startup_form: null
 db_schema:
+  incidents_table: {title: Incidents_table}
   users:
     client: none
-    server: full
     columns:
-    - name: email
-      admin_ui: {order: 0, width: 200}
+    - admin_ui: {order: 0, width: 200}
+      name: email
       type: string
-    - name: enabled
-      admin_ui: {order: 1, width: 200}
+    - admin_ui: {order: 1, width: 200}
+      name: enabled
       type: bool
-    - name: last_login
-      admin_ui: {order: 2, width: 200}
+    - admin_ui: {order: 2, width: 200}
+      name: last_login
       type: datetime
-    - name: password_hash
-      admin_ui: {order: 3, width: 200}
+    - admin_ui: {order: 3, width: 200}
+      name: password_hash
       type: string
-    - name: n_password_failures
-      admin_ui: {order: 4, width: 200}
+    - admin_ui: {order: 4, width: 200}
+      name: n_password_failures
       type: number
-    - name: confirmed_email
-      admin_ui: {order: 5, width: 200}
+    - admin_ui: {order: 5, width: 200}
+      name: confirmed_email
       type: bool
-    - name: role
-      admin_ui: {width: 200, order: 6}
+    - admin_ui: {order: 6, width: 200}
+      name: role
       type: string
+    server: full
     title: Users
-  incidents_table: {title: Incidents_table}
+dependencies: []
+metadata: {logo_img: 'asset:DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png', title: Information System for the Support - Recording of Maritime Incidents at Sea}
+name: Information System for the Support - Recording of Maritime Incidents at Sea
+package_name: Information_System_for_the_Support___Recording_of_Maritime_Incidents_at_Sea
 renamed: true
+runtime_options: {client_version: '3', server_spec: null, server_version: python3-sandbox, version: 2}
+services:
+- client_config: {}
+  server_config: {auto_create_missing_columns: false}
+  source: /runtime/services/tables.yml
+- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, require_secure_passwords: false, use_email: true}
+  server_config: {user_table: users}
+  source: /runtime/services/anvil/users.yml
+startup: {module: Cover_page, type: form}
+startup_form: null

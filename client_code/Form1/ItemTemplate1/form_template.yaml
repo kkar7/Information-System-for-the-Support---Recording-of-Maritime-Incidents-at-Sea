@@ -1,5 +1,5 @@
-is_package: true
-container:
-  type: ColumnPanel
-  properties: {visible: false, wrap_on: never}
 components: []
+container:
+  properties: {visible: false, wrap_on: never}
+  type: ColumnPanel
+is_package: true

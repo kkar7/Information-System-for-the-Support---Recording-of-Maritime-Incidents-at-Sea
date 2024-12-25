@@ -1,123 +1,123 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
 components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: image_1
-    properties: {source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png', height: 146.79998779296875}
+- components:
+  - layout_properties: {grid_position: 'AEJHFU,RPYXVU'}
+    name: image_1
+    properties: {height: 146.79998779296875, source: '_/theme/DALL·E 2023-11-30 18.41.52 - Create a logo featuring a large anchor representing the sea, with a ship on top of it. The ship should have a medical Red Cross symbol as its flag, sy.png'}
     type: Image
-    layout_properties: {grid_position: 'AEJHFU,RPYXVU'}
-  - name: label_6
-    properties: {text: Πλοία, align: center, bold: true, underline: true}
+  - layout_properties: {grid_position: 'GFONBN,SPYXGH'}
+    name: label_6
+    properties: {align: center, bold: true, text: Πλοία, underline: true}
     type: Label
-    layout_properties: {grid_position: 'GFONBN,SPYXGH'}
-  - name: label_unique_signs
+  - layout_properties: {grid_position: 'ZJOFJK,MXUOKY'}
+    name: label_unique_signs
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'ZJOFJK,MXUOKY'}
-  - name: label_8
+  - layout_properties: {grid_position: 'CRMSJR,VRITRM'}
+    name: label_8
     properties: {text: 'Εθνικότητες Πλοίων που έχουν ζητήσει βοήθεια:'}
     type: Label
-    layout_properties: {grid_position: 'CRMSJR,VRITRM'}
-  - name: label_nationalities
+  - layout_properties: {grid_position: 'OTTHIS,IZOWUG'}
+    name: label_nationalities
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'OTTHIS,IZOWUG'}
-  - name: label_9
+  - layout_properties: {grid_position: 'RFIYZG,DRUGRJ'}
+    name: label_9
     properties: {text: Τύποι πλοίων που έχουν ζητήσει βοήθεια.}
     type: Label
-    layout_properties: {grid_position: 'RFIYZG,DRUGRJ'}
-  - name: label_ship_types
+  - layout_properties: {grid_position: 'BGRRVT,VAKXDQ'}
+    name: label_ship_types
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'BGRRVT,VAKXDQ'}
-  - name: label_1
-    properties: {text: ' Ασθενείς', bold: true, underline: true, align: center}
+  - layout_properties: {grid_position: 'QICWAY,TOXBIN'}
+    name: label_1
+    properties: {align: center, bold: true, text: ' Ασθενείς', underline: true}
     type: Label
-    layout_properties: {grid_position: 'QICWAY,TOXBIN'}
-  - name: label_unique_sailorid
+  - layout_properties: {grid_position: 'YSVTCG,AKRICL'}
+    name: label_unique_sailorid
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'YSVTCG,AKRICL'}
-  - name: label_mean_age
+  - layout_properties: {grid_position: 'DYSMRU,TSLAIR'}
+    name: label_mean_age
     properties: {text: ''}
     type: Label
-    layout_properties: {grid_position: 'DYSMRU,TSLAIR'}
-  - name: label_median_age
+  - layout_properties: {grid_position: 'DYSMRU,VZPAKP'}
+    name: label_median_age
     properties: {text: ''}
     type: Label
-    layout_properties: {grid_position: 'DYSMRU,VZPAKP'}
-  - name: label_age_range
+  - layout_properties: {grid_position: 'DYSMRU,WDLUIO'}
+    name: label_age_range
     properties: {text: ''}
     type: Label
-    layout_properties: {grid_position: 'DYSMRU,WDLUIO'}
-  - name: label_min_age
+  - layout_properties: {grid_position: 'PZIQCD,MIRSRM'}
+    name: label_min_age
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'PZIQCD,MIRSRM'}
-  - name: label_max_age
+  - layout_properties: {grid_position: 'PZIQCD,BUJFZU'}
+    name: label_max_age
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'PZIQCD,BUJFZU'}
-  - name: label_4
+  - layout_properties: {grid_position: 'PZIQCD,OLQJGO'}
+    name: label_4
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'PZIQCD,OLQJGO'}
-  - name: label_mean
+  - layout_properties: {grid_position: 'ZWNGMC,VCEOXQ'}
+    name: label_mean
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'ZWNGMC,VCEOXQ'}
-  - name: label_3
+  - layout_properties: {grid_position: 'RDDHNI,GLVMKP'}
+    name: label_3
     properties: {text: 'Εθνικότητες ασθενών που έχουν ζητήσει βοήθεια:'}
     type: Label
-    layout_properties: {grid_position: 'RDDHNI,GLVMKP'}
-  - name: label_sailor_nationalities
+  - layout_properties: {grid_position: 'XTGHCN,RPOUWD'}
+    name: label_sailor_nationalities
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'XTGHCN,RPOUWD'}
-  - name: label_2
+  - layout_properties: {grid_position: 'VGDXNC,ATZTNN'}
+    name: label_2
     properties: {text: 'Ειδικότητες ασθενών που έχουν ζητήσει βοήθεια:'}
     type: Label
-    layout_properties: {grid_position: 'VGDXNC,ATZTNN'}
-  - name: label_specialties
+  - layout_properties: {grid_position: 'NGGSLB,NOEYOP'}
+    name: label_specialties
     properties: {}
     type: Label
-    layout_properties: {grid_position: 'NGGSLB,NOEYOP'}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: label_5
-  properties: {text: Στατιστικά, bold: true}
-  type: Label
-  layout_properties: {slot: title}
-- name: column_panel_1
+  layout_properties: {slot: default}
+  name: content_panel
   properties: {}
   type: ColumnPanel
-  layout_properties: {slot: left-nav}
-  components:
-  - name: column_panel_2
+- layout_properties: {slot: nav-right}
+  name: navbar_links
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_5
+  properties: {bold: true, text: Στατιστικά}
+  type: Label
+- components:
+  - components:
+    - event_bindings: {click: start_page_button_click}
+      layout_properties: {grid_position: 'QWVEYO,MSWKNH'}
+      name: start_page_button
+      properties: {role: outlined-button, text: Αρχική σελίδα}
+      type: Button
+    - event_bindings: {click: form_page_button_click}
+      layout_properties: {grid_position: 'WCJEWB,EOKJZD'}
+      name: form_page_button
+      properties: {role: outlined-button, text: Φόρμα}
+      type: Button
+    - event_bindings: {click: exit_button_click}
+      layout_properties: {grid_position: 'YBYQWC,PKXNGT'}
+      name: exit_button
+      properties: {role: outlined-button, text: Έξοδος}
+      type: Button
+    layout_properties: {grid_position: 'GUXBCS,VJUWWM'}
+    name: column_panel_2
     properties: {}
     type: ColumnPanel
-    layout_properties: {grid_position: 'GUXBCS,VJUWWM'}
-    components:
-    - name: start_page_button
-      properties: {text: Αρχική σελίδα, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'QWVEYO,MSWKNH'}
-      event_bindings: {click: start_page_button_click}
-    - name: form_page_button
-      properties: {text: Φόρμα, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'WCJEWB,EOKJZD'}
-      event_bindings: {click: form_page_button_click}
-    - name: exit_button
-      properties: {text: Έξοδος, role: outlined-button}
-      type: Button
-      layout_properties: {grid_position: 'YBYQWC,PKXNGT'}
-      event_bindings: {click: exit_button_click}
+  layout_properties: {slot: left-nav}
+  name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+container:
+  properties: {html: '@theme:standard-page.html'}
+  type: HtmlTemplate
+is_package: true
